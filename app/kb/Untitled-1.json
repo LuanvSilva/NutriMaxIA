@@ -1,0 +1,1003 @@
+"bibliotecas_dados_detalhadas": {
+  "alimentos": [
+    // PROTEÍNAS MAGRAS ANIMAIS
+    {
+      "id": "FOOD001",
+      "nome_pt": "Peito de Frango Grelhado ou Cozido (sem pele)",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 165,
+      "macros_100g": {"proteina_g": 31, "carboidrato_g": 0, "gordura_total_g": 3.6, "gordura_saturada_g": 1, "fibras_g": 0},
+      "micronutrientes_destaque": ["Niacina (B3)", "Vitamina B6", "Fósforo", "Selênio"],
+      "tags": ["alto_proteina", "baixo_carb", "baixo_gordura", "sem_gluten", "sem_lactose", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 filé pequeno", "peso_g": 100}, {"descricao": "1 filé médio", "peso_g": 120}, {"descricao": "1 filé grande", "peso_g": 150}, {"descricao": "1 xícara (chá) cozido e desfiado", "peso_g": 140}],
+      "observacoes": "Versátil e acessível. Base para muitas dietas."
+    },
+    {
+      "id": "FOOD006",
+      "nome_pt": "Tilápia Grelhada ou Assada",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 128,
+      "macros_100g": {"proteina_g": 26, "carboidrato_g": 0, "gordura_total_g": 2.7, "gordura_saturada_g": 0.9, "fibras_g": 0},
+      "micronutrientes_destaque": ["Vitamina B12", "Selênio", "Fósforo", "Potássio"],
+      "tags": ["alto_proteina", "baixo_carb", "baixo_gordura", "peixe_magro", "sem_gluten", "sem_lactose", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 filé médio", "peso_g": 120}, {"descricao": "1 posta pequena", "peso_g": 100}],
+      "observacoes": "Peixe branco de sabor suave e baixo teor de gordura."
+    },
+    {
+      "id": "FOOD007",
+      "nome_pt": "Patinho Bovino Moído (magro, cozido)",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 210, // Varia com % gordura
+      "macros_100g": {"proteina_g": 30, "carboidrato_g": 0, "gordura_total_g": 9, "gordura_saturada_g": 3.5, "fibras_g": 0},
+      "micronutrientes_destaque": ["Ferro Heme", "Zinco", "Vitamina B12", "Niacina (B3)"],
+      "tags": ["alto_proteina", "carne_vermelha_magra", "sem_gluten", "sem_lactose", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 porção cozida (hambúrguer)", "peso_g": 100}, {"descricao": "4 colheres de sopa (moída refogada)", "peso_g": 100}],
+      "observacoes": "Escolher cortes magros (patinho, coxão mole). Escorrer gordura após cozimento se necessário."
+    },
+     {
+      "id": "FOOD008",
+      "nome_pt": "Clara de Ovo Cozida",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 52,
+      "macros_100g": {"proteina_g": 11, "carboidrato_g": 0.7, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 0},
+      "micronutrientes_destaque": ["Riboflavina (B2)", "Selênio", "Potássio"],
+      "tags": ["alto_proteina", "quase_zero_gordura", "baixo_carb", "sem_gluten", "sem_lactose", "vegetariano_ovolacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 clara de ovo grande", "peso_g": 33}, {"descricao": "3 claras de ovo grande", "peso_g": 100}],
+      "observacoes": "Proteína pura, sem a gordura e colesterol da gema. Comum em dietas restritivas em gordura."
+    },
+    {
+      "id": "FOOD009",
+      "nome_pt": "Peru Assado (peito, sem pele)",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 135,
+      "macros_100g": {"proteina_g": 30, "carboidrato_g": 0, "gordura_total_g": 1, "gordura_saturada_g": 0.3, "fibras_g": 0},
+      "micronutrientes_destaque": ["Selênio", "Fósforo", "Niacina (B3)", "Vitamina B6"],
+      "tags": ["alto_proteina", "muito_baixo_gordura", "baixo_carb", "ave", "sem_gluten", "sem_lactose", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia grossa", "peso_g": 100}, {"descricao": "1 xícara desfiado", "peso_g": 140}],
+      "observacoes": "Alternativa magra ao frango."
+    },
+    {
+      "id": "FOOD010",
+      "nome_pt": "Lombo Suíno Assado ou Grelhado",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 180, // Magro
+      "macros_100g": {"proteina_g": 26, "carboidrato_g": 0, "gordura_total_g": 8, "gordura_saturada_g": 2.8, "fibras_g": 0},
+      "micronutrientes_destaque": ["Tiamina (B1)", "Selênio", "Fósforo", "Zinco"],
+      "tags": ["alto_proteina", "carne_branca", "sem_gluten", "sem_lactose", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia média", "peso_g": 100}, {"descricao": "1 medalhão", "peso_g": 120}],
+      "observacoes": "Corte magro da carne de porco. Retirar gordura aparente antes do preparo."
+    },
+    {
+      "id": "FOOD011",
+      "nome_pt": "Atum em Água (enlatado, drenado)",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 116,
+      "macros_100g": {"proteina_g": 25.5, "carboidrato_g": 0, "gordura_total_g": 0.8, "gordura_saturada_g": 0.2, "fibras_g": 0},
+      "micronutrientes_destaque": ["Vitamina B12", "Selênio", "Niacina (B3)", "Vitamina D"],
+      "tags": ["alto_proteina", "muito_baixo_gordura", "peixe_conserva", "omega_3_baixo", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 lata pequena drenada", "peso_g": 80-100}, {"descricao": "3 colheres de sopa", "peso_g": 60}],
+      "observacoes": "Prático. Preferir versão em água para menos gordura/sódio. Teor de ômega-3 menor que atum fresco ou em óleo."
+    },
+    {
+      "id": "FOOD012",
+      "nome_pt": "Camarão Cozido ou Grelhado",
+      "grupo_alimentar": "Proteína Magra",
+      "energia_kcal_100g": 99,
+      "macros_100g": {"proteina_g": 20.3, "carboidrato_g": 0.9, "gordura_total_g": 1.4, "gordura_saturada_g": 0.3, "fibras_g": 0},
+      "micronutrientes_destaque": ["Selênio", "Vitamina B12", "Fósforo", "Iodo"],
+      "tags": ["alto_proteina", "baixo_gordura", "fruto_do_mar", "sem_gluten", "sem_lactose", "paleo", "contem_colesterol"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá)", "peso_g": 100}, {"descricao": "10-12 camarões médios", "peso_g": 100}],
+      "observacoes": "Apesar do colesterol, tem baixo teor de gordura saturada. Cuidado com preparações com muita gordura (frito, molhos)."
+    },
+
+    // PROTEÍNAS COM MAIS GORDURA ANIMAIS
+    {
+      "id": "FOOD013",
+      "nome_pt": "Salmão Grelhado ou Assado",
+      "grupo_alimentar": "Proteína e Gordura Saudável",
+      "energia_kcal_100g": 208,
+      "macros_100g": {"proteina_g": 20, "carboidrato_g": 0, "gordura_total_g": 13, "gordura_saturada_g": 3, "fibras_g": 0},
+      "micronutrientes_destaque": ["Ômega-3 (EPA/DHA)", "Vitamina D", "Vitamina B12", "Selênio"],
+      "tags": ["alto_proteina", "gordura_boa", "omega_3", "peixe_gordo", "sem_gluten", "sem_lactose", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 posta média", "peso_g": 130}, {"descricao": "1 filé pequeno", "peso_g": 120}],
+      "observacoes": "Excelente fonte de ômega-3. Preferir salmão selvagem se possível."
+    },
+    {
+      "id": "FOOD014",
+      "nome_pt": "Coxa ou Sobrecoxa de Frango Assada (sem pele)",
+      "grupo_alimentar": "Proteína", // Gordura moderada
+      "energia_kcal_100g": 209,
+      "macros_100g": {"proteina_g": 26, "carboidrato_g": 0, "gordura_total_g": 11, "gordura_saturada_g": 3, "fibras_g": 0},
+      "micronutrientes_destaque": ["Zinco", "Ferro", "Vitamina B12", "Niacina (B3)"],
+      "tags": ["alto_proteina", "gordura_moderada", "carne_escura_ave", "sem_gluten", "sem_lactose", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média (coxa+sobrecoxa)", "peso_g": 150-200 (com osso)}, {"descricao": "1 xícara desfiado", "peso_g": 140}],
+      "observacoes": "Mais saborosa e suculenta que o peito devido à maior gordura. Retirar a pele reduz significativamente a gordura."
+    },
+    {
+      "id": "FOOD015",
+      "nome_pt": "Sardinha em Óleo (enlatada, drenada)",
+      "grupo_alimentar": "Proteína e Gordura Saudável",
+      "energia_kcal_100g": 208,
+      "macros_100g": {"proteina_g": 24.6, "carboidrato_g": 0, "gordura_total_g": 11.5, "gordura_saturada_g": 1.5, "fibras_g": 0},
+      "micronutrientes_destaque": ["Ômega-3 (EPA/DHA)", "Cálcio (ossos)", "Vitamina D", "Vitamina B12"],
+      "tags": ["alto_proteina", "gordura_boa", "omega_3", "peixe_gordo", "peixe_conserva", "fonte_calcio", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 lata pequena drenada", "peso_g": 80-90}, {"descricao": "3-4 sardinhas médias", "peso_g": 100}],
+      "observacoes": "Opção acessível e nutritiva. O óleo da conserva pode ser parcialmente drenado se desejar menos gordura."
+    },
+    {
+      "id": "FOOD016",
+      "nome_pt": "Acém Bovino Cozido (ex: carne de panela)",
+      "grupo_alimentar": "Proteína", // Gordura moderada a alta
+      "energia_kcal_100g": 250, // Varia muito
+      "macros_100g": {"proteina_g": 28, "carboidrato_g": 0, "gordura_total_g": 15, "gordura_saturada_g": 6, "fibras_g": 0},
+      "micronutrientes_destaque": ["Ferro Heme", "Zinco", "Vitamina B12", "Selênio"],
+      "tags": ["alto_proteina", "carne_vermelha", "gordura_moderada_alta", "sem_gluten", "sem_lactose", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 pedaço médio cozido", "peso_g": 120}, {"descricao": "1 xícara desfiado", "peso_g": 140}],
+      "observacoes": "Corte mais gordo, ideal para cozimentos longos. Retirar gordura excessiva visível pode ser opção."
+    },
+     {
+      "id": "FOOD004", // ID Original mantido para consistência
+      "nome_pt": "Ovo de Galinha Inteiro (Cozido, Frito, Mexido)",
+      "grupo_alimentar": "Proteína e Gordura",
+      "energia_kcal_100g": 155, // Cozido. Frito/Mexido pode adicionar kcal da gordura usada.
+      "macros_100g": {"proteina_g": 13, "carboidrato_g": 1.1, "gordura_total_g": 11, "gordura_saturada_g": 3.3, "fibras_g": 0},
+      "micronutrientes_destaque": ["Vitamina B12", "Vitamina D", "Vitamina A", "Riboflavina (B2)", "Selênio", "Colina"],
+      "tags": ["alto_proteina", "gordura_boa", "sem_gluten", "sem_lactose", "vegetariano_ovolacto", "paleo", "keto", "versatil"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade pequena (P)", "peso_g": 45}, {"descricao": "1 unidade média (M)", "peso_g": 50}, {"descricao": "1 unidade grande (G)", "peso_g": 55}],
+      "observacoes": "Alimento completo. Método de preparo influencia calorias (fritura adiciona gordura)."
+    },
+
+    // PROTEÍNAS VEGETAIS
+    {
+      "id": "FOOD017",
+      "nome_pt": "Tofu Firme",
+      "grupo_alimentar": "Proteína Vegetal",
+      "energia_kcal_100g": 76,
+      "macros_100g": {"proteina_g": 8, "carboidrato_g": 2, "gordura_total_g": 4.8, "gordura_saturada_g": 0.7, "fibras_g": 1},
+      "micronutrientes_destaque": ["Cálcio (se fortificado)", "Manganês", "Selênio", "Fósforo", "Ferro"],
+      "tags": ["proteina_vegetal", "soja", "vegano", "vegetariano", "sem_lactose", "baixo_carb", "versatil"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia grossa", "peso_g": 100}, {"descricao": "1/2 xícara em cubos", "peso_g": 120}],
+      "observacoes": "Absorve bem temperos. Ótimo grelhado, assado, mexido."
+    },
+    {
+      "id": "FOOD018",
+      "nome_pt": "Lentilha Cozida",
+      "grupo_alimentar": "Leguminosa (Proteína e Carboidrato)",
+      "energia_kcal_100g": 116,
+      "macros_100g": {"proteina_g": 9, "carboidrato_g": 20, "gordura_total_g": 0.4, "gordura_saturada_g": 0.1, "fibras_g": 8},
+      "micronutrientes_destaque": ["Folato (B9)", "Ferro", "Manganês", "Fósforo", "Tiamina (B1)"],
+      "tags": ["proteina_vegetal", "carboidrato_complexo", "alto_fibra", "leguminosa", "vegano", "vegetariano", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 concha média", "peso_g": 120}, {"descricao": "1 xícara (chá) cozida", "peso_g": 200}],
+      "observacoes": "Cozinha rapidamente. Ótima em sopas, saladas, como acompanhamento."
+    },
+    {
+      "id": "FOOD019",
+      "nome_pt": "Grão-de-bico Cozido",
+      "grupo_alimentar": "Leguminosa (Proteína e Carboidrato)",
+      "energia_kcal_100g": 164,
+      "macros_100g": {"proteina_g": 8.9, "carboidrato_g": 27.4, "gordura_total_g": 2.6, "gordura_saturada_g": 0.3, "fibras_g": 7.6},
+      "micronutrientes_destaque": ["Folato (B9)", "Manganês", "Cobre", "Ferro", "Fósforo"],
+      "tags": ["proteina_vegetal", "carboidrato_complexo", "alto_fibra", "leguminosa", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "versatil"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 concha média", "peso_g": 110}, {"descricao": "1 xícara (chá) cozido", "peso_g": 165}],
+      "observacoes": "Base para homus, falafel. Bom em saladas, sopas, assado."
+    },
+    {
+      "id": "FOOD020",
+      "nome_pt": "Feijão Carioca Cozido",
+      "grupo_alimentar": "Leguminosa (Proteína e Carboidrato)",
+      "energia_kcal_100g": 135,
+      "macros_100g": {"proteina_g": 8.5, "carboidrato_g": 24, "gordura_total_g": 0.5, "gordura_saturada_g": 0.1, "fibras_g": 7.7},
+      "micronutrientes_destaque": ["Folato (B9)", "Ferro", "Magnésio", "Fósforo", "Potássio"],
+      "tags": ["proteina_vegetal", "carboidrato_complexo", "alto_fibra", "leguminosa", "base_brasileira", "vegano", "vegetariano", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 concha média", "peso_g": 100}, {"descricao": "1 xícara (chá) cozido", "peso_g": 170}],
+      "observacoes": "Clássico brasileiro. Combinado com arroz, forma proteína de alto valor biológico."
+    },
+    {
+      "id": "FOOD021",
+      "nome_pt": "Feijão Preto Cozido",
+      "grupo_alimentar": "Leguminosa (Proteína e Carboidrato)",
+      "energia_kcal_100g": 132,
+      "macros_100g": {"proteina_g": 8.9, "carboidrato_g": 23.7, "gordura_total_g": 0.5, "gordura_saturada_g": 0.1, "fibras_g": 8.8}, // Fibras ligeiramente maiores
+      "micronutrientes_destaque": ["Folato (B9)", "Ferro", "Magnésio", "Manganês", "Tiamina (B1)"],
+      "tags": ["proteina_vegetal", "carboidrato_complexo", "alto_fibra", "leguminosa", "antioxidantes", "vegano", "vegetariano", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 concha média", "peso_g": 100}, {"descricao": "1 xícara (chá) cozido", "peso_g": 172}],
+      "observacoes": "Rico em antocianinas (pigmento escuro). Base da feijoada."
+    },
+    {
+      "id": "FOOD022",
+      "nome_pt": "Edamame Cozido (Soja Verde na Vagem)",
+      "grupo_alimentar": "Leguminosa (Proteína e Gordura)",
+      "energia_kcal_100g": 121,
+      "macros_100g": {"proteina_g": 11.9, "carboidrato_g": 8.9, "gordura_total_g": 5.2, "gordura_saturada_g": 0.6, "fibras_g": 5.2},
+      "micronutrientes_destaque": ["Folato (B9)", "Vitamina K", "Manganês", "Fósforo"],
+      "tags": ["proteina_vegetal", "gordura_boa", "alto_fibra", "soja", "leguminosa", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "lanche_saudavel"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) cozido (grãos)", "peso_g": 155}],
+      "observacoes": "Comum na culinária asiática. Cozinhar no vapor ou ferver. Comer apenas os grãos."
+    },
+     {
+      "id": "FOOD023",
+      "nome_pt": "Tempeh",
+      "grupo_alimentar": "Proteína Vegetal Fermentada",
+      "energia_kcal_100g": 192,
+      "macros_100g": {"proteina_g": 20.3, "carboidrato_g": 7.6, "gordura_total_g": 10.8, "gordura_saturada_g": 2.2, "fibras_g": 0}, // Fibra varia
+      "micronutrientes_destaque": ["Manganês", "Cobre", "Fósforo", "Magnésio", "Riboflavina (B2)"],
+      "tags": ["proteina_vegetal", "soja", "fermentado", "probiotico_potencial", "vegano", "vegetariano", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia", "peso_g": 80-100}],
+      "observacoes": "Soja fermentada, textura firme. Mais fácil digestão para alguns. Sabor mais pronunciado que tofu."
+    },
+     {
+      "id": "FOOD024",
+      "nome_pt": "Proteína de Soja Texturizada (PTS) Grossa Hidratada",
+      "grupo_alimentar": "Proteína Vegetal",
+      "energia_kcal_100g": 120, // Valor após hidratar e cozinhar, varia muito
+      "macros_100g": {"proteina_g": 16, "carboidrato_g": 9, "gordura_total_g": 1, "gordura_saturada_g": 0.2, "fibras_g": 6}, // Varia muito
+      "micronutrientes_destaque": ["Ferro", "Magnésio", "Fósforo"],
+      "tags": ["alto_proteina", "proteina_vegetal", "soja", "processado", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "baixo_custo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) hidratada e refogada", "peso_g": 150}],
+      "observacoes": "Muito versátil para substituir carne moída. Hidratar bem e temperar."
+    },
+
+    // CARBOIDRATOS COMPLEXOS / INTEGRAIS
+    {
+      "id": "FOOD003", // ID Original
+      "nome_pt": "Arroz Integral Cozido",
+      "grupo_alimentar": "Carboidrato Complexo Integral",
+      "energia_kcal_100g": 111,
+      "macros_100g": {"proteina_g": 2.6, "carboidrato_g": 23, "gordura_total_g": 0.9, "gordura_saturada_g": 0.2, "fibras_g": 1.8},
+      "micronutrientes_destaque": ["Manganês", "Magnésio", "Fósforo", "Selênio"],
+      "tags": ["carboidrato_complexo", "alto_fibra", "grao_integral", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "energia_lenta"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de servir (arroz)", "peso_g": 55}, {"descricao": "1 xícara (chá) cozido", "peso_g": 170}],
+      "observacoes": "Liberação de energia mais lenta, maior saciedade."
+    },
+    {
+      "id": "FOOD025",
+      "nome_pt": "Batata Doce Cozida ou Assada (com casca)",
+      "grupo_alimentar": "Carboidrato Complexo",
+      "energia_kcal_100g": 90,
+      "macros_100g": {"proteina_g": 2, "carboidrato_g": 21, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 3.3},
+      "micronutrientes_destaque": ["Vitamina A (Betacaroteno)", "Vitamina C", "Manganês", "Potássio"],
+      "tags": ["carboidrato_complexo", "alto_fibra", "vitamina_a", "tuberculo", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "paleo", "energia_lenta"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade pequena", "peso_g": 120}, {"descricao": "1 unidade média", "peso_g": 180}, {"descricao": "1 xícara em cubos", "peso_g": 150}],
+      "observacoes": "Excelente fonte de carboidrato para praticantes de atividade física."
+    },
+    {
+      "id": "FOOD026",
+      "nome_pt": "Aveia em Flocos Crua",
+      "grupo_alimentar": "Carboidrato Complexo Integral",
+      "energia_kcal_100g": 389,
+      "macros_100g": {"proteina_g": 16.9, "carboidrato_g": 66.3, "gordura_total_g": 6.9, "gordura_saturada_g": 1.2, "fibras_g": 10.6}, // Rica em Beta-glucana
+      "micronutrientes_destaque": ["Manganês", "Fósforo", "Magnésio", "Ferro", "Zinco", "Tiamina (B1)"],
+      "tags": ["carboidrato_complexo", "alto_fibra", "beta_glucana", "grao_integral", "vegano", "vegetariano", "sem_lactose", "saude_coracao", "energia_lenta", "versatil"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de sopa", "peso_g": 10}, {"descricao": "1/2 xícara (chá)", "peso_g": 40}],
+      "observacoes": "Pode conter glúten por contaminação cruzada; escolher versão certificada se necessário. Ótima para mingau, vitaminas, panquecas."
+    },
+    {
+      "id": "FOOD027",
+      "nome_pt": "Quinoa Cozida",
+      "grupo_alimentar": "Pseudocereal (Carboidrato e Proteína)",
+      "energia_kcal_100g": 120,
+      "macros_100g": {"proteina_g": 4.4, "carboidrato_g": 21.3, "gordura_total_g": 1.9, "gordura_saturada_g": 0.2, "fibras_g": 2.8},
+      "micronutrientes_destaque": ["Manganês", "Magnésio", "Fósforo", "Folato (B9)", "Cobre"],
+      "tags": ["proteina_completa_vegetal", "carboidrato_complexo", "alto_fibra", "pseudocereal", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "versatil"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) cozida", "peso_g": 185}, {"descricao": "4 colheres de sopa", "peso_g": 70}],
+      "observacoes": "Considerada uma proteína completa (contém todos aminoácidos essenciais). Ótima em saladas, como substituto do arroz."
+    },
+    {
+      "id": "FOOD028",
+      "nome_pt": "Mandioca Cozida (Aipim, Macaxeira)",
+      "grupo_alimentar": "Carboidrato Complexo",
+      "energia_kcal_100g": 160,
+      "macros_100g": {"proteina_g": 1.4, "carboidrato_g": 38, "gordura_total_g": 0.3, "gordura_saturada_g": 0.1, "fibras_g": 1.8},
+      "micronutrientes_destaque": ["Vitamina C", "Tiamina (B1)", "Manganês", "Potássio"],
+      "tags": ["carboidrato_complexo", "tuberculo", "energia", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 pedaço médio", "peso_g": 100}, {"descricao": "1 xícara em cubos", "peso_g": 150}],
+      "observacoes": "Fonte densa de energia. Evitar consumo da variedade 'brava' crua (tóxica)."
+    },
+     {
+      "id": "FOOD029",
+      "nome_pt": "Pão Integral (100% Trigo Integral)",
+      "grupo_alimentar": "Carboidrato Complexo Integral",
+      "energia_kcal_100g": 265, // Varia por marca
+      "macros_100g": {"proteina_g": 13, "carboidrato_g": 41, "gordura_total_g": 4.2, "gordura_saturada_g": 0.8, "fibras_g": 7}, // Varia
+      "micronutrientes_destaque": ["Manganês", "Selênio", "Niacina (B3)", "Magnésio"],
+      "tags": ["carboidrato_complexo", "alto_fibra", "grao_integral", "vegetariano", "vegano (verificar)", "contem_gluten", "sem_lactose (verificar)"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia", "peso_g": 30-40}, {"descricao": "2 fatias", "peso_g": 60-80}],
+      "observacoes": "Verificar rótulo para garantir que é 100% integral e sem adição excessiva de açúcar/gordura."
+    },
+    {
+      "id": "FOOD030",
+      "nome_pt": "Macarrão Integral Cozido",
+      "grupo_alimentar": "Carboidrato Complexo Integral",
+      "energia_kcal_100g": 145, // Cozido al dente
+      "macros_100g": {"proteina_g": 5.8, "carboidrato_g": 30, "gordura_total_g": 0.9, "gordura_saturada_g": 0.2, "fibras_g": 3.5},
+      "micronutrientes_destaque": ["Manganês", "Selênio", "Fósforo"],
+      "tags": ["carboidrato_complexo", "alto_fibra", "grao_integral", "vegetariano", "vegano (verificar)", "contem_gluten", "sem_lactose (verificar)"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) cozido", "peso_g": 140}, {"descricao": "1 pegador", "peso_g": 100-120}],
+      "observacoes": "Alternativa com mais fibras ao macarrão branco."
+    },
+     {
+      "id": "FOOD031",
+      "nome_pt": "Batata Inglesa Cozida (com casca)",
+      "grupo_alimentar": "Carboidrato Complexo",
+      "energia_kcal_100g": 87,
+      "macros_100g": {"proteina_g": 1.9, "carboidrato_g": 20, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 1.8},
+      "micronutrientes_destaque": ["Potássio", "Vitamina C", "Vitamina B6"],
+      "tags": ["carboidrato", "tuberculo", "potassio", "vegano", "vegetariano", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade pequena", "peso_g": 100}, {"descricao": "1 unidade média", "peso_g": 170}],
+      "observacoes": "Versátil. Cozinhar com casca preserva mais nutrientes. Índice glicêmico pode variar com preparo (cozida < assada < purê)."
+    },
+     {
+      "id": "FOOD032",
+      "nome_pt": "Milho Verde Cozido (espiga ou lata)",
+      "grupo_alimentar": "Carboidrato (Grão/Vegetal Amiláceo)",
+      "energia_kcal_100g": 96,
+      "macros_100g": {"proteina_g": 3.4, "carboidrato_g": 21, "gordura_total_g": 1.5, "gordura_saturada_g": 0.2, "fibras_g": 2.4},
+      "micronutrientes_destaque": ["Folato (B9)", "Tiamina (B1)", "Fósforo", "Magnésio"],
+      "tags": ["carboidrato", "grao", "vegetal_amilaceo", "fibra_moderada", "vegano", "vegetariano", "sem_gluten", "sem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 espiga média", "peso_g": 150 (grãos)}, {"descricao": "1/2 lata drenada", "peso_g": 100}, {"descricao": "3 colheres de sopa", "peso_g": 60}],
+      "observacoes": "Base de muitas preparações. Versão em lata pode ter adição de sal/açúcar."
+    },
+
+    // CARBOIDRATOS SIMPLES / REFINADOS (Usar com Moderação)
+    {
+      "id": "FOOD002", // ID Original
+      "nome_pt": "Arroz Branco Cozido",
+      "grupo_alimentar": "Carboidrato Refinado",
+      "energia_kcal_100g": 130,
+      "macros_100g": {"proteina_g": 2.7, "carboidrato_g": 28, "gordura_total_g": 0.3, "gordura_saturada_g": 0.1, "fibras_g": 0.4},
+      "micronutrientes_destaque": ["Manganês", "(Enriquecido?)"],
+      "tags": ["carboidrato", "rapida_digestao", "baixo_fibra", "vegano", "vegetariano", "sem_gluten", "sem_lactose", "consumo_moderado", "pos_treino_potencial"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de servir", "peso_g": 50}, {"descricao": "1 xícara cozido", "peso_g": 160}],
+      "observacoes": "Energia rápida, baixo valor nutricional comparado ao integral."
+    },
+     {
+      "id": "FOOD033",
+      "nome_pt": "Pão Francês (tipo Cacetinho)",
+      "grupo_alimentar": "Carboidrato Refinado",
+      "energia_kcal_100g": 300, // Varia
+      "macros_100g": {"proteina_g": 9, "carboidrato_g": 59, "gordura_total_g": 3, "gordura_saturada_g": 0.7, "fibras_g": 2.7}, // Varia
+      "micronutrientes_destaque": ["Selênio", "(Enriquecido com Ferro, Ácido Fólico)"],
+      "tags": ["carboidrato", "rapida_digestao", "baixo_fibra", "contem_gluten", "vegetariano", "vegano (verificar)", "sem_lactose (verificar)", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade", "peso_g": 50}],
+      "observacoes": "Comum no café da manhã brasileiro. Pobre em fibras e nutrientes."
+    },
+     {
+      "id": "FOOD034",
+      "nome_pt": "Macarrão Branco Cozido",
+      "grupo_alimentar": "Carboidrato Refinado",
+      "energia_kcal_100g": 158, // Cozido
+      "macros_100g": {"proteina_g": 5.8, "carboidrato_g": 31, "gordura_total_g": 0.9, "gordura_saturada_g": 0.2, "fibras_g": 1.8},
+      "micronutrientes_destaque": ["Selênio", "(Enriquecido?)"],
+      "tags": ["carboidrato", "rapida_digestao", "baixo_fibra", "contem_gluten", "vegetariano", "vegano (verificar)", "sem_lactose (verificar)", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara cozido", "peso_g": 140}, {"descricao": "1 pegador", "peso_g": 100-120}],
+      "observacoes": "Fonte de energia rápida, mas menos nutritivo que o integral."
+    },
+    {
+      "id": "FOOD035",
+      "nome_pt": "Tapioca (Goma Hidratada preparada na frigideira)",
+      "grupo_alimentar": "Carboidrato Refinado",
+      "energia_kcal_100g": 280, // Varia com recheio
+      "macros_100g": {"proteina_g": 0.5, "carboidrato_g": 68, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 0.5}, // Só a goma
+      "micronutrientes_destaque": ["Nenhum significativo"],
+      "tags": ["carboidrato", "rapida_digestao", "baixo_fibra", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 disco médio (3 col sopa de goma)", "peso_g": 80-100 (só a massa)}],
+      "observacoes": "Índice glicêmico alto. Nutritividade depende totalmente do recheio. Adicionar fibras (chia, aveia) na massa pode ajudar."
+    },
+     {
+      "id": "FOOD036",
+      "nome_pt": "Açúcar Branco Refinado",
+      "grupo_alimentar": "Açúcar Simples",
+      "energia_kcal_100g": 387,
+      "macros_100g": {"proteina_g": 0, "carboidrato_g": 100, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0},
+      "micronutrientes_destaque": ["Nenhum"],
+      "tags": ["carboidrato_simples", "caloria_vazia", "rapida_absorcao", "adocante", "evitar_excesso"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá", "peso_g": 4}, {"descricao": "1 colher de sopa", "peso_g": 12}],
+      "observacoes": "Fornece apenas calorias (energia), sem nutrientes. Limitar o consumo."
+    },
+     {
+      "id": "FOOD037",
+      "nome_pt": "Mel de Abelha",
+      "grupo_alimentar": "Açúcar Simples",
+      "energia_kcal_100g": 304,
+      "macros_100g": {"proteina_g": 0.3, "carboidrato_g": 82, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0.2}, // Predominantemente frutose e glicose
+      "micronutrientes_destaque": ["Pequenas quantidades de antioxidantes, minerais"],
+      "tags": ["carboidrato_simples", "rapida_absorcao", "adocante_natural", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá", "peso_g": 7}, {"descricao": "1 colher de sopa", "peso_g": 21}],
+      "observacoes": "Ainda é uma forma de açúcar, usar com moderação. Não recomendado para bebês < 1 ano (risco de botulismo)."
+    },
+
+    // FRUTAS
+    {
+      "id": "FOOD038",
+      "nome_pt": "Banana Prata",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 98,
+      "macros_100g": {"proteina_g": 1.3, "carboidrato_g": 26, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 2},
+      "micronutrientes_destaque": ["Potássio", "Vitamina B6", "Vitamina C"],
+      "tags": ["fruta", "carboidrato", "potassio", "energia_rapida", "pre_treino_potencial", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 90-110}],
+      "observacoes": "Ótima fonte de energia rápida e potássio."
+    },
+    {
+      "id": "FOOD039",
+      "nome_pt": "Maçã Fuji (com casca)",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 52,
+      "macros_100g": {"proteina_g": 0.3, "carboidrato_g": 13.8, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 2.4}, // Rica em pectina
+      "micronutrientes_destaque": ["Vitamina C", "Potássio", "Fibras Solúveis"],
+      "tags": ["fruta", "carboidrato", "alto_fibra", "lanche_saudavel", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade pequena", "peso_g": 130}, {"descricao": "1 unidade média", "peso_g": 180}],
+      "observacoes": "Comer com casca aumenta o teor de fibras. Boa para saciedade."
+    },
+    {
+      "id": "FOOD040",
+      "nome_pt": "Mamão Papaia",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 43,
+      "macros_100g": {"proteina_g": 0.5, "carboidrato_g": 11, "gordura_total_g": 0.3, "gordura_saturada_g": 0.1, "fibras_g": 1.7}, // Contém Papaína
+      "micronutrientes_destaque": ["Vitamina C", "Vitamina A", "Folato (B9)", "Potássio"],
+      "tags": ["fruta", "carboidrato", "vitamina_c", "vitamina_a", "digestao_facil", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia fina", "peso_g": 100}, {"descricao": "1/2 unidade pequena", "peso_g": 150}],
+      "observacoes": "Papaína pode auxiliar na digestão de proteínas."
+    },
+    {
+      "id": "FOOD041",
+      "nome_pt": "Laranja Pera (polpa)",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 47,
+      "macros_100g": {"proteina_g": 0.9, "carboidrato_g": 11.8, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 2.4},
+      "micronutrientes_destaque": ["Vitamina C", "Folato (B9)", "Potássio", "Hesperidina (antioxidante)"],
+      "tags": ["fruta", "carboidrato", "vitamina_c", "alto_fibra (com bagaço)", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 150-180 (com casca)}],
+      "observacoes": "Consumir a fruta inteira é melhor que o suco devido às fibras."
+    },
+    {
+      "id": "FOOD042",
+      "nome_pt": "Manga Palmer",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 60,
+      "macros_100g": {"proteina_g": 0.8, "carboidrato_g": 15, "gordura_total_g": 0.4, "gordura_saturada_g": 0.1, "fibras_g": 1.6},
+      "micronutrientes_destaque": ["Vitamina C", "Vitamina A", "Folato (B9)", "Cobre"],
+      "tags": ["fruta", "carboidrato", "vitamina_c", "vitamina_a", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia", "peso_g": 100}, {"descricao": "1/2 unidade média", "peso_g": 170}],
+      "observacoes": "Doce e saborosa. Moderar porção devido ao teor de açúcar."
+    },
+     {
+      "id": "FOOD043",
+      "nome_pt": "Morango Fresco",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 32,
+      "macros_100g": {"proteina_g": 0.7, "carboidrato_g": 7.7, "gordura_total_g": 0.3, "gordura_saturada_g": 0, "fibras_g": 2},
+      "micronutrientes_destaque": ["Vitamina C", "Manganês", "Folato (B9)", "Antocianinas (antioxidante)"],
+      "tags": ["fruta", "baixo_carb", "baixa_caloria", "alto_fibra", "vitamina_c", "antioxidantes", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "keto (em pequenas qtd)"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá)", "peso_g": 150}, {"descricao": "8 unidades médias", "peso_g": 100}],
+      "observacoes": "Ótima opção de fruta com menos carboidrato/caloria."
+    },
+    {
+      "id": "FOOD044",
+      "nome_pt": "Melancia",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 30,
+      "macros_100g": {"proteina_g": 0.6, "carboidrato_g": 7.6, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 0.4}, // Baixa fibra
+      "micronutrientes_destaque": ["Licopeno (antioxidante)", "Vitamina C", "Vitamina A", "Potássio"],
+      "tags": ["fruta", "baixa_caloria", "hidratante", "licopeno", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia média", "peso_g": 280}, {"descricao": "1 xícara em cubos", "peso_g": 150}],
+      "observacoes": "Excelente para hidratação devido ao alto teor de água."
+    },
+     {
+      "id": "FOOD045",
+      "nome_pt": "Abacaxi Pérola",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 50,
+      "macros_100g": {"proteina_g": 0.5, "carboidrato_g": 13, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 1.4}, // Contém Bromelina
+      "micronutrientes_destaque": ["Vitamina C", "Manganês", "Cobre"],
+      "tags": ["fruta", "carboidrato", "vitamina_c", "digestivo_potencial", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia média", "peso_g": 100}, {"descricao": "1 xícara em cubos", "peso_g": 165}],
+      "observacoes": "Bromelina pode auxiliar na digestão. Sabor ácido e doce."
+    },
+     {
+      "id": "FOOD046",
+      "nome_pt": "Uva Thompson (sem semente)",
+      "grupo_alimentar": "Fruta",
+      "energia_kcal_100g": 69,
+      "macros_100g": {"proteina_g": 0.7, "carboidrato_g": 18, "gordura_total_g": 0.2, "gordura_saturada_g": 0.1, "fibras_g": 0.9},
+      "micronutrientes_destaque": ["Vitamina K", "Cobre", "Resveratrol (antioxidante)"],
+      "tags": ["fruta", "carboidrato", "energia_rapida", "antioxidantes", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 cacho pequeno", "peso_g": 150}, {"descricao": "1 xícara", "peso_g": 100}],
+      "observacoes": "Fonte rápida de energia. Consumir com moderação devido ao açúcar."
+    },
+     {
+      "id": "FOOD047",
+      "nome_pt": "Açaí Puro Congelado (sem xarope/açúcar)",
+      "grupo_alimentar": "Fruta (rica em gordura)",
+      "energia_kcal_100g": 60-80, // Varia
+      "macros_100g": {"proteina_g": 1, "carboidrato_g": 4, "gordura_total_g": 5, "gordura_saturada_g": 1.5, "fibras_g": 3}, // Gorduras mono e poliinsaturadas
+      "micronutrientes_destaque": ["Antocianinas (antioxidante)", "Manganês", "Vitamina E"],
+      "tags": ["fruta", "gordura_boa", "antioxidantes", "baixo_carb_natural", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 polpa congelada", "peso_g": 100}],
+      "observacoes": "O açaí tradicional vendido em lanchonetes geralmente contém MUITO xarope de guaraná/açúcar, elevando drasticamente calorias e carboidratos. Priorizar a polpa pura."
+    },
+
+    // VEGETAIS / HORTALIÇAS
+    {
+      "id": "FOOD048",
+      "nome_pt": "Alface Crespa Crua",
+      "grupo_alimentar": "Vegetal Folhoso",
+      "energia_kcal_100g": 15,
+      "macros_100g": {"proteina_g": 1.4, "carboidrato_g": 2.9, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 1.3},
+      "micronutrientes_destaque": ["Vitamina K", "Vitamina A", "Folato (B9)"],
+      "tags": ["vegetal", "folhoso", "muito_baixa_caloria", "fibra", "salada", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 prato fundo cheio", "peso_g": 80-100}, {"descricao": "5 folhas grandes", "peso_g": 50}],
+      "observacoes": "Base para saladas. Baixíssimo em calorias."
+    },
+    {
+      "id": "FOOD049",
+      "nome_pt": "Espinafre Cozido",
+      "grupo_alimentar": "Vegetal Folhoso Escuro",
+      "energia_kcal_100g": 23,
+      "macros_100g": {"proteina_g": 3, "carboidrato_g": 3.6, "gordura_total_g": 0.3, "gordura_saturada_g": 0, "fibras_g": 2.4},
+      "micronutrientes_destaque": ["Vitamina K", "Vitamina A", "Manganês", "Folato (B9)", "Ferro (não-heme)"],
+      "tags": ["vegetal", "folhoso_escuro", "baixa_caloria", "alto_nutriente", "vitamina_k", "vitamina_a", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) cozido", "peso_g": 180}, {"descricao": "3 colheres de sopa refogado", "peso_g": 90}],
+      "observacoes": "Cozinhar reduz volume e pode aumentar biodisponibilidade de alguns nutrientes, mas perde parte da Vit C."
+    },
+    {
+      "id": "FOOD050",
+      "nome_pt": "Brócolis Cozido (vapor ou água)",
+      "grupo_alimentar": "Vegetal Crucifero",
+      "energia_kcal_100g": 55,
+      "macros_100g": {"proteina_g": 3.7, "carboidrato_g": 11.2, "gordura_total_g": 0.6, "gordura_saturada_g": 0.1, "fibras_g": 5.1},
+      "micronutrientes_destaque": ["Vitamina C", "Vitamina K", "Folato (B9)", "Potássio"],
+      "tags": ["vegetal", "crucifero", "baixa_caloria", "alto_fibra", "vitamina_c", "vitamina_k", "anticancerigeno_potencial", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) cozido picado", "peso_g": 150}, {"descricao": "5-6 floretes médios", "peso_g": 100}],
+      "observacoes": "Cozinhar no vapor preserva mais nutrientes que ferver."
+    },
+     {
+      "id": "FOOD051",
+      "nome_pt": "Couve-Flor Cozida",
+      "grupo_alimentar": "Vegetal Crucifero",
+      "energia_kcal_100g": 25,
+      "macros_100g": {"proteina_g": 1.9, "carboidrato_g": 5, "gordura_total_g": 0.3, "gordura_saturada_g": 0.1, "fibras_g": 2},
+      "micronutrientes_destaque": ["Vitamina C", "Vitamina K", "Folato (B9)", "Potássio"],
+      "tags": ["vegetal", "crucifero", "baixa_caloria", "baixo_carb", "fibra", "versatil", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara (chá) cozido picado", "peso_g": 125}, {"descricao": "5-6 floretes médios", "peso_g": 100}],
+      "observacoes": "Muito versátil, usada como substituto de arroz ou purê em dietas low-carb."
+    },
+     {
+      "id": "FOOD052",
+      "nome_pt": "Cenoura Crua",
+      "grupo_alimentar": "Raiz",
+      "energia_kcal_100g": 41,
+      "macros_100g": {"proteina_g": 0.9, "carboidrato_g": 9.6, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 2.8},
+      "micronutrientes_destaque": ["Vitamina A (Betacaroteno)", "Vitamina K", "Potássio", "Vitamina B6"],
+      "tags": ["vegetal", "raiz", "baixa_caloria", "vitamina_a", "fibra", "lanche_saudavel", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 60}, {"descricao": "1 xícara ralada", "peso_g": 110}],
+      "observacoes": "Cozinhar pode aumentar a biodisponibilidade do betacaroteno."
+    },
+    {
+      "id": "FOOD053",
+      "nome_pt": "Tomate Comum Cru",
+      "grupo_alimentar": "Fruto (usado como vegetal)",
+      "energia_kcal_100g": 18,
+      "macros_100g": {"proteina_g": 0.9, "carboidrato_g": 3.9, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 1.2},
+      "micronutrientes_destaque": ["Vitamina C", "Potássio", "Licopeno (antioxidante)", "Vitamina K"],
+      "tags": ["vegetal", "fruto", "baixa_caloria", "licopeno", "vitamina_c", "salada", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 120}, {"descricao": "1/2 xícara picado", "peso_g": 90}],
+      "observacoes": "Licopeno é melhor absorvido quando tomate é cozido com um pouco de gordura."
+    },
+     {
+      "id": "FOOD054",
+      "nome_pt": "Pepino Japonês Cru (com casca)",
+      "grupo_alimentar": "Fruto (usado como vegetal)",
+      "energia_kcal_100g": 15,
+      "macros_100g": {"proteina_g": 0.7, "carboidrato_g": 3.6, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 0.5},
+      "micronutrientes_destaque": ["Vitamina K", "Potássio", "Vitamina C"],
+      "tags": ["vegetal", "fruto", "muito_baixa_caloria", "hidratante", "salada", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade pequena", "peso_g": 150}, {"descricao": "1 xícara fatiado", "peso_g": 100}],
+      "observacoes": "Muito rico em água, ótimo para saladas refrescantes."
+    },
+    {
+      "id": "FOOD055",
+      "nome_pt": "Abobrinha Italiana Cozida",
+      "grupo_alimentar": "Fruto (usado como vegetal)",
+      "energia_kcal_100g": 17,
+      "macros_100g": {"proteina_g": 1.2, "carboidrato_g": 3.1, "gordura_total_g": 0.3, "gordura_saturada_g": 0.1, "fibras_g": 1},
+      "micronutrientes_destaque": ["Vitamina C", "Potássio", "Vitamina B6", "Manganês"],
+      "tags": ["vegetal", "fruto", "baixa_caloria", "baixo_carb", "versatil", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade pequena", "peso_g": 150}, {"descricao": "1 xícara cozida fatiada", "peso_g": 180}],
+      "observacoes": "Versátil, pode ser usada refogada, assada, grelhada, em sopas, ou como 'macarrão' low-carb."
+    },
+    {
+      "id": "FOOD056",
+      "nome_pt": "Berinjela Cozida",
+      "grupo_alimentar": "Fruto (usado como vegetal)",
+      "energia_kcal_100g": 35, // Cozida sem gordura
+      "macros_100g": {"proteina_g": 0.8, "carboidrato_g": 8.7, "gordura_total_g": 0.2, "gordura_saturada_g": 0, "fibras_g": 2.5},
+      "micronutrientes_destaque": ["Manganês", "Folato (B9)", "Potássio", "Vitamina K"],
+      "tags": ["vegetal", "fruto", "baixa_caloria", "fibra", "versatil", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara em cubos cozida", "peso_g": 100}, {"descricao": "1/2 unidade média", "peso_g": 200}],
+      "observacoes": "Absorve muita gordura no preparo, cuidado com frituras ou excesso de óleo."
+    },
+    {
+      "id": "FOOD057",
+      "nome_pt": "Pimentão Vermelho Cru",
+      "grupo_alimentar": "Fruto (usado como vegetal)",
+      "energia_kcal_100g": 31,
+      "macros_100g": {"proteina_g": 1, "carboidrato_g": 6, "gordura_total_g": 0.3, "gordura_saturada_g": 0.1, "fibras_g": 2.1},
+      "micronutrientes_destaque": ["Vitamina C (altíssimo)", "Vitamina A", "Vitamina B6", "Vitamina E"],
+      "tags": ["vegetal", "fruto", "baixa_caloria", "vitamina_c", "antioxidante", "salada", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 150}, {"descricao": "1 xícara picado", "peso_g": 100}],
+      "observacoes": "Pimentão vermelho é o mais rico em Vitamina C e A entre as cores. Ótimo cru em saladas ou cozido."
+    },
+    {
+      "id": "FOOD058",
+      "nome_pt": "Cebola Crua",
+      "grupo_alimentar": "Bulbo",
+      "energia_kcal_100g": 40,
+      "macros_100g": {"proteina_g": 1.1, "carboidrato_g": 9.3, "gordura_total_g": 0.1, "gordura_saturada_g": 0, "fibras_g": 1.7},
+      "micronutrientes_destaque": ["Vitamina C", "Potássio", "Manganês", "Quercetina (antioxidante)"],
+      "tags": ["vegetal", "bulbo", "baixa_caloria", "tempero", "antioxidante", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 110}, {"descricao": "1/2 xícara picada", "peso_g": 80}],
+      "observacoes": "Base para muitos refogados e temperos. Crua em saladas."
+    },
+     {
+      "id": "FOOD059",
+      "nome_pt": "Alho Cru",
+      "grupo_alimentar": "Bulbo",
+      "energia_kcal_100g": 149, // Densidade calórica maior, mas usa-se pouco
+      "macros_100g": {"proteina_g": 6.4, "carboidrato_g": 33, "gordura_total_g": 0.5, "gordura_saturada_g": 0.1, "fibras_g": 2.1},
+      "micronutrientes_destaque": ["Manganês", "Vitamina B6", "Vitamina C", "Selênio", "Alicina (composto bioativo)"],
+      "tags": ["vegetal", "bulbo", "tempero", "composto_bioativo", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 dente", "peso_g": 3-5}],
+      "observacoes": "Fundamental na culinária. Propriedades medicinais potenciais associadas à alicina (liberada ao cortar/amassar)."
+    },
+
+    // GORDURAS SAUDÁVEIS (OLEAGINOSAS, SEMENTES, ÓLEOS)
+    {
+      "id": "FOOD005", // ID Original
+      "nome_pt": "Abacate Hass",
+      "grupo_alimentar": "Gordura Saudável (Fruta)",
+      "energia_kcal_100g": 160,
+      "macros_100g": {"proteina_g": 2, "carboidrato_g": 9, "gordura_total_g": 15, "gordura_saturada_g": 2.1, "fibras_g": 7},
+      "micronutrientes_destaque": ["Potássio", "Vitamina K", "Vitamina E", "Gorduras Monoinsaturadas"],
+      "tags": ["gordura_boa", "fruta_gordurosa", "alto_fibra", "baixo_carb_net", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1/4 unidade média", "peso_g": 50}, {"descricao": "1/2 unidade média", "peso_g": 100}, {"descricao": "1 colher de sopa amassado", "peso_g": 15}],
+      "observacoes": "Excelente fonte de gorduras monoinsaturadas."
+    },
+    {
+      "id": "FOOD060",
+      "nome_pt": "Azeite de Oliva Extra Virgem",
+      "grupo_alimentar": "Gordura Saudável (Óleo)",
+      "energia_kcal_100g": 884, // Muito denso
+      "macros_100g": {"proteina_g": 0, "carboidrato_g": 0, "gordura_total_g": 100, "gordura_saturada_g": 14, "fibras_g": 0}, // Predominantemente monoinsaturada
+      "micronutrientes_destaque": ["Vitamina E", "Vitamina K", "Gorduras Monoinsaturadas", "Polifenóis (antioxidantes)"],
+      "tags": ["gordura_boa", "oleo", "monoinsaturada", "antioxidante", "tempero", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá", "peso_g": 5}, {"descricao": "1 colher de sopa", "peso_g": 15}],
+      "observacoes": "Ideal para temperar saladas e finalizar pratos. Pode ser usado para cozinhar em fogo baixo/médio (ponto de fumaça médio)."
+    },
+    {
+      "id": "FOOD061",
+      "nome_pt": "Castanha-do-Pará (Castanha do Brasil)",
+      "grupo_alimentar": "Oleaginosa",
+      "energia_kcal_100g": 656,
+      "macros_100g": {"proteina_g": 14.3, "carboidrato_g": 12.3, "gordura_total_g": 66.4, "gordura_saturada_g": 15.1, "fibras_g": 7.5},
+      "micronutrientes_destaque": ["Selênio (altíssimo)", "Magnésio", "Fósforo", "Zinco"],
+      "tags": ["gordura_boa", "oleaginosa", "alto_selenio", "proteina_vegetal", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade média", "peso_g": 4-5}, {"descricao": "Porção recomendada (selênio)", "peso_g": "4-10 (1-2 unidades)"}],
+      "observacoes": "Apenas 1-2 unidades por dia geralmente atendem à necessidade de Selênio. Excesso pode ser tóxico."
+    },
+    {
+      "id": "FOOD062",
+      "nome_pt": "Amêndoas Cruas (sem sal)",
+      "grupo_alimentar": "Oleaginosa",
+      "energia_kcal_100g": 579,
+      "macros_100g": {"proteina_g": 21.2, "carboidrato_g": 21.6, "gordura_total_g": 49.9, "gordura_saturada_g": 3.8, "fibras_g": 12.5},
+      "micronutrientes_destaque": ["Vitamina E", "Magnésio", "Manganês", "Cálcio", "Fibras"],
+      "tags": ["gordura_boa", "oleaginosa", "alto_fibra", "vitamina_e", "magnesio", "proteina_vegetal", "lanche_saudavel", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 punhado pequeno", "peso_g": 25-30 (aprox. 20-24 unidades)}, {"descricao": "10 unidades", "peso_g": 12}],
+      "observacoes": "Ótimo lanche, rico em nutrientes."
+    },
+    {
+      "id": "FOOD063",
+      "nome_pt": "Nozes Cruas (sem casca)",
+      "grupo_alimentar": "Oleaginosa",
+      "energia_kcal_100g": 654,
+      "macros_100g": {"proteina_g": 15.2, "carboidrato_g": 13.7, "gordura_total_g": 65.2, "gordura_saturada_g": 6.1, "fibras_g": 6.7}, // Rica em Ômega-3 ALA
+      "micronutrientes_destaque": ["Ômega-3 (ALA)", "Cobre", "Manganês", "Magnésio", "Fósforo"],
+      "tags": ["gordura_boa", "oleaginosa", "omega_3_ALA", "proteina_vegetal", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 punhado pequeno", "peso_g": 25-30 (aprox. 5-7 metades)}, {"descricao": "4 metades", "peso_g": 15}],
+      "observacoes": "Boa fonte de ômega-3 de origem vegetal (ALA)."
+    },
+     {
+      "id": "FOOD064",
+      "nome_pt": "Semente de Chia",
+      "grupo_alimentar": "Semente",
+      "energia_kcal_100g": 486,
+      "macros_100g": {"proteina_g": 16.5, "carboidrato_g": 42.1, "gordura_total_g": 30.7, "gordura_saturada_g": 3.3, "fibras_g": 34.4}, // Fibra muito alta!
+      "micronutrientes_destaque": ["Fibras", "Ômega-3 (ALA)", "Cálcio", "Manganês", "Fósforo", "Magnésio"],
+      "tags": ["gordura_boa", "semente", "superalimento_potencial", "altissimo_fibra", "omega_3_ALA", "calcio_vegetal", "proteina_vegetal", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá", "peso_g": 5}, {"descricao": "1 colher de sopa", "peso_g": 15}],
+      "observacoes": "Absorve muito líquido, forma um gel. Ótima para pudins, adicionar em iogurtes, vitaminas. Aumentar consumo de água ao consumir."
+    },
+     {
+      "id": "FOOD065",
+      "nome_pt": "Semente de Linhaça Dourada ou Marrom (moída)",
+      "grupo_alimentar": "Semente",
+      "energia_kcal_100g": 534,
+      "macros_100g": {"proteina_g": 18.3, "carboidrato_g": 28.9, "gordura_total_g": 42.2, "gordura_saturada_g": 3.7, "fibras_g": 27.3}, // Rica em lignanas
+      "micronutrientes_destaque": ["Fibras", "Ômega-3 (ALA)", "Magnésio", "Fósforo", "Tiamina (B1)", "Lignanas (fitoestrógeno)"],
+      "tags": ["gordura_boa", "semente", "alto_fibra", "omega_3_ALA", "lignanas", "proteina_vegetal", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá moída", "peso_g": 4}, {"descricao": "1 colher de sopa moída", "peso_g": 12}],
+      "observacoes": "Moer na hora ou comprar moída e guardar na geladeira para melhor absorção do ômega-3 e evitar oxidação."
+    },
+     {
+      "id": "FOOD066",
+      "nome_pt": "Pasta de Amendoim Integral (100% amendoim)",
+      "grupo_alimentar": "Gordura Saudável / Proteína Vegetal",
+      "energia_kcal_100g": 588, // Varia
+      "macros_100g": {"proteina_g": 25, "carboidrato_g": 20, "gordura_total_g": 50, "gordura_saturada_g": 10, "fibras_g": 6}, // Varia
+      "micronutrientes_destaque": ["Niacina (B3)", "Vitamina E", "Magnésio", "Fósforo"],
+      "tags": ["gordura_boa", "proteina_vegetal", "leguminosa", "energia_densa", "sem_gluten", "sem_lactose (verificar)", "vegano (verificar)", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá", "peso_g": 8}, {"descricao": "1 colher de sopa", "peso_g": 25}],
+      "observacoes": "Escolher versões sem adição de açúcar, óleos hidrogenados ou sal. É calórica, moderar porção."
+    },
+     {
+      "id": "FOOD067",
+      "nome_pt": "Óleo de Coco Extra Virgem",
+      "grupo_alimentar": "Gordura (predominantemente Saturada)",
+      "energia_kcal_100g": 862,
+      "macros_100g": {"proteina_g": 0, "carboidrato_g": 0, "gordura_total_g": 100, "gordura_saturada_g": 87, "fibras_g": 0}, // Rico em TCMs
+      "micronutrientes_destaque": ["Triglicerídeos de Cadeia Média (TCM)"],
+      "tags": ["gordura_saturada", "oleo", "tcm", "energia_rapida_potencial", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de chá", "peso_g": 5}, {"descricao": "1 colher de sopa", "peso_g": 15}],
+      "observacoes": "Alto em gordura saturada, embora TCMs tenham metabolismo diferente. Usar com moderação. Bom para cozinhar em altas temperaturas."
+    },
+
+    // LATICÍNIOS
+    {
+      "id": "FOOD068",
+      "nome_pt": "Leite de Vaca Integral (3% gordura)",
+      "grupo_alimentar": "Laticínio Integral",
+      "energia_kcal_100g": 61, // = 61 kcal / 100ml
+      "macros_100g": {"proteina_g": 3.2, "carboidrato_g": 4.8, "gordura_total_g": 3.3, "gordura_saturada_g": 1.9, "fibras_g": 0}, // Carboidrato = lactose
+      "micronutrientes_destaque": ["Cálcio", "Vitamina D (se fortificado)", "Fósforo", "Vitamina B12", "Riboflavina (B2)"],
+      "tags": ["laticinio", "proteina_animal", "gordura_animal", "calcio", "vitamina_d", "sem_gluten", "contem_lactose", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 copo americano", "peso_g": 190}, {"descricao": "1 xícara (chá)", "peso_g": 240}],
+      "observacoes": "Fonte de cálcio e proteína. Integral tem mais gordura e vitaminas lipossolúveis."
+    },
+    {
+      "id": "FOOD069",
+      "nome_pt": "Leite de Vaca Desnatado (0% gordura)",
+      "grupo_alimentar": "Laticínio Magro",
+      "energia_kcal_100g": 35,
+      "macros_100g": {"proteina_g": 3.4, "carboidrato_g": 5, "gordura_total_g": 0.2, "gordura_saturada_g": 0.1, "fibras_g": 0},
+      "micronutrientes_destaque": ["Cálcio", "Vitamina D (se fortificado)", "Fósforo", "Vitamina B12"],
+      "tags": ["laticinio", "proteina_animal", "baixo_gordura", "calcio", "vitamina_d", "sem_gluten", "contem_lactose", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 copo americano", "peso_g": 190}, {"descricao": "1 xícara (chá)", "peso_g": 240}],
+      "observacoes": "Menos calórico e gorduroso que o integral. Pode ter menos vitaminas lipossolúveis se não fortificado."
+    },
+    {
+      "id": "FOOD070",
+      "nome_pt": "Iogurte Natural Integral (sem açúcar)",
+      "grupo_alimentar": "Laticínio Integral Fermentado",
+      "energia_kcal_100g": 61,
+      "macros_100g": {"proteina_g": 3.5, "carboidrato_g": 4.7, "gordura_total_g": 3.3, "gordura_saturada_g": 2.1, "fibras_g": 0},
+      "micronutrientes_destaque": ["Cálcio", "Fósforo", "Vitamina B12", "Probióticos (depende da cultura)"],
+      "tags": ["laticinio", "proteina_animal", "gordura_animal", "calcio", "probiotico_potencial", "fermentado", "sem_gluten", "contem_lactose", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 pote", "peso_g": 170}],
+      "observacoes": "Versátil, pode ser consumido puro, com frutas, mel, etc. Verificar rótulo para ausência de açúcar adicionado."
+    },
+     {
+      "id": "FOOD071",
+      "nome_pt": "Iogurte Natural Desnatado (sem açúcar)",
+      "grupo_alimentar": "Laticínio Magro Fermentado",
+      "energia_kcal_100g": 56,
+      "macros_100g": {"proteina_g": 5.7, "carboidrato_g": 7, "gordura_total_g": 0.4, "gordura_saturada_g": 0.1, "fibras_g": 0}, // Proteína pode ser maior
+      "micronutrientes_destaque": ["Cálcio", "Fósforo", "Vitamina B12", "Probióticos"],
+      "tags": ["laticinio", "proteina_animal", "baixo_gordura", "alto_proteina_relativo", "calcio", "probiotico_potencial", "fermentado", "sem_gluten", "contem_lactose", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 pote", "peso_g": 170}],
+      "observacoes": "Boa opção proteica com pouca gordura."
+    },
+    {
+      "id": "FOOD072",
+      "nome_pt": "Iogurte Grego Natural (0% Gordura, sem açúcar)",
+      "grupo_alimentar": "Laticínio Magro Fermentado Concentrado",
+      "energia_kcal_100g": 59,
+      "macros_100g": {"proteina_g": 10, "carboidrato_g": 3.6, "gordura_total_g": 0.4, "gordura_saturada_g": 0.1, "fibras_g": 0}, // Proteína bem mais alta
+      "micronutrientes_destaque": ["Proteína", "Cálcio", "Fósforo", "Vitamina B12"],
+      "tags": ["laticinio", "alto_proteina", "baixo_gordura", "baixo_carb", "calcio", "fermentado", "sem_gluten", "contem_lactose (reduzida?)", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 pote", "peso_g": 100-130}],
+      "observacoes": "Textura mais espessa e maior teor de proteína devido à remoção do soro."
+    },
+     {
+      "id": "FOOD073",
+      "nome_pt": "Queijo Cottage (baixo teor de gordura)",
+      "grupo_alimentar": "Queijo Fresco Magro",
+      "energia_kcal_100g": 98,
+      "macros_100g": {"proteina_g": 11, "carboidrato_g": 3.4, "gordura_total_g": 4.3, "gordura_saturada_g": 1.7, "fibras_g": 0},
+      "micronutrientes_destaque": ["Proteína", "Fósforo", "Selênio", "Vitamina B12"],
+      "tags": ["laticinio", "queijo_fresco", "alto_proteina", "baixo_gordura", "calcio", "sem_gluten", "contem_lactose", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de sopa cheia", "peso_g": 30}, {"descricao": "1/2 xícara", "peso_g": 110}],
+      "observacoes": "Leve e rico em proteína. Bom com torradas, frutas, saladas."
+    },
+    {
+      "id": "FOOD074",
+      "nome_pt": "Queijo Minas Frescal",
+      "grupo_alimentar": "Queijo Fresco",
+      "energia_kcal_100g": 264, // Varia
+      "macros_100g": {"proteina_g": 17, "carboidrato_g": 2.7, "gordura_total_g": 20, "gordura_saturada_g": 13, "fibras_g": 0}, // Teor de gordura moderado/alto
+      "micronutrientes_destaque": ["Cálcio", "Fósforo", "Proteína"],
+      "tags": ["laticinio", "queijo_fresco", "proteina_animal", "gordura_moderada_alta", "calcio", "sem_gluten", "contem_lactose", "vegetariano_lacto", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia fina", "peso_g": 30}, {"descricao": "1 fatia grossa", "peso_g": 50}],
+      "observacoes": "Popular no Brasil. Moderar devido à gordura e sódio."
+    },
+     {
+      "id": "FOOD075",
+      "nome_pt": "Queijo Mussarela",
+      "grupo_alimentar": "Queijo Curado",
+      "energia_kcal_100g": 300,
+      "macros_100g": {"proteina_g": 22, "carboidrato_g": 2.2, "gordura_total_g": 22, "gordura_saturada_g": 13, "fibras_g": 0},
+      "micronutrientes_destaque": ["Cálcio", "Fósforo", "Proteína", "Zinco"],
+      "tags": ["laticinio", "queijo_curado", "proteina_animal", "gordura_alta", "calcio", "sem_gluten", "contem_lactose (baixa?)", "vegetariano_lacto", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia", "peso_g": 25-30}],
+      "observacoes": "Muito usado em sanduíches e pizzas. Rico em gordura e sódio."
+    },
+    {
+      "id": "FOOD076",
+      "nome_pt": "Ricota Fresca",
+      "grupo_alimentar": "Derivado Lácteo (Soro)",
+      "energia_kcal_100g": 174, // Integral
+      "macros_100g": {"proteina_g": 11, "carboidrato_g": 3, "gordura_total_g": 13, "gordura_saturada_g": 8, "fibras_g": 0},
+      "micronutrientes_destaque": ["Proteína (soro)", "Cálcio", "Fósforo", "Selênio"],
+      "tags": ["laticinio", "queijo_fresco", "proteina_soro", "gordura_moderada", "calcio", "sem_gluten", "contem_lactose", "vegetariano_lacto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 colher de sopa cheia", "peso_g": 30}, {"descricao": "1/2 xícara", "peso_g": 120}],
+      "observacoes": "Feita a partir do soro do leite. Versões light/magras disponíveis com menos gordura."
+    },
+
+    // BEBIDAS (Excluindo refrigerantes e sucos industrializados com açúcar)
+     {
+      "id": "FOOD077",
+      "nome_pt": "Água Mineral",
+      "grupo_alimentar": "Bebida",
+      "energia_kcal_100g": 0,
+      "macros_100g": {"proteina_g": 0, "carboidrato_g": 0, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0},
+      "micronutrientes_destaque": ["Minerais (variável: cálcio, magnésio, sódio, flúor)"],
+      "tags": ["hidratacao", "essencial", "zero_caloria", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 copo", "peso_g": 200}, {"descricao": "1 garrafa pequena", "peso_g": 500}],
+      "observacoes": "Fundamental para todas as funções corporais."
+    },
+     {
+      "id": "FOOD078",
+      "nome_pt": "Café Coado (sem açúcar)",
+      "grupo_alimentar": "Bebida Estimulante",
+      "energia_kcal_100g": 2, // Praticamente zero
+      "macros_100g": {"proteina_g": 0.1, "carboidrato_g": 0, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0},
+      "micronutrientes_destaque": ["Cafeína", "Antioxidantes"],
+      "tags": ["bebida", "estimulante", "cafeina", "zero_caloria", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "keto", "pre_treino_potencial"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara de café (pequena)", "peso_g": 50}, {"descricao": "1 xícara de chá", "peso_g": 150}],
+      "observacoes": "Efeito estimulante da cafeína. Consumo excessivo pode causar ansiedade, insônia. Modere."
+    },
+    {
+      "id": "FOOD079",
+      "nome_pt": "Chá Verde (infusão, sem açúcar)",
+      "grupo_alimentar": "Bebida",
+      "energia_kcal_100g": 1, // Praticamente zero
+      "macros_100g": {"proteina_g": 0, "carboidrato_g": 0.2, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0},
+      "micronutrientes_destaque": ["Catequinas (EGCG - antioxidante)", "L-Teanina", "Cafeína (menor que café)"],
+      "tags": ["bebida", "antioxidante", "termogenico_leve", "cafeina_moderada", "zero_caloria", "sem_gluten", "sem_lactose", "vegano", "vegetariano"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 xícara de chá", "peso_g": 200}],
+      "observacoes": "Rico em antioxidantes. Pode ter leve efeito termogênico."
+    },
+    {
+      "id": "FOOD080",
+      "nome_pt": "Leite de Amêndoas (sem açúcar adicionado)",
+      "grupo_alimentar": "Bebida Vegetal",
+      "energia_kcal_100g": 15-30, // Varia muito por marca
+      "macros_100g": {"proteina_g": 0.5, "carboidrato_g": 1, "gordura_total_g": 1.5, "gordura_saturada_g": 0.1, "fibras_g": 0.5}, // Baixo em proteína
+      "micronutrientes_destaque": ["Vitamina E", "Cálcio (se fortificado)", "Vitamina D (se fortificado)"],
+      "tags": ["bebida_vegetal", "substituto_leite", "baixa_caloria", "baixo_carb", "sem_lactose", "sem_gluten", "vegano", "vegetariano", "paleo"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 copo", "peso_g": 200}],
+      "observacoes": "Alternativa ao leite de vaca, mas pobre em proteína natural. Verificar rótulo (açúcar, fortificação)."
+    },
+    {
+      "id": "FOOD081",
+      "nome_pt": "Água de Coco Natural",
+      "grupo_alimentar": "Bebida Isotônica Natural",
+      "energia_kcal_100g": 19,
+      "macros_100g": {"proteina_g": 0.7, "carboidrato_g": 3.7, "gordura_total_g": 0.2, "gordura_saturada_g": 0.1, "fibras_g": 1.1},
+      "micronutrientes_destaque": ["Potássio", "Sódio (baixo)", "Magnésio", "Manganês"],
+      "tags": ["bebida", "hidratante", "eletrolitos", "potassio", "isotonico_natural", "sem_gluten", "sem_lactose", "vegano", "vegetariano", "paleo", "pos_treino_potencial"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 copo", "peso_g": 200}, {"descricao": "1 caixinha", "peso_g": 200-300}],
+      "observacoes": "Boa para repor eletrólitos após exercício leve/moderado. Contém açúcares naturais, moderar consumo."
+    },
+
+    // ALIMENTOS PROCESSADOS / ULTRAPROCESSADOS (Exemplos com Alertas)
+    {
+      "id": "FOOD082",
+      "nome_pt": "Presunto Cozido Magro Fatiado",
+      "grupo_alimentar": "Carne Processada",
+      "energia_kcal_100g": 110, // Varia
+      "macros_100g": {"proteina_g": 18, "carboidrato_g": 1.5, "gordura_total_g": 3, "gordura_saturada_g": 1, "fibras_g": 0},
+      "micronutrientes_destaque": ["Sódio (alto)", "Fósforo"],
+      "tags": ["carne_processada", "embutido", "alto_sodio", "nitritos_potencial", "proteina_animal", "sem_gluten (verificar)", "sem_lactose (verificar)", "consumo_muito_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia", "peso_g": 15-20}, {"descricao": "2 fatias", "peso_g": 30-40}],
+      "observacoes": "Alto teor de sódio e conservantes (nitritos/nitratos). Consumo associado a riscos à saúde. Limitar ao máximo."
+    },
+     {
+      "id": "FOOD083",
+      "nome_pt": "Peito de Peru Fatiado",
+      "grupo_alimentar": "Carne Processada",
+      "energia_kcal_100g": 105, // Varia
+      "macros_100g": {"proteina_g": 22, "carboidrato_g": 1, "gordura_total_g": 1.5, "gordura_saturada_g": 0.5, "fibras_g": 0},
+      "micronutrientes_destaque": ["Sódio (alto)", "Selênio"],
+      "tags": ["carne_processada", "embutido", "alto_sodio", "nitritos_potencial", "proteina_animal", "sem_gluten (verificar)", "sem_lactose (verificar)", "consumo_muito_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 fatia", "peso_g": 15-20}, {"descricao": "2 fatias", "peso_g": 30-40}],
+      "observacoes": "Frequentemente visto como 'saudável', mas ainda é um processado com alto sódio. Alternar com fontes de proteína fresca."
+    },
+    {
+      "id": "FOOD084",
+      "nome_pt": "Biscoito de Água e Sal",
+      "grupo_alimentar": "Processado",
+      "energia_kcal_100g": 420, // Varia
+      "macros_100g": {"proteina_g": 9, "carboidrato_g": 73, "gordura_total_g": 10, "gordura_saturada_g": 2, "fibras_g": 3}, // Varia muito
+      "micronutrientes_destaque": ["Sódio (alto)"],
+      "tags": ["processado", "carboidrato_refinado", "alto_sodio", "contem_gluten", "vegetariano", "vegano (verificar)", "sem_lactose (verificar)", "consumo_moderado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 unidade", "peso_g": 5-7}, {"descricao": "4 unidades", "peso_g": 20-28}],
+      "observacoes": "Pobre em nutrientes, rico em carboidrato refinado e sódio."
+    },
+    {
+        "id": "FOOD085",
+        "nome_pt": "Refrigerante tipo Cola (Normal)",
+        "grupo_alimentar": "Bebida Açucarada Ultraprocessada",
+        "energia_kcal_100g": 42, // Aprox.
+        "macros_100g": {"proteina_g": 0, "carboidrato_g": 10.6, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0}, // Carboidrato = Açúcar
+        "micronutrientes_destaque": ["Nenhum"],
+        "tags": ["ultraprocessado", "alto_acucar", "caloria_vazia", "acido_fosforico", "cafeina", "evitar"],
+        "medidas_caseiras_aproximadas": [{"descricao": "1 lata", "peso_g": 350}, {"descricao": "1 copo", "peso_g": 200}],
+        "observacoes": "Sem valor nutricional, rico em açúcar e aditivos. Consumo associado a diversos problemas de saúde. Evitar."
+      },
+      {
+        "id": "FOOD086",
+        "nome_pt": "Refrigerante tipo Cola (Zero Açúcar)",
+        "grupo_alimentar": "Bebida Ultraprocessada com Adoçantes",
+        "energia_kcal_100g": 0-1, // Praticamente zero
+        "macros_100g": {"proteina_g": 0, "carboidrato_g": 0, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0},
+        "micronutrientes_destaque": ["Sódio (moderado)"],
+        "tags": ["ultraprocessado", "adocantes_artificiais", "zero_caloria", "acido_fosforico", "cafeina", "consumo_esporadico"],
+        "medidas_caseiras_aproximadas": [{"descricao": "1 lata", "peso_g": 350}, {"descricao": "1 copo", "peso_g": 200}],
+        "observacoes": "Sem açúcar, mas contém adoçantes artificiais, corantes e ácidos cujo impacto a longo prazo é debatido. Consumir esporadicamente, preferir água."
+      },
+
+    // SUPLEMENTOS (Dados básicos para referência - idealmente ter seção separada)
+     {
+      "id": "FOOD087", // Ou SUP001
+      "nome_pt": "Whey Protein Concentrado (Pó, sabor neutro/baunilha)",
+      "grupo_alimentar": "Suplemento Proteico",
+      "energia_kcal_100g": 400, // Varia por marca
+      "macros_100g": {"proteina_g": 75-80, "carboidrato_g": 5-8, "gordura_total_g": 5-7, "gordura_saturada_g": 2-4, "fibras_g": 1}, // Varia
+      "micronutrientes_destaque": ["Proteína de Alto Valor Biológico", "BCAAs", "Cálcio"],
+      "tags": ["suplemento", "proteina_po", "alto_proteina", "pos_treino_potencial", "rapida_absorcao", "laticinio", "sem_gluten", "contem_lactose"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 scoop (medidor)", "peso_g": 30-40}],
+      "observacoes": "Fonte prática de proteína. Concentrado tem um pouco de lactose/gordura. Isolado/Hidrolisado tem menos."
+    },
+    {
+      "id": "FOOD088", // Ou SUP002
+      "nome_pt": "Creatina Monohidratada (Pó)",
+      "grupo_alimentar": "Suplemento Ergogênico",
+      "energia_kcal_100g": 0, // Desprezível na dose usual
+      "macros_100g": {"proteina_g": 0, "carboidrato_g": 0, "gordura_total_g": 0, "gordura_saturada_g": 0, "fibras_g": 0},
+      "micronutrientes_destaque": ["Creatina"],
+      "tags": ["suplemento", "ergogenico", "forca", "performance", "hipertrofia", "seguro_comprovado"],
+      "medidas_caseiras_aproximadas": [{"descricao": "1 dosador pequeno", "peso_g": 3-5}],
+      "observacoes": "Um dos suplementos mais estudados e eficazes para aumento de força e massa muscular. Requer uso contínuo."
+    }
+
+    // ... CONTINUAR ADICIONANDO MUITOS OUTROS ITENS...
+    // Exemplos: outros peixes (pescada, cação), outras carnes (músculo, fígado), outros queijos (parmesão, brie),
+    // outras frutas (kiwi, pêssego, ameixa), outros vegetais (rúcula, agrião, couve de bruxelas, nabo),
+    // outros grãos (centeio, cevadinha), outras bebidas vegetais (soja, aveia, coco),
+    // mais detalhes sobre preparações (frito vs assado vs cozido),
+    // itens específicos de certas dietas (óleo MCT, farinha de amêndoa, etc.)
+
+  ]
+}

@@ -1,0 +1,1092 @@
+"exercicios": [
+    // --- MEMBROS INFERIORES ---
+
+    // ** Agachamentos e Variações **
+    {
+        "id": "EX001",
+        "nome_pt": "Agachamento Livre com Barra (Costas - Barra Alta)",
+        "musculo_primario": "Quadríceps",
+        "musculos_secundarios": ["Glúteos", "Isquiotibiais", "Adutores", "Eretores da Espinha", "Core"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["barra_olimpica", "rack_agachamento", "anilhas"],
+        "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Posicione a barra no rack na altura dos ombros.", "Entre sob a barra, apoiando-a sobre o músculo trapézio (não sobre o osso do pescoço).", "Segure a barra com pegada pronada, mãos um pouco além dos ombros.", "Retire a barra, dê 1-2 passos atrás. Pés na largura dos ombros/quadris, pontas ligeiramente para fora.", "Inspire, contraia o core ('brace'), mantenha peito erguido e coluna neutra.", "Inicie flexionando quadris e joelhos, descendo como se fosse sentar. Mantenha peso distribuído no pé.", "Desça até coxas paralelas ao chão ou mais (mobilidade permitindo), mantendo a curvatura lombar neutra.", "Empurre o chão para subir, estendendo quadris e joelhos. Expire próximo ao topo.", "Evite joelho valgo (para dentro)."],
+        "erros_comuns": ["Curvar a lombar", "Joelho valgo", "Calcanhares saindo do chão", "Profundidade insuficiente", "Descer muito rápido", "Peito caindo para frente"],
+        "variacoes": ["Agachamento Barra Baixa", "Agachamento Frontal", "Agachamento Zercher", "Agachamento com Pausa", "Agachamento Tempo"],
+        "tags": ["pernas", "quadriceps", "gluteos", "forca", "hipertrofia", "composto", "peso_livre", "agachamento"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX005",
+        "nome_pt": "Agachamento Livre com Barra (Costas - Barra Baixa)",
+        "musculo_primario": "Cadeia Posterior (Glúteos, Isquiotibiais)",
+        "musculos_secundarios": ["Quadríceps", "Adutores", "Eretores da Espinha", "Core"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["barra_olimpica", "rack_agachamento", "anilhas"],
+        "nivel_dificuldade": "Intermediário/Avançado",
+        "instrucoes_execucao": ["Similar ao Barra Alta, mas posicione a barra mais abaixo, sobre os deltoides posteriores/espinha da escápula.", "Isso geralmente requer maior inclinação do tronco à frente e ativa mais a cadeia posterior.", "Pegada pode precisar ser ligeiramente mais fechada para 'prender' a barra.", "Restante da execução similar, mantendo coluna neutra."],
+        "erros_comuns": ["Curvar a lombar (especialmente com a inclinação maior)", "Perder a posição da barra", "Joelho valgo"],
+        "variacoes": ["Agachamento Barra Alta", "Agachamento com Pausa", "Agachamento com Correntes/Elásticos"],
+        "tags": ["pernas", "gluteos", "posteriores", "forca", "hipertrofia", "composto", "peso_livre", "agachamento", "powerlifting"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Posicionamento da barra requer cuidado para não sobrecarregar ombros/cotovelos."
+    },
+    {
+        "id": "EX006",
+        "nome_pt": "Agachamento Frontal com Barra",
+        "musculo_primario": "Quadríceps",
+        "musculos_secundarios": ["Glúteos", "Core (anti-flexão)", "Dorsais Superiores (isometria)"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["barra_olimpica", "rack_agachamento", "anilhas"],
+        "nivel_dificuldade": "Intermediário/Avançado",
+        "instrucoes_execucao": ["Posicione a barra no rack na altura clavicular.", "Aproxime-se e apoie a barra sobre os deltoides anteriores, cruzando os braços sobre a barra (pegada 'bodybuilder') ou com punhos flexionados e cotovelos altos (pegada olímpica - requer mobilidade).", "Retire a barra, pés na largura dos ombros.", "Mantenha tronco o mais vertical possível, cotovelos altos.", "Inspire, core firme, desça flexionando quadris e joelhos, mantendo a verticalidade.", "Desça o máximo possível com boa forma.", "Suba empurrando o chão, mantendo cotovelos altos e tronco ereto."],
+        "erros_comuns": ["Cotovelos caindo (barra rola para frente)", "Tronco inclinando muito", "Calcanhares saindo do chão", "Dor nos punhos (pegada olímpica sem mobilidade)"],
+        "variacoes": ["Agachamento Zercher", "Agachamento Frontal com Halteres/Kettlebell (Goblet)", "Agachamento Frontal na Máquina Smith"],
+        "tags": ["pernas", "quadriceps", "core", "forca", "hipertrofia", "composto", "peso_livre", "agachamento", "mobilidade"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Pegada olímpica exige boa mobilidade de punhos, ombros e torácica."
+    },
+    {
+        "id": "EX007",
+        "nome_pt": "Agachamento Taça (Goblet Squat)",
+        "musculo_primario": "Quadríceps",
+        "musculos_secundarios": ["Glúteos", "Adutores", "Core"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["halter", "kettlebell"],
+        "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Segure um halter verticalmente pela 'cabeça' superior ou um kettlebell pelas 'alças' laterais, junto ao peito.", "Pés na largura dos ombros, pontas levemente para fora.", "Mantenha o peso próximo ao corpo e o tronco ereto.", "Inspire, core firme, desça flexionando quadris e joelhos, afastando os joelhos na direção dos pés.", "Desça o mais fundo possível com boa forma (cotovelos podem passar por dentro dos joelhos).", "Suba empurrando o chão, mantendo tronco ereto."],
+        "erros_comuns": ["Tronco caindo para frente", "Calcanhares saindo do chão", "Joelho valgo"],
+        "variacoes": ["Agachamento com Halteres (um em cada mão)", "Agachamento Frontal com Barra"],
+        "tags": ["pernas", "quadriceps", "gluteos", "forca", "hipertrofia", "composto", "halteres", "kettlebell", "agachamento", "aprendizado_movimento"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX008",
+        "nome_pt": "Agachamento Búlgaro com Halteres",
+        "musculo_primario": "Quadríceps (perna da frente)",
+        "musculos_secundarios": ["Glúteos (perna da frente)", "Isquiotibiais (estabilização)", "Core"],
+        "tipo_exercicio": "Composto Unilateral",
+        "equipamento": ["halteres", "banco_reto"],
+        "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Segure um halter em cada mão.", "Posicione-se de costas para um banco.", "Coloque o peito de um pé sobre o banco.", "Dê um passo à frente com a outra perna, o suficiente para permitir a descida.", "Mantenha o tronco ereto ou ligeiramente inclinado.", "Inspire, core firme, desça flexionando o joelho da perna da frente até a coxa ficar paralela ao chão ou o joelho de trás quase tocar o chão.", "Empurre o chão com a perna da frente para subir.", "Mantenha o equilíbrio. O joelho da frente não deve ultrapassar excessivamente a ponta do pé."],
+        "erros_comuns": ["Desequilíbrio", "Tronco oscilando", "Joelho da frente avançando demais", "Impulso com a perna de trás"],
+        "variacoes": ["Agachamento Búlgaro com Barra", "Agachamento Búlgaro no Smith", "Agachamento Búlgaro sem peso"],
+        "tags": ["pernas", "quadriceps", "gluteos", "unilateral", "hipertrofia", "estabilidade", "halteres", "agachamento"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX009",
+        "nome_pt": "Agachamento Sumô com Halter ou Kettlebell",
+        "musculo_primario": "Adutores",
+        "musculos_secundarios": ["Glúteos", "Quadríceps"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["halter", "kettlebell"],
+        "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Fique em pé com as pernas bem afastadas (mais que a largura dos ombros), pontas dos pés apontando para fora (aprox. 45 graus).", "Segure um halter pesado ou kettlebell com ambas as mãos, braços estendidos para baixo.", "Mantenha o tronco ereto e a coluna neutra.", "Inspire, core firme, desça flexionando quadris e joelhos, direcionando os joelhos para fora, na mesma linha dos pés.", "Desça até sentir um bom alongamento nos adutores e/ou o peso quase tocar o chão.", "Suba estendendo quadris e joelhos, contraindo os glúteos no topo."],
+        "erros_comuns": ["Joelho caindo para dentro", "Tronco inclinando demais", "Curvar a lombar", "Amplitude pequena"],
+        "variacoes": ["Agachamento Sumô com Barra", "Levantamento Terra Sumô"],
+        "tags": ["pernas", "adutores", "gluteos", "hipertrofia", "composto", "halteres", "kettlebell", "agachamento"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Leg Press e Variações **
+    {
+        "id": "EX010",
+        "nome_pt": "Leg Press 45 graus",
+        "musculo_primario": "Quadríceps",
+        "musculos_secundarios": ["Glúteos", "Isquiotibiais", "Adutores"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["maquina_leg_press_45"],
+        "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Sente-se na máquina com as costas e quadris bem apoiados.", "Posicione os pés na plataforma, afastados na largura dos ombros (padrão). Pés mais altos = mais glúteo/posterior; Pés mais baixos = mais quadríceps; Pés mais afastados = mais adutores.", "Destrave a segurança e segure as alças laterais.", "Inspire e desça a plataforma de forma controlada, flexionando os joelhos (aprox. 90 graus ou mais, sem tirar o quadril do banco).", "Empurre a plataforma de volta à posição inicial, expirando. Concentre-se em empurrar com os calcanhares/meio do pé.", "Não trave completamente os joelhos no topo."],
+        "erros_comuns": ["Tirar o quadril/lombar do banco na descida (risco!)", "Amplitude muito curta", "Travar os joelhos no topo", "Descer descontroladamente"],
+        "variacoes": ["Leg Press Unilateral", "Leg Press com diferentes posições dos pés"],
+        "tags": ["pernas", "quadriceps", "gluteos", "hipertrofia", "forca", "composto", "maquina"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Manter a lombar apoiada é crucial para segurança."
+    },
+    {
+        "id": "EX011",
+        "nome_pt": "Leg Press Horizontal (Sentado)",
+        "musculo_primario": "Quadríceps",
+        "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+        "tipo_exercicio": "Composto",
+        "equipamento": ["maquina_leg_press_horizontal"],
+        "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina com costas apoiadas.", "Pés na plataforma na largura dos ombros.", "Empurre a plataforma para estender as pernas (sem travar joelhos).", "Retorne de forma controlada flexionando os joelhos.", "Manter controle durante todo o movimento."],
+        "erros_comuns": ["Amplitude curta", "Movimento muito rápido", "Travar joelhos"],
+        "variacoes": ["Leg Press Horizontal Unilateral"],
+        "tags": ["pernas", "quadriceps", "gluteos", "hipertrofia", "composto", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Extensões e Flexões de Joelho **
+    {
+        "id": "EX012",
+        "nome_pt": "Cadeira Extensora (Extensão de Joelho)",
+        "musculo_primario": "Quadríceps",
+        "musculos_secundarios": [],
+        "tipo_exercicio": "Isolamento",
+        "equipamento": ["maquina_cadeira_extensora"],
+        "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina, ajuste o encosto para que os joelhos fiquem alinhados com o eixo de rotação da máquina.", "Ajuste o rolo de apoio sobre a parte inferior das canelas (não sobre os pés).", "Segure as alças laterais.", "Estenda os joelhos, levantando o peso de forma controlada. Concentre-se na contração do quadríceps no topo.", "Retorne à posição inicial lentamente, resistindo ao peso.", "Evite usar impulso."],
+        "erros_comuns": ["Usar impulso do tronco", "Movimento muito rápido", "Amplitude incompleta (não estender/flexionar totalmente)"],
+        "variacoes": ["Cadeira Extensora Unilateral", "Extensão com Pico de Contração"],
+        "tags": ["pernas", "quadriceps", "hipertrofia", "isolamento", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX013",
+        "nome_pt": "Mesa Flexora (Flexão de Joelho Deitado)",
+        "musculo_primario": "Isquiotibiais (Posteriores da Coxa)",
+        "musculos_secundarios": ["Gastrocnêmio (Panturrilha)"],
+        "tipo_exercicio": "Isolamento",
+        "equipamento": ["maquina_mesa_flexora"],
+        "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Deite-se de bruços na máquina, alinhando os joelhos com o eixo de rotação.", "Posicione o rolo de apoio logo acima dos calcanhares.", "Segure as alças frontais.", "Flexione os joelhos, puxando o rolo em direção aos glúteos. Concentre-se na contração dos posteriores.", "Retorne à posição inicial de forma controlada.", "Mantenha o quadril pressionado contra o banco, evitando elevá-lo."],
+        "erros_comuns": ["Elevar o quadril do banco", "Movimento muito rápido/impulso", "Amplitude incompleta"],
+        "variacoes": ["Mesa Flexora Unilateral", "Flexão com Pico de Contração"],
+        "tags": ["pernas", "posteriores", "isquiotibiais", "hipertrofia", "isolamento", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX014",
+        "nome_pt": "Cadeira Flexora (Flexão de Joelho Sentado)",
+        "musculo_primario": "Isquiotibiais",
+        "musculos_secundarios": ["Gastrocnêmio"],
+        "tipo_exercicio": "Isolamento",
+        "equipamento": ["maquina_cadeira_flexora"],
+        "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Sente-se na máquina, ajuste o encosto e o apoio das coxas.", "Joelhos alinhados com o eixo de rotação. Rolo de apoio posicionado atrás dos tornozelos.", "Flexione os joelhos, puxando o rolo para baixo e para trás.", "Contraia os posteriores.", "Retorne controladamente à posição inicial."],
+        "erros_comuns": ["Movimento curto", "Usar impulso"],
+        "variacoes": ["Cadeira Flexora Unilateral"],
+        "tags": ["pernas", "posteriores", "isquiotibiais", "hipertrofia", "isolamento", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX015",
+        "nome_pt": "Flexora em Pé (Flexão de Joelho Unilateral em Pé)",
+        "musculo_primario": "Isquiotibiais",
+        "musculos_secundarios": ["Gastrocnêmio"],
+        "tipo_exercicio": "Isolamento Unilateral",
+        "equipamento": ["maquina_flexora_em_pe"],
+        "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Posicione-se na máquina, apoiando o tronco e a coxa da perna de trabalho.", "Ajuste o rolo atrás do tornozelo.", "Mantenha o joelho alinhado com o eixo.", "Flexione o joelho, puxando o calcanhar em direção ao glúteo.", "Contraia o posterior.", "Retorne controladamente.", "Faça uma perna de cada vez."],
+        "erros_comuns": ["Balançar o tronco", "Movimento rápido"],
+        "variacoes": [],
+        "tags": ["pernas", "posteriores", "isquiotibiais", "hipertrofia", "isolamento", "unilateral", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Exercícios com Ênfase em Glúteos e Posteriores **
+    {
+        "id": "EX004", // Original
+        "nome_pt": "Levantamento Terra (Convencional)",
+        "musculo_primario": "Cadeia Posterior (Glúteos, Isquiotibiais, Eretores da Espinha)",
+        "musculos_secundarios": ["Quadríceps", "Trapézio", "Dorsais", "Antebraços (pegada)", "Core"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "anilhas"], "nivel_dificuldade": "Avançado",
+        "instrucoes_execucao": ["... (instruções já detalhadas anteriormente) ..."], "erros_comuns": ["..."], "variacoes": ["..."],
+        "tags": ["corpo_inteiro", "cadeia_posterior", "gluteos", "posteriores", "costas", "pernas", "forca", "hipertrofia", "composto", "peso_livre", "levantamento_terra"],
+        "video_link_exemplo": "placeholder", "aviso_seguranca": "Técnica é crucial."
+    },
+    {
+        "id": "EX016",
+        "nome_pt": "Levantamento Terra Sumô",
+        "musculo_primario": "Glúteos",
+        "musculos_secundarios": ["Isquiotibiais", "Adutores", "Quadríceps", "Eretores da Espinha", "Trapézio", "Core"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "anilhas"], "nivel_dificuldade": "Avançado",
+        "instrucoes_execucao": ["Posicione-se com pés bem afastados, pontas para fora, canelas próximas à barra.", "Agache para pegar a barra com pegada pronada ou mista, mãos por dentro das pernas (largura dos ombros).", "Mantenha costas retas, peito aberto, quadris baixos (mais que no convencional).", "Empurre o chão com as pernas e estenda os quadris, mantendo a barra próxima.", "Finalize em pé, ereto.", "Desça controladamente, invertendo o movimento."],
+        "erros_comuns": ["Costas curvadas", "Quadris subindo muito rápido", "Joelho valgo"],
+        "variacoes": ["Levantamento Terra Convencional", "Terra Sumô com Halteres/Kettlebell"],
+        "tags": ["corpo_inteiro", "gluteos", "posteriores", "adutores", "pernas", "forca", "hipertrofia", "composto", "peso_livre", "levantamento_terra", "powerlifting"],
+        "video_link_exemplo": "placeholder", "aviso_seguranca": "Técnica é crucial."
+    },
+    {
+        "id": "EX017",
+        "nome_pt": "Levantamento Terra Romeno (RDL)",
+        "musculo_primario": "Isquiotibiais",
+        "musculos_secundarios": ["Glúteos", "Eretores da Espinha (isometria)", "Antebraços"],
+        "tipo_exercicio": "Composto (Hinge)", "equipamento": ["barra_olimpica", "halteres", "anilhas"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Comece em pé, segurando a barra ou halteres à frente das coxas, pegada pronada.", "Pés na largura dos quadris, joelhos levemente flexionados (quase estendidos, mas não travados).", "Mantendo as costas retas e o peito aberto, inicie o movimento empurrando o quadril para trás (hinge).", "Desça a barra/halteres rente às pernas, sentindo alongar os posteriores.", "Desça até onde conseguir manter a coluna neutra (geralmente abaixo dos joelhos).", "Retorne à posição inicial estendendo os quadris, contraindo glúteos e posteriores.", "O movimento é primariamente no quadril, não na coluna."],
+        "erros_comuns": ["Curvar a lombar", "Flexionar demais os joelhos (vira quase um terra)", "Barra afastada do corpo", "Não sentir alongar posteriores"],
+        "variacoes": ["RDL Unilateral", "Good Morning", "Stiff Leg Deadlift (joelhos mais estendidos, maior risco se mal feito)"],
+        "tags": ["cadeia_posterior", "posteriores", "isquiotibiais", "gluteos", "forca", "hipertrofia", "composto", "peso_livre", "halteres", "hinge"],
+        "video_link_exemplo": "placeholder", "aviso_seguranca": "Manter coluna neutra é fundamental."
+    },
+    {
+        "id": "EX018",
+        "nome_pt": "Elevação Pélvica com Barra (Hip Thrust)",
+        "musculo_primario": "Glúteos",
+        "musculos_secundarios": ["Isquiotibiais", "Quadríceps (isometria)", "Core"],
+        "tipo_exercicio": "Composto (Hinge)", "equipamento": ["barra_olimpica", "anilhas", "banco_reto", "colchonete_barra (opcional)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Sente-se no chão com as costas (altura das escápulas) apoiadas na lateral de um banco.", "Role uma barra carregada sobre seus quadris (use proteção se necessário).", "Pés apoiados no chão, afastados na largura dos quadris, joelhos flexionados.", "Empurre pelos calcanhares, elevando os quadris até o corpo formar uma linha reta dos ombros aos joelhos.", "Contraia fortemente os glúteos no topo. Mantenha o olhar para frente/queixo levemente para baixo.", "Desça controladamente quase até o chão.", "Repita."],
+        "erros_comuns": ["Hiperextender a lombar no topo", "Não atingir extensão completa do quadril", "Movimento muito curto", "Empurrar com a ponta dos pés"],
+        "variacoes": ["Elevação Pélvica com Halter", "Elevação Pélvica na Máquina Específica", "Elevação Pélvica Unilateral", "Glute Bridge (no chão)"],
+        "tags": ["gluteos", "forca", "hipertrofia", "composto", "peso_livre", "hinge"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX019",
+        "nome_pt": "Bom Dia (Good Morning)",
+        "musculo_primario": "Isquiotibiais",
+        "musculos_secundarios": ["Glúteos", "Eretores da Espinha"],
+        "tipo_exercicio": "Composto (Hinge)", "equipamento": ["barra_olimpica", "rack_agachamento"], "nivel_dificuldade": "Avançado",
+        "instrucoes_execucao": ["Posicione a barra nas costas como no agachamento (barra alta ou baixa).", "Pés na largura dos quadris, joelhos levemente flexionados.", "Mantendo as costas perfeitamente retas, inicie o movimento empurrando o quadril para trás, inclinando o tronco à frente.", "Desça até sentir forte alongamento nos posteriores, mantendo a coluna neutra (tronco pode ficar quase paralelo ao chão).", "Retorne à posição inicial estendendo os quadris.", "Use cargas leves inicialmente para dominar a técnica."],
+        "erros_comuns": ["Curvar a lombar (MUITO perigoso!)", "Flexionar demais os joelhos", "Movimento rápido"],
+        "variacoes": ["Good Morning Sentado", "Good Morning com Elásticos"],
+        "tags": ["cadeia_posterior", "posteriores", "isquiotibiais", "gluteos", "forca", "hipertrofia", "composto", "peso_livre", "hinge", "mobilidade"],
+        "video_link_exemplo": "placeholder", "aviso_seguranca": "Alto risco de lesão lombar se a forma for incorreta. Cuidado extremo com a carga e a técnica."
+     },
+     {
+        "id": "EX020",
+        "nome_pt": "Stiff Leg Deadlift com Halteres",
+        "musculo_primario": "Isquiotibiais",
+        "musculos_secundarios": ["Glúteos", "Eretores da Espinha"],
+        "tipo_exercicio": "Composto (Hinge)", "equipamento": ["halteres"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Segure halteres à frente do corpo, palmas voltadas para as coxas.", "Pés na largura dos quadris, joelhos quase estendidos (uma flexão mínima).", "Mantendo as costas retas, incline o tronco para frente a partir dos quadris, baixando os halteres em direção ao chão.", "Mantenha os halteres próximos às pernas.", "Desça o máximo possível sentindo alongar os posteriores, sem curvar a lombar.", "Suba estendendo os quadris."],
+        "erros_comuns": ["Curvar a lombar", "Flexionar os joelhos (vira RDL)", "Halteres afastados do corpo"],
+        "variacoes": ["Stiff Leg Deadlift com Barra"],
+        "tags": ["cadeia_posterior", "posteriores", "isquiotibiais", "gluteos", "hipertrofia", "composto", "halteres", "hinge"],
+        "video_link_exemplo": "placeholder", "aviso_seguranca": "Foco no alongamento e controle, não na carga pesada."
+    },
+     {
+        "id": "EX021",
+        "nome_pt": "Coice de Mula (Glúteo Kickback) na Polia Baixa",
+        "musculo_primario": "Glúteos",
+        "musculos_secundarios": ["Isquiotibiais"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia", "tornozeleira"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Prenda uma tornozeleira no cabo da polia baixa.", "Fique de frente para a máquina, segure o suporte para estabilidade.", "Dê um passo atrás.", "Mantenha o tronco ligeiramente inclinado e o core firme.", "Estenda o quadril da perna com a tornozeleira, chutando para trás e para cima, contraindo o glúteo.", "Evite arquear excessivamente a lombar.", "Retorne controladamente à posição inicial."],
+        "erros_comuns": ["Usar impulso", "Arquear a lombar", "Amplitude curta"],
+        "variacoes": ["Coice de Mula com Caneleira", "Coice de Mula na Máquina Específica"],
+        "tags": ["gluteos", "hipertrofia", "isolamento", "cabo_polia", "unilateral"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX022",
+        "nome_pt": "Abdução de Quadril na Polia Baixa",
+        "musculo_primario": "Glúteo Médio e Mínimo (Abdutores)",
+        "musculos_secundarios": ["Tensor da Fáscia Lata"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia", "tornozeleira"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Prenda a tornozeleira no cabo baixo.", "Fique de lado para a máquina, prenda a tornozeleira na perna de fora.", "Segure o suporte com a mão interna.", "Mantenha o corpo estável e a perna de trabalho ligeiramente à frente.", "Abduza o quadril, levando a perna para o lado, contraindo o glúteo lateral.", "Retorne controladamente.", "Faça os dois lados."],
+        "erros_comuns": ["Inclinar o tronco", "Usar impulso", "Amplitude curta"],
+        "variacoes": ["Abdução de Quadril na Máquina", "Abdução de Quadril Deitado com Caneleira/Elástico"],
+        "tags": ["gluteos", "gluteo_medio", "abdutores", "hipertrofia", "estabilidade_quadril", "isolamento", "cabo_polia", "unilateral"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX023",
+        "nome_pt": "Cadeira Abdutora",
+        "musculo_primario": "Glúteo Médio e Mínimo (Abdutores)",
+        "musculos_secundarios": [],
+        "tipo_exercicio": "Isolamento", "equipamento": ["maquina_cadeira_abdutora"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina com as costas apoiadas.", "Posicione a parte externa das coxas/joelhos contra as almofadas.", "Abra as pernas, empurrando as almofadas para fora, contraindo os glúteos laterais.", "Retorne controladamente à posição inicial."],
+        "erros_comuns": ["Movimento muito rápido", "Usar impulso", "Não controlar a volta"],
+        "variacoes": ["Cadeira Abdutora com inclinação do tronco à frente (maior ativação glúteo máximo)"],
+        "tags": ["gluteos", "gluteo_medio", "abdutores", "hipertrofia", "isolamento", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX024",
+        "nome_pt": "Cadeira Adutora",
+        "musculo_primario": "Adutores da Coxa (Parte Interna)",
+        "musculos_secundarios": [],
+        "tipo_exercicio": "Isolamento", "equipamento": ["maquina_cadeira_adutora"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina com as costas apoiadas.", "Posicione a parte interna das coxas/joelhos contra as almofadas.", "Feche as pernas, apertando as almofadas uma contra a outra, contraindo a parte interna da coxa.", "Retorne controladamente à posição inicial (abertura)."],
+        "erros_comuns": ["Movimento muito rápido", "Não controlar a abertura"],
+        "variacoes": [],
+        "tags": ["pernas", "adutores", "parte_interna_coxa", "hipertrofia", "isolamento", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Panturrilhas **
+    {
+        "id": "EX025",
+        "nome_pt": "Panturrilha em Pé na Máquina (Gêmeos)",
+        "musculo_primario": "Gastrocnêmio (Panturrilha - porção superficial)",
+        "musculos_secundarios": ["Sóleo"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["maquina_panturrilha_em_pe"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Posicione os ombros sob as almofadas da máquina.", "Ponta dos pés apoiada na plataforma, calcanhares para fora.", "Mantenha joelhos estendidos ou levemente flexionados.", "Empurre para cima, elevando os calcanhares o máximo possível, contraindo a panturrilha.", "Desça lentamente, alongando bem os calcanhares abaixo da linha da plataforma.", "Controle total da amplitude."],
+        "erros_comuns": ["Amplitude curta (não subir/descer tudo)", "Movimento rápido/balanço", "Flexionar muito os joelhos"],
+        "variacoes": ["Panturrilha em Pé no Smith", "Panturrilha em Pé Livre com Halter/Anilha"],
+        "tags": ["pernas", "panturrilhas", "gastrocnemio", "hipertrofia", "isolamento", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX026",
+        "nome_pt": "Panturrilha Sentado na Máquina (Sóleo)",
+        "musculo_primario": "Sóleo (Panturrilha - porção profunda)",
+        "musculos_secundarios": ["Gastrocnêmio (menos ativo)"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["maquina_panturrilha_sentado"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina, joelhos flexionados a 90 graus sob a almofada.", "Ponta dos pés apoiada na plataforma.", "Eleve os calcanhares o máximo possível, empurrando a almofada para cima.", "Contraia a panturrilha.", "Desça lentamente, alongando bem.", "A flexão do joelho inibe parcialmente o gastrocnêmio, focando no sóleo."],
+        "erros_comuns": ["Amplitude curta", "Movimento rápido"],
+        "variacoes": ["Panturrilha Sentado com Anilha/Halter sobre os joelhos"],
+        "tags": ["pernas", "panturrilhas", "soleo", "hipertrofia", "isolamento", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX027",
+        "nome_pt": "Panturrilha no Leg Press",
+        "musculo_primario": "Gastrocnêmio",
+        "musculos_secundarios": ["Sóleo"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["maquina_leg_press_45"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Sente-se no Leg Press.", "Posicione a ponta dos pés na parte inferior da plataforma, calcanhares fora.", "Mantenha as pernas estendidas (sem travar joelhos).", "Empurre a plataforma apenas com a flexão plantar (movimento do tornozelo), elevando os calcanhares.", "Desça controladamente, alongando as panturrilhas.", "Use a trava de segurança do Leg Press corretamente."],
+        "erros_comuns": ["Flexionar os joelhos durante o movimento", "Amplitude curta"],
+        "variacoes": ["Panturrilha no Leg Press Unilateral"],
+        "tags": ["pernas", "panturrilhas", "gastrocnemio", "hipertrofia", "isolamento", "maquina"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // --- MEMBROS SUPERIORES: PEITORAL ---
+
+    // ** Supinos e Variações **
+    {
+        "id": "EX002", // Original
+        "nome_pt": "Supino Reto com Barra",
+        "musculo_primario": "Peitoral Maior (porção esternal)", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "banco_reto", "anilhas", "suporte_barra"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["... (instruções já detalhadas anteriormente) ..."], "erros_comuns": ["..."], "variacoes": ["..."],
+        "tags": ["peitoral", "triceps", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX028",
+        "nome_pt": "Supino Reto com Halteres",
+        "musculo_primario": "Peitoral Maior (porção esternal)", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["halteres", "banco_reto"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Deite-se no banco com um halter em cada mão, apoiados nas coxas.", "Impulsione os halteres para cima com ajuda das pernas enquanto deita, posicionando-os acima do peito com pegada neutra ou pronada.", "Pés firmes no chão, escápulas retraídas.", "Inspire e desça os halteres de forma controlada, abrindo ligeiramente os braços (maior amplitude que a barra).", "Alongue o peitoral na descida.", "Empurre os halteres para cima e ligeiramente para dentro, expirando. Contraia o peitoral.", "Não deixe os halteres baterem no topo."],
+        "erros_comuns": ["Descer com cotovelos muito abertos", "Amplitude curta", "Perder retração escapular", "Balançar os halteres"],
+        "variacoes": ["Supino Reto com Halteres Pegada Neutra", "Supino Reto com Halteres Unilateral", "Supino Reto Alternado"],
+        "tags": ["peitoral", "triceps", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "halteres", "amplitude_maior"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX029",
+        "nome_pt": "Supino Inclinado com Barra",
+        "musculo_primario": "Peitoral Maior (porção clavicular - superior)", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "banco_inclinado (30-45 graus)", "anilhas", "suporte_barra"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Similar ao supino reto, mas em banco inclinado.", "A barra desce em direção à parte superior do peito/clavícula.", "Pegada ligeiramente mais fechada que no reto pode ser mais confortável.", "Manter escápulas retraídas e arco lombar natural."],
+        "erros_comuns": ["Inclinação excessiva do banco (>45° sobrecarrega ombros)", "Descer a barra muito baixo (no pescoço)", "Cotovelos muito abertos"],
+        "variacoes": ["Supino Inclinado com Halteres", "Supino Inclinado na Máquina Smith"],
+        "tags": ["peitoral", "peitoral_superior", "triceps", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX030",
+        "nome_pt": "Supino Inclinado com Halteres",
+        "musculo_primario": "Peitoral Maior (porção clavicular)", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["halteres", "banco_inclinado (30-45 graus)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Similar ao supino reto com halteres, mas em banco inclinado.", "Desça os halteres controladamente, alongando a parte superior do peitoral.", "Suba contraindo o peitoral superior."],
+        "erros_comuns": ["Balançar os halteres", "Amplitude curta", "Cotovelos muito abertos"],
+        "variacoes": ["Supino Inclinado com Halteres Pegada Neutra"],
+        "tags": ["peitoral", "peitoral_superior", "triceps", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "halteres", "amplitude_maior"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX031",
+        "nome_pt": "Supino Declinado com Barra",
+        "musculo_primario": "Peitoral Maior (porção inferior)", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "banco_declinado", "anilhas", "suporte_barra"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Deite-se no banco declinado, prendendo os pés no apoio.", "Pegada na barra similar ao supino reto.", "Retire a barra e desça controladamente em direção à parte inferior do peitoral.", "Empurre a barra para cima.", "Exercício menos comum, foco na parte inferior do peito."],
+        "erros_comuns": ["Descer a barra muito alto", "Movimento descontrolado"],
+        "variacoes": ["Supino Declinado com Halteres", "Mergulho em Paralelas (Dips) com foco no peito"],
+        "tags": ["peitoral", "peitoral_inferior", "triceps", "ombro", "empurrar", "push", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Cuidado ao retirar e recolocar a barra devido ao ângulo."
+    },
+     {
+        "id": "EX032",
+        "nome_pt": "Supino Declinado com Halteres",
+        "musculo_primario": "Peitoral Maior (porção inferior)", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["halteres", "banco_declinado"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Similar ao supino reto com halteres, mas em banco declinado.", "Desça os halteres em direção à parte inferior do peito.", "Suba contraindo."],
+        "erros_comuns": ["Balançar os halteres"],
+        "variacoes": ["Supino Declinado com Barra"],
+        "tags": ["peitoral", "peitoral_inferior", "triceps", "ombro", "empurrar", "push", "hipertrofia", "composto", "halteres"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX033",
+        "nome_pt": "Supino Máquina Vertical (Chest Press Machine)",
+        "musculo_primario": "Peitoral Maior", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["maquina_supino_vertical"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina, ajuste a altura do banco para que as manoplas fiquem na altura média do peito.", "Costas bem apoiadas.", "Empurre as manoplas para frente, estendendo os cotovelos (sem travar).", "Contraia o peitoral.", "Retorne controladamente à posição inicial, alongando o peito."],
+        "erros_comuns": ["Banco mal ajustado", "Movimento muito rápido", "Amplitude curta"],
+        "variacoes": ["Chest Press Unilateral na Máquina"],
+        "tags": ["peitoral", "triceps", "ombro", "empurrar", "push", "hipertrofia", "composto", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Crucifixos / Aduções **
+    {
+        "id": "EX034",
+        "nome_pt": "Crucifixo Reto com Halteres",
+        "musculo_primario": "Peitoral Maior (adução horizontal)", "musculos_secundarios": ["Deltóide Anterior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres", "banco_reto"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Deite-se no banco com um halter em cada mão, braços estendidos acima do peito, palmas voltadas uma para a outra.", "Mantenha uma leve flexão nos cotovelos (não trave).", "Inspire e abra os braços lentamente, descendo os halteres para os lados em um arco amplo.", "Alongue bem o peitoral, mas sem forçar a articulação do ombro.", "Retorne os halteres à posição inicial, como se estivesse 'abraçando uma árvore', contraindo o peitoral.", "Evite bater os halteres no topo."],
+        "erros_comuns": ["Flexionar demais os cotovelos (vira supino)", "Descer demais/forçar o ombro", "Usar muito peso e perder a forma", "Movimento rápido"],
+        "variacoes": ["Crucifixo Inclinado com Halteres", "Crucifixo Declinado com Halteres", "Crucifixo na Polia (Cabos)"],
+        "tags": ["peitoral", "hipertrofia", "isolamento", "halteres", "aducao_horizontal"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Use cargas moderadas para proteger os ombros."
+    },
+    {
+        "id": "EX035",
+        "nome_pt": "Crucifixo Inclinado com Halteres",
+        "musculo_primario": "Peitoral Maior (porção clavicular)", "musculos_secundarios": ["Deltóide Anterior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres", "banco_inclinado (30-45 graus)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Mesma execução do crucifixo reto, mas em banco inclinado.", "Foco no alongamento e contração da parte superior do peitoral."],
+        "erros_comuns": ["Flexionar cotovelos", "Descer demais"],
+        "variacoes": ["Crucifixo Reto/Declinado", "Crucifixo Inclinado na Polia"],
+        "tags": ["peitoral", "peitoral_superior", "hipertrofia", "isolamento", "halteres", "aducao_horizontal"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX036",
+        "nome_pt": "Crucifixo Máquina (Peck Deck ou Voador)",
+        "musculo_primario": "Peitoral Maior (adução horizontal)", "musculos_secundarios": ["Deltóide Anterior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["maquina_peck_deck"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina, ajuste a altura do banco.", "Posicione os antebraços/mãos nas almofadas/manoplas.", "Mantenha costas apoiadas.", "Faça a adução (fechar), juntando as almofadas/manoplas à frente do corpo, contraindo o peitoral.", "Retorne controladamente à posição inicial, alongando o peito."],
+        "erros_comuns": ["Movimento muito rápido", "Não controlar a volta", "Usar impulso"],
+        "variacoes": ["Peck Deck Unilateral"],
+        "tags": ["peitoral", "hipertrofia", "isolamento", "maquina", "aducao_horizontal", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX037",
+        "nome_pt": "Crossover na Polia Alta",
+        "musculo_primario": "Peitoral Maior (porção inferior/esternal)", "musculos_secundarios": ["Deltóide Anterior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia (duas polias altas)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Posicione as polias na posição mais alta.", "Segure um estribo em cada mão.", "Dê um passo à frente, incline o tronco ligeiramente.", "Mantenha uma leve flexão nos cotovelos.", "Faça a adução horizontal, trazendo as mãos para baixo e para frente, cruzando-as na frente do quadril ou abdômen inferior.", "Contraia o peitoral.", "Retorne controladamente à posição inicial, alongando o peito."],
+        "erros_comuns": ["Flexionar demais os cotovelos", "Usar impulso do tronco", "Não cruzar as mãos/amplitude curta"],
+        "variacoes": ["Crossover Polia Média", "Crossover Polia Baixa"],
+        "tags": ["peitoral", "peitoral_inferior", "hipertrofia", "isolamento", "cabo_polia", "aducao_horizontal"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Flexões e Mergulhos **
+     {
+        "id": "EX038",
+        "nome_pt": "Flexão de Braço (Push-up)",
+        "musculo_primario": "Peitoral Maior", "musculos_secundarios": ["Deltóide Anterior", "Tríceps Braquial", "Core"],
+        "tipo_exercicio": "Composto", "equipamento": ["peso_corporal"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Posição de prancha alta, mãos afastadas na largura dos ombros ou ligeiramente mais.", "Corpo reto da cabeça aos calcanhares.", "Inspire e desça flexionando os cotovelos (aprox. 45 graus do corpo), até o peito quase tocar o chão.", "Empurre o chão para voltar à posição inicial, expirando."],
+        "erros_comuns": ["Quadril caído ou elevado", "Cotovelos muito abertos", "Meia amplitude"],
+        "variacoes": ["Flexão com Joelhos Apoiados (iniciante)", "Flexão Inclinada (mãos mais altas)", "Flexão Declinada (pés mais altos)", "Flexão com Pegada Fechada (Diamond Push-up - foco tríceps)", "Flexão com Plyometria (com salto)"],
+        "tags": ["peitoral", "triceps", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "peso_corporal", "calistenia"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX039",
+        "nome_pt": "Mergulho nas Paralelas (Dips)",
+        "musculo_primario": "Tríceps Braquial / Peitoral Maior (depende da inclinação)", "musculos_secundarios": ["Deltóide Anterior"],
+        "tipo_exercicio": "Composto", "equipamento": ["barras_paralelas", "graviton (opcional)", "cinto_com_peso (opcional)"], "nivel_dificuldade": "Intermediário/Avançado",
+        "instrucoes_execucao": ["Suba nas barras paralelas, braços estendidos, corpo suspenso.", "Para foco no peito: incline o tronco ligeiramente para frente, desça com cotovelos levemente abertos.", "Para foco no tríceps: mantenha o tronco o mais vertical possível, desça com cotovelos próximos ao corpo.", "Desça até ombros abaixo dos cotovelos ou confortávelmente.", "Empurre para voltar à posição inicial."],
+        "erros_comuns": ["Descer demais (risco ombro)", "Balançar o corpo", "Cotovelos muito abertos (risco ombro)"],
+        "variacoes": ["Mergulho assistido (Graviton ou elástico)", "Mergulho com peso adicional", "Mergulho no banco (Bench Dip - mais fácil, cuidado ombros)"],
+        "tags": ["peitoral", "triceps", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "peso_corporal", "calistenia"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Pode ser estressante para os ombros, especialmente com má forma ou descendo demais."
+    },
+
+    // --- MEMBROS SUPERIORES: COSTAS ---
+
+    // ** Puxadas Verticais **
+     {
+        "id": "EX040",
+        "nome_pt": "Barra Fixa (Pull-up) - Pegada Pronada",
+        "musculo_primario": "Dorsais (Latíssimo do Dorso)", "musculos_secundarios": ["Bíceps Braquial", "Trapézio", "Romboídes", "Deltóide Posterior", "Antebraços"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_fixa", "graviton (opcional)", "elastico (opcional)", "cinto_com_peso (opcional)"], "nivel_dificuldade": "Intermediário/Avançado",
+        "instrucoes_execucao": ["Segure a barra com pegada pronada (palmas para frente), mãos um pouco além da largura dos ombros.", "Corpo suspenso, braços estendidos.", "Puxe o corpo para cima, liderando com o peito em direção à barra.", "Passe o queixo acima da barra.", "Contraia as costas no topo.", "Desça de forma controlada até a extensão completa dos braços."],
+        "erros_comuns": ["Não estender completamente os braços na descida", "Usar impulso (kipping, a menos que seja CrossFit)", "Não passar o queixo da barra"],
+        "variacoes": ["Barra Fixa com Pegada Neutra", "Barra Fixa com Pegada Supinada (Chin-up)", "Barra Fixa com Pegada Aberta/Fechada", "Pull-up Assistido (Graviton/Elástico)", "Pull-up com Peso"],
+        "tags": ["costas", "dorsais", "biceps", "puxar", "pull", "forca", "hipertrofia", "composto", "peso_corporal", "calistenia"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX041",
+        "nome_pt": "Barra Fixa (Chin-up) - Pegada Supinada",
+        "musculo_primario": "Dorsais / Bíceps Braquial", "musculos_secundarios": ["Trapézio", "Romboídes", "Antebraços"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_fixa", "graviton (opcional)", "elastico (opcional)", "cinto_com_peso (opcional)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Similar ao Pull-up, mas com pegada supinada (palmas para você), mãos na largura dos ombros.", "Geralmente permite maior ativação do bíceps."],
+        "erros_comuns": ["Não estender braços", "Usar impulso"],
+        "variacoes": ["Chin-up com Pegada Fechada/Aberta", "Chin-up Assistido", "Chin-up com Peso"],
+        "tags": ["costas", "dorsais", "biceps", "puxar", "pull", "forca", "hipertrofia", "composto", "peso_corporal", "calistenia"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX042",
+        "nome_pt": "Puxada Alta na Polia (Lat Pulldown) - Pegada Pronada Aberta",
+        "musculo_primario": "Dorsais (Latíssimo do Dorso)", "musculos_secundarios": ["Bíceps Braquial", "Trapézio", "Romboídes"],
+        "tipo_exercicio": "Composto", "equipamento": ["maquina_puxada_alta (polia)", "barra_longa"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina, ajuste o apoio dos joelhos.", "Segure a barra com pegada pronada, mãos bem afastadas (além dos ombros).", "Mantenha o tronco ligeiramente inclinado para trás (sem balançar).", "Puxe a barra em direção à parte superior do peito, contraindo as costas (pense em puxar com os cotovelos).", "Controle a subida da barra, alongando os dorsais.", "Não use impulso do tronco."],
+        "erros_comuns": ["Balançar o tronco excessivamente", "Puxar a barra para trás do pescoço (risco!)", "Usar muito bíceps e pouco costas", "Amplitude curta"],
+        "variacoes": ["Lat Pulldown Pegada Supinada", "Lat Pulldown Pegada Neutra", "Lat Pulldown Unilateral"],
+        "tags": ["costas", "dorsais", "biceps", "puxar", "pull", "hipertrofia", "composto", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX043",
+        "nome_pt": "Puxada Alta na Polia (Lat Pulldown) - Pegada Supinada Fechada",
+        "musculo_primario": "Dorsais / Bíceps Braquial", "musculos_secundarios": ["Trapézio", "Romboídes"],
+        "tipo_exercicio": "Composto", "equipamento": ["maquina_puxada_alta (polia)", "barra_curta_ou_V"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Similar ao Lat Pulldown pronado, mas com pegada supinada (palmas para você), mãos na largura dos ombros.", "Maior ativação do bíceps."],
+        "erros_comuns": ["Balançar o tronco"],
+        "variacoes": ["Lat Pulldown Pronado", "Lat Pulldown Neutro"],
+        "tags": ["costas", "dorsais", "biceps", "puxar", "pull", "hipertrofia", "composto", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX044",
+        "nome_pt": "Puxada Alta na Polia (Lat Pulldown) - Pegada Neutra",
+        "musculo_primario": "Dorsais", "musculos_secundarios": ["Bíceps Braquial", "Braquial", "Trapézio", "Romboídes"],
+        "tipo_exercicio": "Composto", "equipamento": ["maquina_puxada_alta (polia)", "barra_pegada_neutra"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Similar aos outros Lat Pulldowns, usando a barra com pegadores paralelos (palmas voltadas uma para a outra).", "Posição considerada confortável para os ombros."],
+        "erros_comuns": ["Balançar o tronco"],
+        "variacoes": ["Lat Pulldown Pronado/Supinado"],
+        "tags": ["costas", "dorsais", "biceps", "puxar", "pull", "hipertrofia", "composto", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Remadas Horizontais **
+    {
+        "id": "EX003", // Original
+        "nome_pt": "Remada Curvada com Barra (Pegada Pronada)",
+        "musculo_primario": "Dorsais", "musculos_secundarios": ["Trapézio", "Romboídes", "Deltóide Posterior", "Bíceps", "Antebraços", "Eretores da Espinha"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "anilhas"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["... (instruções já detalhadas anteriormente) ..."], "erros_comuns": ["..."], "variacoes": ["..."],
+        "tags": ["costas", "dorsais", "trapezio", "romboides", "biceps", "puxar", "pull", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX045",
+        "nome_pt": "Remada Curvada com Barra (Pegada Supinada - Yates Row)",
+        "musculo_primario": "Dorsais / Bíceps Braquial", "musculos_secundarios": ["Trapézio", "Romboídes", "Deltóide Posterior", "Antebraços", "Eretores da Espinha"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "anilhas"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Similar à remada pronada, mas com pegada supinada (palmas para você), mãos na largura dos ombros.", "Tronco geralmente menos inclinado (mais vertical) que na pronada.", "Puxar a barra em direção ao umbigo/parte inferior do abdômen.", "Permite maior ativação do bíceps."],
+        "erros_comuns": ["Curvar a lombar", "Usar muito impulso"],
+        "variacoes": ["Remada Curvada Pronada"],
+        "tags": ["costas", "dorsais", "biceps", "puxar", "pull", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX046",
+        "nome_pt": "Remada Unilateral com Halter (Serrote)",
+        "musculo_primario": "Dorsais", "musculos_secundarios": ["Trapézio", "Romboídes", "Deltóide Posterior", "Bíceps", "Core (anti-rotação)"],
+        "tipo_exercicio": "Composto Unilateral", "equipamento": ["halter", "banco_reto"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Apoie um joelho e a mão do mesmo lado em um banco reto.", "Perna oposta estendida ou semi-flexionada ao lado do banco para estabilidade.", "Costas retas e paralelas ao chão.", "Segure um halter com a mão livre, braço estendido.", "Puxe o halter para cima, em direção à lateral do tronco/quadril, mantendo o cotovelo próximo ao corpo.", "Contraia as costas no topo.", "Desça controladamente, alongando o dorsal.", "Faça um lado de cada vez."],
+        "erros_comuns": ["Girar o tronco", "Puxar com o bíceps em vez das costas", "Usar impulso", "Balançar o halter"],
+        "variacoes": ["Remada Serrote com apoio no rack", "Remada Kroc (com cheating controlado, avançado)"],
+        "tags": ["costas", "dorsais", "puxar", "pull", "hipertrofia", "forca", "composto", "unilateral", "halteres"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX047",
+        "nome_pt": "Remada Sentada na Polia (Pegada Fechada Neutra/Triângulo)",
+        "musculo_primario": "Dorsais (meio das costas)", "musculos_secundarios": ["Trapézio", "Romboídes", "Bíceps"],
+        "tipo_exercicio": "Composto", "equipamento": ["maquina_remada_sentada (polia)", "manopla_triangulo"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina com os pés apoiados, joelhos levemente flexionados.", "Segure a manopla triângulo com pegada neutra.", "Mantenha o tronco ereto ou ligeiramente inclinado para trás (sem balançar).", "Puxe a manopla em direção ao abdômen, retraindo as escápulas (juntando as costas).", "Contraia os músculos das costas.", "Retorne controladamente à posição inicial, alongando as costas.", "Evite inclinar o tronco para frente e para trás."],
+        "erros_comuns": ["Balançar o tronco", "Não retrair as escápulas", "Puxar só com os braços", "Ombros elevados"],
+        "variacoes": ["Remada Sentada com Barra Reta (pegada pronada/supinada)", "Remada Sentada Unilateral"],
+        "tags": ["costas", "dorsais", "romboides", "trapezio", "biceps", "puxar", "pull", "hipertrofia", "composto", "maquina", "cabo_polia", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX048",
+        "nome_pt": "Remada Cavalinho (T-Bar Row)",
+        "musculo_primario": "Dorsais (meio das costas)", "musculos_secundarios": ["Trapézio", "Romboídes", "Bíceps", "Eretores da Espinha"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "anilhas", "apoio_barra_cavalinho", "manopla_V (opcional)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Posicione uma extremidade da barra no apoio de chão (ou canto da parede).", "Carregue a outra extremidade com anilhas.", "Posicione-se com a barra entre as pernas.", "Incline o tronco para frente (costas retas!), pegue a barra logo abaixo das anilhas (pode usar manopla V por baixo da barra).", "Puxe a barra em direção ao peito/abdômen, contraindo as costas.", "Mantenha a coluna neutra.", "Desça controladamente."],
+        "erros_comuns": ["Curvar a lombar", "Usar impulso excessivo"],
+        "variacoes": ["Remada Cavalinho na Máquina Específica"],
+        "tags": ["costas", "dorsais", "romboides", "trapezio", "biceps", "puxar", "pull", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Manter a coluna neutra é crucial."
+    },
+    {
+        "id": "EX049",
+        "nome_pt": "Remada Alta com Barra (Upright Row)",
+        "musculo_primario": "Trapézio Superior / Deltóide Lateral", "musculos_secundarios": ["Bíceps"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "barra_EZ", "halteres", "cabo_polia"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Segure a barra com pegada pronada, mãos próximas (largura dos ombros ou menos).", "Puxe a barra verticalmente para cima, em direção ao queixo, liderando com os cotovelos.", "Os cotovelos devem subir acima dos ombros.", "Mantenha a barra próxima ao corpo.", "Desça controladamente."],
+        "erros_comuns": ["Elevar os ombros", "Puxar com as mãos em vez dos cotovelos", "Usar impulso"],
+        "variacoes": ["Remada Alta com Halteres", "Remada Alta na Polia Baixa"],
+        "tags": ["ombros", "trapezio", "deltoide_lateral", "puxar", "pull", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Exercício controverso, alto risco de impacto no ombro para algumas pessoas, especialmente com pegada muito fechada ou puxando muito alto. Executar com cautela ou evitar se causar dor."
+    },
+
+    // ** Isolamento para Costas / Puxadas **
+    {
+        "id": "EX050",
+        "nome_pt": "Pullover com Halter (Deitado no Banco)",
+        "musculo_primario": "Dorsais / Peitoral Maior (depende da forma)", "musculos_secundarios": ["Serrátil Anterior", "Tríceps (longa cabeça)"],
+        "tipo_exercicio": "Isolamento/Composto Leve", "equipamento": ["halter", "banco_reto"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Deite-se no banco perpendicularmente (só ombros apoiados) ou longitudinalmente.", "Segure um halter pelas extremidades com ambas as mãos acima do peito.", "Mantenha uma leve flexão nos cotovelos.", "Inspire e desça o halter para trás da cabeça, em um arco controlado, alongando dorsais e peitoral.", "Desça até sentir um bom alongamento, sem forçar os ombros.", "Retorne à posição inicial usando a força dos dorsais/peito.", "Foco no dorsal: manter cotovelos mais flexionados. Foco peito: cotovelos mais estendidos."],
+        "erros_comuns": ["Flexionar demais os cotovelos", "Descer excessivamente", "Perder controle do peso"],
+        "variacoes": ["Pullover com Barra", "Pullover na Máquina Específica", "Pullover na Polia Alta"],
+        "tags": ["costas", "dorsais", "peitoral", "serrátil", "hipertrofia", "isolamento", "halteres", "mobilidade_toracica"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX051",
+        "nome_pt": "Puxada Reta na Polia Alta (Straight-Arm Pulldown)",
+        "musculo_primario": "Dorsais", "musculos_secundarios": ["Tríceps (longa cabeça)", "Serrátil Anterior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia (polia alta)", "barra_reta", "corda"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Fique de frente para a polia alta, segure a barra/corda com braços estendidos.", "Afaste-se um pouco, incline o tronco ligeiramente à frente, mantenha uma leve flexão nos cotovelos.", "Puxe a barra/corda para baixo em um arco, usando os dorsais, até as mãos chegarem às coxas.", "Mantenha os braços quase retos durante todo o movimento.", "Contraia os dorsais.", "Retorne controladamente à posição inicial."],
+        "erros_comuns": ["Flexionar os cotovelos (vira um tríceps pushdown)", "Usar impulso do tronco", "Não sentir os dorsais"],
+        "variacoes": ["Puxada Reta com Elástico"],
+        "tags": ["costas", "dorsais", "hipertrofia", "isolamento", "cabo_polia", "conexao_mente_musculo"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX052",
+        "nome_pt": "Face Pull na Polia Média/Alta",
+        "musculo_primario": "Deltóide Posterior / Rotadores Externos / Trapézio Médio/Inferior", "musculos_secundarios": ["Romboídes"],
+        "tipo_exercicio": "Isolamento/Acessório", "equipamento": ["cabo_polia", "corda"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Ajuste a polia na altura do rosto ou um pouco acima.", "Segure as extremidades da corda com pegada neutra ou pronada.", "Afaste-se para tensionar o cabo.", "Puxe a corda em direção ao rosto, separando as mãos e levando os cotovelos para trás e para cima (rotação externa).", "Contraia a parte superior das costas e deltóides posteriores.", "Pense em 'puxar a corda para separar'.", "Retorne controladamente."],
+        "erros_comuns": ["Puxar para o pescoço/peito", "Não fazer a rotação externa", "Usar muito peso e perder a forma"],
+        "variacoes": ["Face Pull com Elástico"],
+        "tags": ["costas", "ombros", "deltoide_posterior", "trapezio", "manguito_rotador", "saude_ombro", "hipertrofia", "isolamento", "cabo_polia"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // --- MEMBROS SUPERIORES: OMBROS ---
+
+    // ** Desenvolvimentos / Presses Verticais **
+    {
+        "id": "EX053",
+        "nome_pt": "Desenvolvimento Militar com Barra (Overhead Press - OHP)",
+        "musculo_primario": "Deltóide Anterior", "musculos_secundarios": ["Deltóide Lateral", "Tríceps Braquial", "Trapézio Superior", "Serrátil Anterior", "Core"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "rack_agachamento", "anilhas"], "nivel_dificuldade": "Intermediário/Avançado",
+        "instrucoes_execucao": ["Retire a barra do rack, posicionada na frente dos ombros/clavícula (pegada pronada, pouco além dos ombros).", "Pés firmes no chão, core contraído, glúteos contraídos.", "Empurre a barra verticalmente para cima, passando ligeiramente a cabeça para frente 'por baixo' da barra quando ela ultrapassar o topo da cabeça.", "Estenda completamente os cotovelos no topo, com a barra sobre a linha média do corpo.", "Desça controladamente de volta à posição inicial (clavícula).", "Evite usar impulso das pernas (isso seria Push Press)."],
+        "erros_comuns": ["Arquear excessivamente a lombar", "Bater a barra na clavícula", "Não estender completamente", "Usar impulso das pernas"],
+        "variacoes": ["Desenvolvimento Sentado com Barra", "Push Press", "Desenvolvimento com Halteres"],
+        "tags": ["ombros", "deltoides", "triceps", "empurrar", "push", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Exige bom core e mobilidade de ombro. Cuidado com a lombar."
+    },
+    {
+        "id": "EX054",
+        "nome_pt": "Desenvolvimento com Halteres (Sentado ou em Pé)",
+        "musculo_primario": "Deltóide Anterior", "musculos_secundarios": ["Deltóide Lateral", "Tríceps Braquial", "Trapézio Superior"],
+        "tipo_exercicio": "Composto", "equipamento": ["halteres", "banco_reto (com encosto vertical opcional)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Sente-se em um banco (preferencialmente com encosto) ou fique em pé.", "Segure um halter em cada mão na altura dos ombros, palmas para frente ou neutras.", "Empurre os halteres verticalmente para cima até a extensão quase completa dos cotovelos.", "Desça controladamente de volta à altura dos ombros.", "Manter core firme (especialmente em pé)."],
+        "erros_comuns": ["Arquear a lombar (em pé)", "Bater os halteres no topo", "Amplitude curta"],
+        "variacoes": ["Desenvolvimento Arnold", "Desenvolvimento Unilateral com Halter"],
+        "tags": ["ombros", "deltoides", "triceps", "empurrar", "push", "forca", "hipertrofia", "composto", "halteres"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX055",
+        "nome_pt": "Desenvolvimento Arnold (Arnold Press)",
+        "musculo_primario": "Deltóide Anterior", "musculos_secundarios": ["Deltóide Lateral", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["halteres", "banco_reto (opcional)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Sente-se ou fique em pé.", "Segure os halteres à frente do corpo na altura dos ombros, palmas voltadas para você.", "Inicie o movimento empurrando para cima enquanto rotaciona os punhos, de modo que as palmas fiquem voltadas para frente no topo do movimento.", "No topo, os braços estão estendidos acima da cabeça.", "Desça controladamente, revertendo a rotação para que as palmas voltem a ficar de frente para você na posição inicial."],
+        "erros_comuns": ["Movimento muito rápido", "Bater os halteres", "Arquear a lombar"],
+        "variacoes": ["Desenvolvimento com Halteres Padrão"],
+        "tags": ["ombros", "deltoides", "triceps", "empurrar", "push", "hipertrofia", "composto", "halteres", "rotacao"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX056",
+        "nome_pt": "Desenvolvimento na Máquina (Shoulder Press Machine)",
+        "musculo_primario": "Deltóide Anterior", "musculos_secundarios": ["Deltóide Lateral", "Tríceps Braquial"],
+        "tipo_exercicio": "Composto", "equipamento": ["maquina_desenvolvimento_ombro"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Sente-se na máquina, ajuste a altura do banco para que as manoplas fiquem na altura dos ombros.", "Costas bem apoiadas.", "Empurre as manoplas para cima até a extensão quase completa dos cotovelos.", "Desça controladamente à posição inicial."],
+        "erros_comuns": ["Banco mal ajustado", "Amplitude curta"],
+        "variacoes": ["Desenvolvimento na Máquina Unilateral"],
+        "tags": ["ombros", "deltoides", "triceps", "empurrar", "push", "hipertrofia", "composto", "maquina", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // ** Elevações Laterais, Frontais e Posteriores **
+    {
+        "id": "EX057",
+        "nome_pt": "Elevação Lateral com Halteres",
+        "musculo_primario": "Deltóide Lateral", "musculos_secundarios": ["Deltóide Anterior", "Trapézio Superior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Fique em pé, pés na largura dos ombros, segure um halter em cada mão ao lado do corpo.", "Mantenha uma leve flexão nos cotovelos.", "Eleve os braços lateralmente até a altura dos ombros, mantendo os cotovelos ligeiramente flexionados (não levante as mãos acima dos cotovelos).", "Pense em 'empurrar para os lados', não apenas 'levantar'.", "Contraia os deltóides laterais.", "Desça controladamente."],
+        "erros_comuns": ["Usar impulso/balançar o corpo", "Elevar os ombros (usar trapézio)", "Levantar as mãos acima dos cotovelos", "Flexionar demais os cotovelos"],
+        "variacoes": ["Elevação Lateral Sentado", "Elevação Lateral na Polia Baixa", "Elevação Lateral na Máquina"],
+        "tags": ["ombros", "deltoide_lateral", "hipertrofia", "isolamento", "halteres"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX058",
+        "nome_pt": "Elevação Frontal com Halteres",
+        "musculo_primario": "Deltóide Anterior", "musculos_secundarios": ["Deltóide Lateral", "Peitoral Superior"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres", "barra", "anilhas", "cabo_polia"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Fique em pé, segure halteres (ou barra/anilha) à frente das coxas com pegada pronada.", "Mantenha cotovelos levemente flexionados.", "Eleve um ou ambos os braços para frente e para cima, até a altura dos ombros.", "Mantenha o tronco estável.", "Desça controladamente."],
+        "erros_comuns": ["Balançar o corpo", "Elevar acima da altura dos ombros", "Usar muito peso"],
+        "variacoes": ["Elevação Frontal Alternada", "Elevação Frontal com Barra", "Elevação Frontal com Anilha", "Elevação Frontal na Polia Baixa"],
+        "tags": ["ombros", "deltoide_anterior", "hipertrofia", "isolamento", "halteres", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX059",
+        "nome_pt": "Elevação Lateral Curvado com Halteres (Crucifixo Inverso)",
+        "musculo_primario": "Deltóide Posterior", "musculos_secundarios": ["Trapézio Médio", "Romboídes"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres", "banco_reto (opcional)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Fique em pé e incline o tronco para frente (costas retas, quase paralelas ao chão), ou sente-se em um banco e incline-se sobre as coxas.", "Segure halteres com pegada neutra, braços pendendo verticalmente.", "Mantenha cotovelos levemente flexionados.", "Eleve os braços lateralmente em um arco, como se estivesse abrindo as asas.", "Contraia a parte de trás dos ombros e superior das costas.", "Desça controladamente."],
+        "erros_comuns": ["Usar impulso/levantar o tronco", "Puxar com as costas em vez de abduzir os ombros", "Flexionar demais os cotovelos"],
+        "variacoes": ["Crucifixo Inverso na Máquina (Peck Deck Reverse)", "Crucifixo Inverso na Polia"],
+        "tags": ["ombros", "deltoide_posterior", "costas", "hipertrofia", "isolamento", "halteres", "postura"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // --- MEMBROS SUPERIORES: BÍCEPS ---
+     {
+        "id": "EX060",
+        "nome_pt": "Rosca Direta com Barra Reta",
+        "musculo_primario": "Bíceps Braquial", "musculos_secundarios": ["Braquial", "Braquiorradial", "Antebraços"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["barra_reta", "anilhas"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Fique em pé, segure a barra com pegada supinada (palmas para cima), mãos na largura dos ombros.", "Mantenha cotovelos fixos ao lado do corpo.", "Flexione os cotovelos, elevando a barra em direção aos ombros.", "Contraia o bíceps no topo.", "Desça controladamente até a extensão quase completa dos cotovelos."],
+        "erros_comuns": ["Balançar o corpo/usar impulso", "Mover os cotovelos para frente/trás", "Meia amplitude"],
+        "variacoes": ["Rosca Direta com Barra EZ", "Rosca Direta na Polia Baixa"],
+        "tags": ["bracos", "biceps", "flexao_cotovelo", "hipertrofia", "isolamento", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX061",
+        "nome_pt": "Rosca Direta com Barra EZ",
+        "musculo_primario": "Bíceps Braquial / Braquial", "musculos_secundarios": ["Braquiorradial", "Antebraços"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["barra_EZ", "anilhas"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Similar à rosca com barra reta, mas usando a barra EZ.", "A curvatura da barra permite uma pegada semi-supinada/neutra, que pode ser mais confortável para os punhos e ativar mais o músculo braquial."],
+        "erros_comuns": ["Balançar o corpo", "Mover cotovelos"],
+        "variacoes": ["Rosca Direta com Barra Reta", "Rosca Scott com Barra EZ"],
+        "tags": ["bracos", "biceps", "braquial", "flexao_cotovelo", "hipertrofia", "isolamento", "peso_livre", "conforto_punho"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX062",
+        "nome_pt": "Rosca Alternada com Halteres (em Pé ou Sentado)",
+        "musculo_primario": "Bíceps Braquial", "musculos_secundarios": ["Braquial", "Braquiorradial"],
+        "tipo_exercicio": "Isolamento Unilateral (execução alternada)", "equipamento": ["halteres", "banco_reto (opcional)"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Em pé ou sentado, segure um halter em cada mão ao lado do corpo, palmas voltadas para o corpo ou para frente.", "Mantendo um cotovelo fixo, flexione-o elevando o halter (pode supinar o punho durante a subida - girar palma para cima).", "Contraia o bíceps no topo.", "Desça controladamente.", "Alterne os braços a cada repetição ou faça todas reps de um lado e depois do outro."],
+        "erros_comuns": ["Balançar o corpo", "Mover cotovelos", "Meia amplitude"],
+        "variacoes": ["Rosca Simultânea com Halteres", "Rosca Inclinada com Halteres"],
+        "tags": ["bracos", "biceps", "flexao_cotovelo", "hipertrofia", "isolamento", "halteres", "unilateral"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX063",
+        "nome_pt": "Rosca Martelo (Hammer Curl)",
+        "musculo_primario": "Braquial / Braquiorradial", "musculos_secundarios": ["Bíceps Braquial"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres", "corda_polia"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Em pé ou sentado, segure halteres com pegada neutra (palmas voltadas uma para a outra).", "Mantenha cotovelos fixos ao lado do corpo.", "Flexione os cotovelos, elevando os halteres.", "Mantenha a pegada neutra durante todo o movimento.", "Desça controladamente."],
+        "erros_comuns": ["Balançar", "Mover cotovelos"],
+        "variacoes": ["Rosca Martelo Alternada", "Rosca Martelo na Polia com Corda", "Rosca Martelo Cruzada (Cross Body)"],
+        "tags": ["bracos", "biceps", "braquial", "braquiorradial", "antebraço", "flexao_cotovelo", "hipertrofia", "isolamento", "halteres"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX064",
+        "nome_pt": "Rosca Concentrada com Halter",
+        "musculo_primario": "Bíceps Braquial", "musculos_secundarios": ["Braquial"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halter", "banco_reto"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Sente-se na ponta de um banco, pernas afastadas.", "Incline o tronco à frente, apoie o tríceps do braço de trabalho na parte interna da coxa do mesmo lado.", "Segure um halter com pegada supinada, braço estendido.", "Flexione o cotovelo, elevando o halter em direção ao ombro.", "Foque na contração máxima do bíceps.", "Desça lentamente."],
+        "erros_comuns": ["Usar impulso do corpo", "Não apoiar o braço corretamente"],
+        "variacoes": [],
+        "tags": ["bracos", "biceps", "flexao_cotovelo", "hipertrofia", "isolamento", "halteres", "pico_contracao"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX065",
+        "nome_pt": "Rosca Scott com Barra EZ (Preacher Curl)",
+        "musculo_primario": "Bíceps Braquial", "musculos_secundarios": ["Braquial"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["banco_scott", "barra_EZ", "anilhas", "halter (opcional)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Sente-se no banco Scott, ajustando a altura para que as axilas fiquem próximas ao topo do apoio.", "Apoie a parte de trás dos braços (tríceps) firmemente no apoio inclinado.", "Segure a barra EZ com pegada supinada.", "Flexione os cotovelos, elevando a barra.", "Contraia o bíceps no topo.", "Desça lentamente, controlando o movimento, especialmente na parte final para não hiperextender o cotovelo."],
+        "erros_comuns": ["Levantar os cotovelos/ombros do apoio", "Descer muito rápido/sem controle", "Meia amplitude"],
+        "variacoes": ["Rosca Scott com Halteres", "Rosca Scott Unilateral", "Rosca Scott na Máquina"],
+        "tags": ["bracos", "biceps", "flexao_cotovelo", "hipertrofia", "isolamento", "pico_contracao", "braco_apoiado"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Risco de lesão no cotovelo se descer descontroladamente ou hiperextender."
+    },
+    {
+        "id": "EX066",
+        "nome_pt": "Rosca na Polia Baixa com Barra Reta/EZ",
+        "musculo_primario": "Bíceps Braquial", "musculos_secundarios": ["Braquial", "Braquiorradial"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia (polia baixa)", "barra_reta_polia", "barra_EZ_polia"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Fique de frente para a polia baixa, segure a barra com pegada supinada.", "Mantenha cotovelos fixos ao lado do corpo.", "Flexione os cotovelos, puxando a barra para cima.", "Contraia o bíceps.", "Retorne controladamente à posição inicial."],
+        "erros_comuns": ["Balançar", "Mover cotovelos"],
+        "variacoes": ["Rosca na Polia com Corda (pegada neutra)", "Rosca na Polia Unilateral"],
+        "tags": ["bracos", "biceps", "flexao_cotovelo", "hipertrofia", "isolamento", "cabo_polia", "tensao_constante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX067",
+        "nome_pt": "Rosca Inclinada com Halteres",
+        "musculo_primario": "Bíceps Braquial (cabeça longa - maior alongamento)", "musculos_secundarios": ["Braquial"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halteres", "banco_inclinado (45-60 graus)"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Sente-se em um banco inclinado, costas apoiadas.", "Segure halteres com braços estendidos ao lado do corpo (palmas para frente ou neutras no início).", "Mantenha os ombros para trás e cotovelos fixos.", "Flexione os cotovelos, elevando os halteres (pode supinar durante a subida).", "Contraia o bíceps.", "Desça lentamente, focando no alongamento da cabeça longa do bíceps."],
+        "erros_comuns": ["Balançar os halteres", "Mover os ombros para frente", "Não controlar a descida"],
+        "variacoes": ["Rosca Inclinada Alternada"],
+        "tags": ["bracos", "biceps", "cabeca_longa", "flexao_cotovelo", "hipertrofia", "isolamento", "halteres", "alongamento"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // --- MEMBROS SUPERIORES: TRÍCEPS ---
+     {
+        "id": "EX068",
+        "nome_pt": "Tríceps Pulley com Barra Reta (Pushdown)",
+        "musculo_primario": "Tríceps Braquial (todas as cabeças)", "musculos_secundarios": ["Ancôneo"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia (polia alta)", "barra_reta_polia"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Fique de frente para a polia alta, segure a barra com pegada pronada (palmas para baixo), mãos próximas.", "Mantenha cotovelos fixos ao lado do corpo.", "Estenda os cotovelos, empurrando a barra para baixo até a extensão completa.", "Contraia o tríceps.", "Retorne controladamente à posição inicial (aprox. 90 graus no cotovelo).", "Evite mover os ombros ou balançar."],
+        "erros_comuns": ["Mover os cotovelos", "Balançar o corpo", "Meia amplitude", "Ombros rodando para frente"],
+        "variacoes": ["Tríceps Pulley com Barra V", "Tríceps Pulley com Corda", "Tríceps Pulley com Pegada Supinada (invertida)"],
+        "tags": ["bracos", "triceps", "extensao_cotovelo", "hipertrofia", "isolamento", "cabo_polia", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX069",
+        "nome_pt": "Tríceps Pulley com Corda (Pushdown)",
+        "musculo_primario": "Tríceps Braquial (ênfase cabeça lateral)", "musculos_secundarios": ["Ancôneo"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["cabo_polia (polia alta)", "corda"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Similar ao pulley com barra, mas usando a corda.", "Segure as extremidades da corda com pegada neutra.", "Empurre para baixo, separando as mãos na parte final do movimento para máxima contração.", "Retorne controladamente."],
+        "erros_comuns": ["Mover cotovelos", "Balançar"],
+        "variacoes": ["Tríceps Pulley com Barra", "Tríceps Pulley Unilateral com Alça"],
+        "tags": ["bracos", "triceps", "cabeca_lateral", "extensao_cotovelo", "hipertrofia", "isolamento", "cabo_polia", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX070",
+        "nome_pt": "Tríceps Testa com Barra EZ (Skullcrusher)",
+        "musculo_primario": "Tríceps Braquial (ênfase cabeça longa)", "musculos_secundarios": [],
+        "tipo_exercicio": "Isolamento", "equipamento": ["barra_EZ", "anilhas", "banco_reto"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Deite-se em um banco reto, segure a barra EZ com pegada pronada fechada, braços estendidos acima do peito.", "Mantenha os braços (úmeros) perpendiculares ao chão ou ligeiramente inclinados para trás.", "Flexione apenas os cotovelos, descendo a barra em direção à testa ou um pouco atrás da cabeça.", "Mantenha os cotovelos apontados para o teto (não abra para os lados).", "Estenda os cotovelos, retornando a barra à posição inicial, contraindo o tríceps."],
+        "erros_comuns": ["Abrir os cotovelos", "Mover os ombros/braços", "Descer muito rápido"],
+        "variacoes": ["Tríceps Testa com Halteres", "Tríceps Francês (movimento similar, mas sentado ou em pé)"],
+        "tags": ["bracos", "triceps", "cabeca_longa", "extensao_cotovelo", "hipertrofia", "isolamento", "peso_livre"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Use um pegador (spotter) se usar cargas altas. Cuidado para não bater a barra na testa."
+    },
+     {
+        "id": "EX071",
+        "nome_pt": "Tríceps Francês com Halter (Sentado ou em Pé)",
+        "musculo_primario": "Tríceps Braquial (ênfase cabeça longa)", "musculos_secundarios": [],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halter", "banco_reto (opcional)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Sentado ou em pé, segure um halter com ambas as mãos (formando um triângulo com os polegares e indicadores) acima da cabeça, braços estendidos.", "Mantenha os cotovelos próximos à cabeça (não deixe abrir).", "Flexione os cotovelos, descendo o halter para trás da cabeça.", "Alongue bem o tríceps.", "Estenda os cotovelos, elevando o halter de volta à posição inicial.", "Mantenha o core firme para estabilizar."],
+        "erros_comuns": ["Abrir os cotovelos", "Arquear a lombar", "Meia amplitude"],
+        "variacoes": ["Tríceps Francês com Barra EZ", "Tríceps Francês Unilateral com Halter", "Tríceps Francês na Polia Baixa com Corda"],
+        "tags": ["bracos", "triceps", "cabeca_longa", "extensao_cotovelo", "hipertrofia", "isolamento", "halteres", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX072",
+        "nome_pt": "Tríceps Coice com Halter (Kickback)",
+        "musculo_primario": "Tríceps Braquial (ênfase cabeça lateral)", "musculos_secundarios": [],
+        "tipo_exercicio": "Isolamento", "equipamento": ["halter", "banco_reto (opcional)"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Incline o tronco para frente (costas retas), apoiando uma mão em um banco ou coxa.", "Segure um halter com a outra mão, cotovelo flexionado a 90 graus, braço (úmero) paralelo ao chão.", "Mantenha o braço fixo nessa posição.", "Estenda o cotovelo, levando o halter para trás.", "Contraia o tríceps no final do movimento.", "Retorne controladamente à posição de 90 graus.", "Faça um lado de cada vez."],
+        "erros_comuns": ["Mover o braço inteiro (não isolar o cotovelo)", "Balançar o peso", "Não estender completamente"],
+        "variacoes": ["Tríceps Coice na Polia Baixa"],
+        "tags": ["bracos", "triceps", "cabeca_lateral", "extensao_cotovelo", "hipertrofia", "isolamento", "halteres", "pico_contracao"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX073",
+        "nome_pt": "Supino Fechado com Barra (Close-Grip Bench Press)",
+        "musculo_primario": "Tríceps Braquial", "musculos_secundarios": ["Peitoral Maior (interno)", "Deltóide Anterior"],
+        "tipo_exercicio": "Composto", "equipamento": ["barra_olimpica", "banco_reto", "anilhas", "suporte_barra"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Similar ao supino reto, mas com pegada mais fechada (largura dos ombros ou ligeiramente menor).", "Desça a barra controladamente até a parte inferior do peito/superior do abdômen, mantendo os cotovelos próximos ao corpo.", "Empurre a barra para cima, focando na extensão dos cotovelos e contração do tríceps."],
+        "erros_comuns": ["Pegada excessivamente fechada (estressa punhos)", "Abrir os cotovelos", "Bater a barra"],
+        "variacoes": ["Supino Fechado com Halteres", "Flexão com Pegada Fechada"],
+        "tags": ["bracos", "triceps", "peitoral", "ombro", "empurrar", "push", "forca", "hipertrofia", "composto", "peso_livre"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX074",
+        "nome_pt": "Mergulho entre Bancos (Bench Dip)",
+        "musculo_primario": "Tríceps Braquial", "musculos_secundarios": ["Deltóide Anterior", "Peitoral (inferior)"],
+        "tipo_exercicio": "Composto", "equipamento": ["banco_reto (dois, ou um banco e apoio para pés)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Posicione as mãos na borda de um banco, dedos para frente.", "Estenda as pernas à frente, calcanhares apoiados no chão (mais fácil) ou em outro banco (mais difícil).", "Desça o corpo flexionando os cotovelos (apontados para trás), até sentir um alongamento no tríceps/ombro.", "Empurre para cima, estendendo os cotovelos.", "Mantenha o corpo próximo ao banco."],
+        "erros_comuns": ["Descer demais (risco ombro)", "Cotovelos abrindo para os lados", "Corpo afastado do banco"],
+        "variacoes": ["Bench Dip com anilha no colo"],
+        "tags": ["bracos", "triceps", "ombro", "peitoral", "empurrar", "push", "hipertrofia", "composto", "peso_corporal"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Pode ser estressante para os ombros, especialmente se descer muito ou com má forma."
+    },
+
+    // --- CORE (Abdômen e Lombar) ---
+    {
+        "id": "EX075",
+        "nome_pt": "Prancha Frontal (Plank)",
+        "musculo_primario": "Core (Transverso Abdominal, Reto Abdominal, Oblíquos)", "musculos_secundarios": ["Eretores da Espinha", "Glúteos", "Ombros"],
+        "tipo_exercicio": "Isometria", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Apoie os antebraços e as pontas dos pés no chão.", "Cotovelos alinhados abaixo dos ombros.", "Corpo reto da cabeça aos calcanhares (sem elevar ou deixar cair o quadril).", "Contraia abdômen e glúteos.", "Mantenha a posição pelo tempo determinado."],
+        "erros_comuns": ["Quadril muito alto ou baixo", "Cabeça caída", "Ombros tensos"],
+        "variacoes": ["Prancha com Braços Estendidos", "Prancha instável (em bola, bosu)", "Prancha com elevação de perna/braço"],
+        "tags": ["core", "abdomen", "lombar", "estabilidade", "isometria", "peso_corporal", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX076",
+        "nome_pt": "Prancha Lateral (Side Plank)",
+        "musculo_primario": "Oblíquos", "musculos_secundarios": ["Transverso Abdominal", "Quadrado Lombar", "Glúteo Médio"],
+        "tipo_exercicio": "Isometria Unilateral", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Deite-se de lado, apoie o antebraço no chão (cotovelo abaixo do ombro).", "Pés juntos ou um sobre o outro.", "Eleve o quadril do chão, formando uma linha reta do corpo.", "Contraia os oblíquos do lado de baixo.", "Mantenha a posição.", "Faça os dois lados."],
+        "erros_comuns": ["Quadril caído", "Corpo desalinhado (rodado)"],
+        "variacoes": ["Prancha Lateral com Joelho Apoiado", "Prancha Lateral com Elevação de Perna", "Prancha Lateral com Rotação"],
+        "tags": ["core", "obliquos", "estabilidade", "isometria", "unilateral", "peso_corporal"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX077",
+        "nome_pt": "Abdominal Supra (Crunch)",
+        "musculo_primario": "Reto Abdominal (porção superior)", "musculos_secundarios": ["Oblíquos"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Deite-se de costas, joelhos flexionados, pés no chão.", "Mãos atrás da cabeça (sem puxar o pescoço) ou cruzadas no peito.", "Contraia o abdômen, elevando a cabeça e os ombros do chão (flexão da coluna torácica).", "Mantenha a lombar no chão.", "Retorne controladamente."],
+        "erros_comuns": ["Puxar o pescoço", "Subir demais (usar flexores do quadril)", "Movimento rápido"],
+        "variacoes": ["Crunch com Pernas Elevadas", "Crunch na Bola Suíça", "Crunch na Máquina"],
+        "tags": ["core", "abdomen", "reto_abdominal", "hipertrofia", "isolamento", "peso_corporal", "iniciante"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX078",
+        "nome_pt": "Abdominal Infra (Elevação de Pernas Deitado)",
+        "musculo_primario": "Reto Abdominal (porção inferior) / Flexores do Quadril", "musculos_secundarios": ["Oblíquos"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Deite-se de costas, pernas estendidas ou levemente flexionadas.", "Mãos ao lado do corpo ou sob o quadril (para apoio lombar).", "Contraia o abdômen inferior e eleve as pernas em direção ao teto.", "Mantenha a lombar o mais próximo possível do chão.", "Desça as pernas controladamente, sem deixar a lombar arquear excessivamente.", "Para iniciantes, pode fazer com joelhos flexionados."],
+        "erros_comuns": ["Arquear a lombar na descida", "Usar impulso", "Não controlar o movimento"],
+        "variacoes": ["Elevação de Pernas na Barra Fixa (Hanging Leg Raise)", "Elevação de Joelhos na Barra Fixa", "Abdominal Infra na Prancha Inclinada"],
+        "tags": ["core", "abdomen", "reto_abdominal_inferior", "flexores_quadril", "hipertrofia", "isolamento", "peso_corporal"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Cuidado com a lombar, especialmente se tiver fraqueza no core."
+    },
+    {
+        "id": "EX079",
+        "nome_pt": "Abdominal Remador",
+        "musculo_primario": "Reto Abdominal / Flexores do Quadril", "musculos_secundarios": ["Oblíquos"],
+        "tipo_exercicio": "Composto", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Deite-se de costas, braços estendidos atrás da cabeça, pernas estendidas.", "Contraia o abdômen e, simultaneamente, eleve o tronco e as pernas, tentando tocar as mãos nos pés (ou joelhos flexionados).", "Forma um 'V' com o corpo.", "Retorne controladamente à posição inicial."],
+        "erros_comuns": ["Usar impulso", "Não sincronizar o movimento"],
+        "variacoes": ["Abdominal Canivete (V-Up)"],
+        "tags": ["core", "abdomen", "reto_abdominal", "flexores_quadril", "hipertrofia", "composto", "peso_corporal"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX080",
+        "nome_pt": "Abdominal Oblíquo (Bicicleta no Ar)",
+        "musculo_primario": "Oblíquos / Reto Abdominal", "musculos_secundarios": ["Flexores do Quadril"],
+        "tipo_exercicio": "Composto", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Deite-se de costas, mãos atrás da cabeça.", "Tire os ombros do chão.", "Traga um joelho em direção ao peito enquanto leva o cotovelo oposto em direção a esse joelho (rotação do tronco).", "Ao mesmo tempo, estenda a outra perna.", "Alterne os lados em um movimento contínuo, como se estivesse pedalando."],
+        "erros_comuns": ["Puxar o pescoço", "Movimento muito rápido e sem controle", "Não rotacionar o tronco"],
+        "variacoes": ["Crunch Oblíquo (com pés no chão)"],
+        "tags": ["core", "abdomen", "obliquos", "reto_abdominal", "hipertrofia", "composto", "peso_corporal"],
+        "video_link_exemplo": "placeholder"
+    },
+    {
+        "id": "EX081",
+        "nome_pt": "Abdominal na Roda (Ab Wheel Rollout)",
+        "musculo_primario": "Core (anti-extensão)", "musculos_secundarios": ["Reto Abdominal", "Oblíquos", "Dorsais", "Ombros", "Tríceps"],
+        "tipo_exercicio": "Composto (Anti-Extensão)", "equipamento": ["roda_abdominal"], "nivel_dificuldade": "Avançado",
+        "instrucoes_execucao": ["Ajoelhe-se no chão (use colchonete), segure as manoplas da roda abdominal.", "Posicione a roda à frente do corpo, sob os ombros.", "Mantendo o core extremamente contraído e as costas retas (levemente arredondadas é mais seguro), role a roda para frente o máximo que conseguir sem deixar a lombar arquear.", "Use a força do core para puxar a roda de volta à posição inicial.", "Não relaxe o abdômen em nenhum momento."],
+        "erros_comuns": ["Arquear a lombar (PERIGOSO!)", "Ir longe demais antes de ter força", "Usar flexores do quadril para voltar"],
+        "variacoes": ["Rollout com Barra e Anilhas", "Rollout na Bola Suíça", "Rollout em Pé (muito avançado)"],
+        "tags": ["core", "abdomen", "anti_extensao", "estabilidade", "forca", "avançado"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Alto risco de lesão lombar se a forma for incorreta ou se for feito sem força suficiente no core. Progrida com cautela."
+    },
+    {
+        "id": "EX082",
+        "nome_pt": "Perdigueiro (Bird Dog)",
+        "musculo_primario": "Core (estabilidade)", "musculos_secundarios": ["Eretores da Espinha", "Glúteos", "Ombros"],
+        "tipo_exercicio": "Estabilidade", "equipamento": ["peso_corporal", "colchonete"], "nivel_dificuldade": "Iniciante",
+        "instrucoes_execucao": ["Posição de quatro apoios (mãos sob ombros, joelhos sob quadris).", "Mantenha a coluna neutra e o core ativado.", "Lentamente, estenda um braço para frente e a perna oposta para trás, simultaneamente.", "Mantenha o corpo estável, sem girar o quadril ou arquear a lombar.", "Sustente por 1-2 segundos.", "Retorne controladamente à posição inicial.", "Alterne os lados."],
+        "erros_comuns": ["Arquear a lombar", "Girar o quadril", "Movimento rápido"],
+        "variacoes": ["Bird Dog com toque cotovelo-joelho"],
+        "tags": ["core", "lombar", "gluteos", "estabilidade", "controle_motor", "peso_corporal", "iniciante", "reabilitacao"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX083",
+        "nome_pt": "Hiperextensão Lombar (Back Extension)",
+        "musculo_primario": "Eretores da Espinha (Lombar)", "musculos_secundarios": ["Glúteos", "Isquiotibiais"],
+        "tipo_exercicio": "Isolamento", "equipamento": ["banco_hiperextensao_45_graus", "banco_romano (90 graus)"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Posicione-se no banco de hiperextensão, com os pés presos e o apoio na altura do quadril (permitindo a flexão do tronco).", "Cruze os braços no peito ou coloque as mãos atrás da cabeça.", "Mantenha as costas retas.", "Desça o tronco flexionando o quadril, até onde for confortável.", "Suba estendendo o quadril e a coluna, até o corpo ficar alinhado.", "Evite hiperextender a coluna no topo (não 'jogar' o tronco para trás)."],
+        "erros_comuns": ["Hiperextender a coluna no topo", "Movimento muito rápido", "Curvar as costas"],
+        "variacoes": ["Hiperextensão com anilha no peito", "Hiperextensão Reversa (pernas se movem)"],
+        "tags": ["core", "lombar", "eretores_espinha", "gluteos", "posteriores", "forca", "hipertrofia", "isolamento"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Evitar hiperextensão excessiva para proteger a coluna."
+    },
+    {
+        "id": "EX084",
+        "nome_pt": "Pallof Press (Anti-Rotação)",
+        "musculo_primario": "Core (Oblíquos, Transverso - Anti-Rotação)", "musculos_secundarios": ["Reto Abdominal", "Ombros (isometria)"],
+        "tipo_exercicio": "Anti-Rotação", "equipamento": ["cabo_polia", "elastico"], "nivel_dificuldade": "Iniciante/Intermediário",
+        "instrucoes_execucao": ["Posicione a polia (ou prenda o elástico) na altura do peito.", "Fique de lado para a polia, pegue a manopla com ambas as mãos.", "Afaste-se lateralmente para tensionar.", "Posicione as mãos juntas no centro do peito.", "Base firme, core ativado.", "Empurre as mãos retas para frente, resistindo à força rotacional do cabo/elástico que tenta puxá-lo de volta.", "Mantenha o tronco e quadris imóveis.", "Retorne as mãos ao peito controladamente.", "Faça os dois lados."],
+        "erros_comuns": ["Deixar o tronco girar", "Compensar com os ombros"],
+        "variacoes": ["Pallof Press Ajoelhado", "Pallof Press com Rotação Controlada"],
+        "tags": ["core", "obliquos", "transverso", "anti_rotacao", "estabilidade", "cabo_polia", "elastico"],
+        "video_link_exemplo": "placeholder"
+    },
+
+    // --- EXERCÍCIOS FUNCIONAIS / CORPO INTEIRO ---
+     {
+        "id": "EX085",
+        "nome_pt": "Kettlebell Swing (Estilo Russo)",
+        "musculo_primario": "Cadeia Posterior (Glúteos, Isquiotibiais)", "musculos_secundarios": ["Eretores da Espinha", "Core", "Ombros (estabilização)", "Antebraços"],
+        "tipo_exercicio": "Composto Balístico (Hinge)", "equipamento": ["kettlebell"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Fique em pé, pés um pouco além da largura dos ombros, kettlebell no chão ligeiramente à frente.", "Incline o tronco (hinge), pegue o kettlebell com ambas as mãos.", "Balance o KB para trás, entre as pernas.", "Com uma extensão explosiva do quadril (não um agachamento!), projete o KB para frente até a altura do peito/ombros.", "Braços servem como 'ganchos', o movimento vem do quadril.", "Deixe o KB descer de volta entre as pernas de forma controlada e repita o movimento de quadril.", "Mantenha costas retas e core firme."],
+        "erros_comuns": ["Agachar em vez de fazer o hinge", "Usar os braços para levantar o KB", "Curvar a lombar", "Não ter explosão no quadril"],
+        "variacoes": ["Kettlebell Swing Unilateral", "Kettlebell Swing Americano (acima da cabeça - maior risco/mobilidade necessária)"],
+        "tags": ["corpo_inteiro", "funcional", "cadeia_posterior", "gluteos", "posteriores", "potencia", "condicionamento", "kettlebell", "hinge", "balistico"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Requer aprendizado da técnica correta para evitar lesão lombar."
+    },
+     {
+        "id": "EX086",
+        "nome_pt": "Levantamento Turco (Turkish Get-Up - TGU)",
+        "musculo_primario": "Corpo Inteiro (Estabilidade, Força)", "musculos_secundarios": ["Ombros", "Core", "Quadris", "Tríceps"],
+        "tipo_exercicio": "Composto Funcional", "equipamento": ["kettlebell", "halter"], "nivel_dificuldade": "Avançado",
+        "instrucoes_execucao": ["Sequência complexa de movimentos: Deitado de costas segurando o peso com um braço estendido -> Rolar para o cotovelo -> Apoiar na mão -> Elevar o quadril -> Passar a perna por baixo -> Posição de lunge -> Levantar.", "Manter o peso estável e o braço estendido acima da cabeça durante todo o processo.", "Execução lenta e controlada.", "Retornar ao chão revertendo os passos."],
+        "erros_comuns": ["Perder a estabilidade do ombro", "Movimentos apressados", "Sequência incorreta"],
+        "variacoes": ["TGU sem peso (aprendizado)", "TGU com Halter"],
+        "tags": ["corpo_inteiro", "funcional", "estabilidade", "forca", "mobilidade", "controle_motor", "kettlebell", "halteres", "avançado"],
+        "video_link_exemplo": "placeholder",
+        "aviso_seguranca": "Exercício complexo que exige aprendizado progressivo e atenção total à forma."
+    },
+    {
+        "id": "EX087",
+        "nome_pt": "Empurrar Trenó (Sled Push)",
+        "musculo_primario": "Pernas (Quadríceps, Glúteos) / Core", "musculos_secundarios": ["Panturrilhas", "Ombros"],
+        "tipo_exercicio": "Composto / Condicionamento", "equipamento": ["treno_carga", "anilhas"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Posicione as mãos nas barras do trenó (altas ou baixas).", "Incline o corpo para frente, mantendo braços estendidos ou flexionados.", "Empurre o trenó para frente usando a força das pernas, com passos curtos e rápidos ou longos e fortes.", "Mantenha o core firme e as costas retas."],
+        "erros_comuns": ["Costas curvadas", "Não usar a força das pernas"],
+        "variacoes": ["Sled Pull (puxar o trenó com corda)"],
+        "tags": ["corpo_inteiro", "pernas", "condicionamento", "forca", "metabolico", "baixo_impacto"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX088",
+        "nome_pt": "Caminhada do Fazendeiro (Farmer's Walk)",
+        "musculo_primario": "Antebraços (Pegada) / Core / Trapézio", "musculos_secundarios": ["Pernas", "Ombros"],
+        "tipo_exercicio": "Carregamento / Força de Pegada / Core", "equipamento": ["halteres pesados", "kettlebells pesados", "barras_farmers_walk"], "nivel_dificuldade": "Intermediário",
+        "instrucoes_execucao": ["Pegue um peso pesado em cada mão (halteres, KBs, etc.).", "Fique em pé, com postura ereta, ombros para trás, core ativado.", "Caminhe uma distância determinada, mantendo a postura e o controle dos pesos.", "Não deixe os ombros caírem ou o tronco inclinar."],
+        "erros_comuns": ["Perder a postura", "Passos muito rápidos e descontrolados", "Deixar o peso balançar"],
+        "variacoes": ["Suitcase Carry (peso em apenas uma mão - desafio anti-lateral)", "Overhead Carry (peso acima da cabeça)"],
+        "tags": ["corpo_inteiro", "funcional", "pegada", "antebraço", "core", "trapezio", "estabilidade", "carregamento", "condicionamento"],
+        "video_link_exemplo": "placeholder"
+    },
+     {
+        "id": "EX089",
+        "nome_pt": "Burpee",
+        "musculo_primario": "Corpo Inteiro (Condicionamento)", "musculos_secundarios": ["Peito", "Ombros", "Tríceps", "Pernas", "Core"],
+        "tipo_exercicio": "Composto Pliométrico / Condicionamento", "equipamento": ["peso_corporal"], "nivel_dificuldade": "Intermediário/Avançado",
+        "instrucoes_execucao": ["Comece em pé.", "Agache e coloque as mãos no chão.", "Salte os pés para trás, entrando em posição de prancha alta.", "(Opcional) Faça uma flexão de braço.", "Salte os pés de volta para perto das mãos.", "Levante-se explosivamente e salte verticalmente, estendendo os braços acima da cabeça."],
+        "erros_comuns": ["Forma ruim na flexão", "Não saltar explosivamente", "Curvar as costas"],
+        "variacoes": ["Burpee sem flexão", "Burpee sem salto"],
+        "tags": ["corpo_inteiro", "condicionamento", "metabolico", "pliometria", "peso_corporal", "calistenia", "hiit"],
+        "video_link_exemplo": "placeholder"
+    }
+
+    // ... CONTINUAR ADICIONANDO MAIS EXERCÍCIOS ...
+    // Exemplos a adicionar:
+    // - Variações de máquinas (diferentes ângulos, unilaterais)
+    // - Mais exercícios com cabos (remadas unilaterais, elevações diferentes)
+    // - Mais exercícios com Kettlebells (Snatch, Clean, Windmill)
+    // - Exercícios com elásticos (remadas, puxadas, agachamentos assistidos/resistidos)
+    // - Exercícios de mobilidade e alongamento (se aplicável à base de dados)
+    // - Exercícios pliométricos (Box Jump, Medicine Ball Throws)
+    // - Exercícios de aquecimento específicos
+]

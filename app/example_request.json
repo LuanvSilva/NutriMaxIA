@@ -1,0 +1,66 @@
+{
+    "user_id_for_test": "00000000-0000-0000-0000-000000000000",
+      "dados_pessoais": {
+        "nome": "João Silva",
+        "idade": 32,
+        "genero": "masculino",
+        "peso_kg": 85,
+        "altura_cm": 178,
+        "nivel_atividade": "moderadamente_ativo"
+      },
+      "objetivo_principal": "hipertrofia",
+      "objetivos_secundarios": ["perda_gordura", "melhora_condicionamento"],
+      "preferencias_alimentares": {
+        "alimentos_preferidos": ["frango", "arroz", "ovo", "banana", "aveia"],
+        "alimentos_indesejados": ["beterraba", "berinjela"]
+      },
+      "restricoes_alimentares": {
+        "alergias": ["amendoim"],
+        "intolerancia_lactose": false,
+        "intolerancia_gluten": false,
+        "dieta_especifica": "omnivoro"
+      },
+      "health_history": {
+        "has_diabetes": false,
+        "has_hypertension": false,
+        "has_heart_disease": false,
+        "has_renal_disease": false,
+        "has_thyroid_issues": false,
+        "medications": [],
+        "recent_injuries": [],
+        "outras_condicoes_saude": ""
+      },
+      "rotina": {
+        "horario_acordar": "06:00",
+        "horario_dormir": "22:30",
+        "dias_treino_disponiveis": ["segunda", "terca", "quinta", "sexta"],
+        "duracao_treino_minutos": 60,
+        "local_treino": "academia",
+        "equipamentos_disponiveis": ["todos"]
+      },
+      "nivel_experiencia_treino": "intermediario",
+      "frequencia_treino_semana": 4,
+      "historico_treino": {
+        "tempo_treino_anos": 2,
+        "ultimo_programa": "treino ABC",
+        "exercicios_favoritos": ["agachamento", "supino", "barra fixa"],
+        "exercicios_problema": ["levantamento terra"]
+      },
+      "medicoes": {
+        "percentual_gordura": 18,
+        "circunferencia_cintura_cm": 88,
+        "circunferencia_braco_cm": 38
+      },
+      "habitos_alimentares": {
+        "refeicoes_por_dia": 4,
+        "frequencia_refeicao_fora": "ocasional",
+        "consumo_agua_litros": 2.5,
+        "suplementos_atuais": ["whey protein", "creatina"]
+      },
+      "preferencias_plano": {
+        "complexidade_receitas": "simples",
+        "variedade_cardapio": "moderada",
+        "preferencia_contagem_macros": true,
+        "metodologia_treino_preferida": "hipertrofia_tradicional"
+      }
+    }

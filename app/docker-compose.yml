@@ -1,0 +1,108 @@
+services:
+  # Serviço do Backend (API Flask)
+  backend:
+    build:
+      context: . # Alterado de ./backend para . já que o Dockerfile está na raiz do projeto
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    env_file:
+      - .env # Alterado de ./app/.env para .env já que o .env está na raiz do projeto
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - nutritrain_network
+
+  # Serviço do Banco de Dados (PostgreSQL com pgvector)
+  db:
+    image: ankane/pgvector:v0.5.1 # Imagem oficial com pgvector (verifique a versão mais recente)
+    # Ou use postgres:15 e adicione um script init para criar a extensão
+    container_name: nutritrain_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER} # Usa variáveis do .env
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Volume para persistência dos dados
+      - ./init-db.sql:/docker-entrypoint-initdb.d/01-init-db.sql # Inicializar o banco automaticamente
+      - ./init-test-users.sql:/docker-entrypoint-initdb.d/02-init-test-users.sql # Inicializar usuários de teste automaticamente
+    ports:
+      - "5432:5432" # Expõe a porta do PostgreSQL (para debug ou pgAdmin externo)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - nutritrain_network
+
+  # Serviço do pgAdmin (Interface Gráfica para o DB)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: nutritrain_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+      PGADMIN_LISTEN_PORT: 80 # Porta interna do container pgAdmin
+    ports:
+      - "5050:80" # Mapeia a porta 80 interna para a 5050 na sua máquina
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin # Volume para persistência das configs do pgAdmin
+    depends_on:
+      db:
+        condition: service_healthy # Espera o DB estar pronto
+    networks:
+      - nutritrain_network
+
+  # Serviço Redis (Broker para Celery)
+  redis:
+    image: redis:7-alpine
+    container_name: nutritrain_redis
+    ports:
+      - "6379:6379" # Expõe a porta do Redis
+    volumes:
+      - redis_data:/data # Volume para persistência (opcional para dev)
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - nutritrain_network
+
+  # Serviço Celery Worker (Opcional no início, mas necessário para tarefas assíncronas)
+  celery_worker:
+    build:
+      context: . # Alterado de ./backend para . já que o Dockerfile está na raiz do projeto
+      dockerfile: Dockerfile
+    command: celery -A celery_worker.celery worker --loglevel=info
+    env_file:
+      - .env
+    depends_on:
+      redis:
+        condition: service_healthy
+      db:
+        condition: service_healthy
+      backend:
+        condition: service_started
+    networks:
+      - nutritrain_network
+
+# Definição das Redes
+networks:
+  nutritrain_network:
+    driver: bridge
+
+# Definição dos Volumes Nomeados
+volumes:
+  postgres_data:
+  pgadmin_data:
+  redis_data:
+  pip_cache:       # Para backend (se usar imagem Python)
+  # Removi os volumes relacionados ao frontend
+  # node_modules_volume: 
+  # yarn_cache:    
+  # npm_cache:

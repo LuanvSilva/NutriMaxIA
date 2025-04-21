@@ -1,0 +1,20 @@
+# requirements.txt
+Flask>=2.0
+Flask-SQLAlchemy>=3.0
+Flask-Migrate>=4.0
+Flask-Marshmallow>=0.14 # ou Pydantic se preferir
+marshmallow-sqlalchemy>=0.28.0 # Necessário para SQLAlchemyAutoSchema
+Flask-JWT-Extended>=4.0
+psycopg2-binary>=2.9 # Driver PostgreSQL
+python-dotenv>=0.20
+SQLAlchemy>=1.4 # Ou 2.0+
+pgvector>=0.1.8 # Para o tipo Vector no SQLAlchemy
+Werkzeug>=2.0 # Dependência do Flask
+bcrypt>=3.2 # Para hashing de senhas
+celery>=5.0
+redis>=4.0 # Ou outro broker para Celery
+sentence-transformers>=2.2 # Para embeddings (exemplo)
+google-generativeai>=0.4.0 # Adicione esta linha
+requests # Dependência comum
+gunicorn # Para produção (opcional no dev)
+jsonschema # Para validação do JSON da IA (recomendado)
