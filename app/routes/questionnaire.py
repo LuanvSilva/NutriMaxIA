@@ -1,9 +1,15 @@
+import sys
+import os
+
+# Configurar path do Python para encontrar módulos locais
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from flask import Blueprint, request, jsonify
-from app.extensions import db
-from app.models import QuestionnaireResponse, GeneratedPlan, Academia, User
-from app.schemas import QuestionnaireSchema
-from app.tasks.plan_tasks import generate_plan_task
-from app.utils.helpers import get_current_kb_version
+from extensions import db
+from models import QuestionnaireResponse, GeneratedPlan, Academia, User
+from schemas import QuestionnaireSchema
+from tasks.plan_tasks import generate_plan_task
+from utils.helpers import get_current_kb_version
 import uuid
 import logging
 from sqlalchemy import text

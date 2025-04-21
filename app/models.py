@@ -1,5 +1,11 @@
 # app/models.py
-from app.extensions import db
+import sys
+import os
+
+# Adicionar o diretório atual ao path do Python
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from extensions import db
 from sqlalchemy.dialects.postgresql import JSONB, UUID
 from pgvector.sqlalchemy import Vector # Importar tipo Vector
 import uuid

@@ -1,6 +1,12 @@
-from app.extensions import celery, db
-from app.models import GeneratedPlan, QuestionnaireResponse
-from app.services.plan_generation_service import PlanGenerationService
+import sys
+import os
+
+# Adicionar o diretório raiz ao path do Python
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from extensions import celery, db
+from models import GeneratedPlan, QuestionnaireResponse
+from services.plan_generation_service import PlanGenerationService
 import logging
 from datetime import datetime
 

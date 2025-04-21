@@ -1,7 +1,13 @@
-from app.extensions import db
-from app.models import KnowledgeBaseChunk
+import sys
+import os
+
+# Adicionar o diretório raiz ao path do Python
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from extensions import db
+from models import KnowledgeBaseChunk
 from sqlalchemy import text
-from .knowledge_base_service import KnowledgeBaseService # Para gerar embedding da query
+from services.knowledge_base_service import KnowledgeBaseService # Para gerar embedding da query
 import logging
 
 logger = logging.getLogger(__name__)

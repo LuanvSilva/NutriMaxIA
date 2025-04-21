@@ -1,7 +1,13 @@
+import sys
+import os
+
+# Configurar path do Python para encontrar módulos locais
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from flask import Blueprint, jsonify
 # Removi importações de JWT para facilitar testes
-from app.extensions import db
-from app.models import GeneratedPlan
+from extensions import db
+from models import GeneratedPlan
 import logging
 
 logger = logging.getLogger(__name__)

@@ -1,11 +1,16 @@
+import sys
 import os
 import click
 from flask.cli import with_appcontext
 from sqlalchemy import text
-from app.extensions import db
-from app.services.knowledge_base_service import KnowledgeBaseService
-from app.services.vector_db_service import VectorDBService
-from app.config import Config
+
+# Adicionar o diretório atual ao path do Python
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from extensions import db
+from services.knowledge_base_service import KnowledgeBaseService
+from services.vector_db_service import VectorDBService
+from config import Config
 
 def register_commands(app):
     """Registra comandos CLI personalizados para a aplicação Flask"""
@@ -58,7 +63,7 @@ def register_commands(app):
     @with_appcontext
     def create_user(nome, email, senha, academia_id):
         """Cria um novo usuário no banco de dados"""
-        from app.models import User
+        from models import User
         
         try:
             # Cria o usuário

@@ -1,6 +1,11 @@
 import json
-from app.config import Config
+import sys
 import os
+
+# Adicionar o diretório raiz ao path do Python
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from config import Config
 import logging
 from sentence_transformers import SentenceTransformer # Exemplo de modelo de embedding
 
