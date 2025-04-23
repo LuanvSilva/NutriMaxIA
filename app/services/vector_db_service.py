@@ -56,40 +56,98 @@ class VectorDBService:
 
 
     def search(self, query_text, k=5, filters=None):
-        """Busca os k chunks mais similares à query_text, com filtros opcionais."""
+        """
+        Realiza busca vetorial por similaridade e aplica filtros opcionais.
+        
+        Args:
+            query_text: Texto de consulta para buscar chunks similares
+            k: Número de resultados a retornar
+            filters: Dicionário com filtros a aplicar nos metadados
+                    Exemplos: 
+                    - {'type': 'food'} -> metadata_json->>'type' = 'food'
+                    - {'tags': ['lowcarb', 'keto']} -> metadata_json->'tags' ? 'lowcarb' OR metadata_json->'tags' ? 'keto'
+        
+        Returns:
+            Lista de chunks relevantes com seus metadados e similaridade
+        """
         if not self.kb_service.embedding_model:
-             logger.error("Modelo de embedding não disponível para busca.")
-             return []
+            logger.error("Modelo de embedding não disponível para busca.")
+            return []
 
-        query_embedding = self.kb_service.generate_embeddings([query_text])[0]
-
-        # Exemplo de consulta com pgvector (usando distância de cosseno)
-        # 1 - (embedding <=> query_embedding) é a similaridade de cosseno
-        # A cláusula WHERE pode ser usada para filtros nos metadados
-        # É crucial ter um índice vetorial (ex: IVFFlat ou HNSW) na coluna 'embedding' para performance
-        sql_query = text("""
-            SELECT id, chunk_text, metadata_json, 1 - (embedding <=> :query_embedding) AS similarity
-            FROM knowledge_base_chunk
-            WHERE kb_version = :kb_version
-            -- Aqui podem entrar filtros adicionais baseados em 'filters' e metadata_json
-            -- Exemplo: AND metadata_json->>'type' = :type_filter
-            ORDER BY embedding <=> :query_embedding
-            LIMIT :k
-        """)
-
-        params = {
-            "query_embedding": str(query_embedding), # pgvector espera string ou lista
-            "kb_version": self.kb_version,
-            "k": k
-        }
-        # Adicionar parâmetros de filtro se 'filters' for fornecido
-
-        results = db.session.execute(sql_query, params).fetchall()
-
-        # Formatar resultados
-        relevant_chunks = [
-            {"id": str(row.id), "chunk_text": row.chunk_text, "metadata": row.metadata_json, "similarity": row.similarity}
-            for row in results
-        ]
-        logger.debug(f"Busca vetorial para '{query_text[:50]}...' retornou {len(relevant_chunks)} chunks.")
-        return relevant_chunks
+        try:
+            # Gerar embedding da consulta
+            query_embedding = self.kb_service.generate_embeddings([query_text])[0]
+            
+            # Construir a base da consulta SQL
+            base_query = """
+                SELECT id, chunk_text, metadata_json, 1 - (embedding <=> :query_embedding) AS similarity
+                FROM kb_chunks
+                WHERE kb_version = :kb_version
+                {filter_conditions}
+                ORDER BY embedding <=> :query_embedding
+                LIMIT :k
+            """
+            
+            params = {
+                "query_embedding": query_embedding,  # pgvector manipula listas automaticamente
+                "kb_version": self.kb_version,
+                "k": k
+            }
+            
+            # Adicionar condições de filtro, se houver
+            filter_conditions = ""
+            if filters and isinstance(filters, dict):
+                filter_clauses = []
+                
+                for key, value in filters.items():
+                    if isinstance(value, list):
+                        # Para valores em lista, usamos condição IN ou contains @> para arrays JSON
+                        filter_param = f"filter_{key}"
+                        if key == 'tags' or key == 'equipment':
+                            # Para campos que são arrays no JSON, usamos o operador ? (contains)
+                            or_conditions = []
+                            for i, item in enumerate(value):
+                                param_name = f"{filter_param}_{i}"
+                                params[param_name] = item
+                                or_conditions.append(f"metadata_json->'tags' ? :{param_name}")
+                            
+                            if or_conditions:
+                                filter_clauses.append(f"({' OR '.join(or_conditions)})")
+                        else:
+                            # Para campos regulares, usamos IN
+                            params[filter_param] = value
+                            filter_clauses.append(f"metadata_json->>'{key}' IN (:{filter_param})")
+                    else:
+                        # Para valores simples, usamos igualdade
+                        filter_param = f"filter_{key}"
+                        params[filter_param] = value
+                        filter_clauses.append(f"metadata_json->>'{key}' = :{filter_param}")
+                
+                if filter_clauses:
+                    filter_conditions = "AND " + " AND ".join(filter_clauses)
+            
+            # Construir a consulta final
+            final_query = text(base_query.format(filter_conditions=filter_conditions))
+            
+            # Executar a consulta
+            results = db.session.execute(final_query, params).fetchall()
+            
+            # Formatar resultados
+            relevant_chunks = []
+            for row in results:
+                chunk = {
+                    "id": str(row.id),
+                    "chunk_text": row.chunk_text,
+                    "metadata": row.metadata_json, 
+                    "similarity": float(row.similarity)
+                }
+                relevant_chunks.append(chunk)
+            
+            logger.debug(f"Busca para '{query_text[:50]}...' retornou {len(relevant_chunks)} chunks" +
+                        (f" com filtros: {filters}" if filters else ""))
+            
+            return relevant_chunks
+            
+        except Exception as e:
+            logger.error(f"Erro na busca vetorial: {str(e)}", exc_info=True)
+            return []

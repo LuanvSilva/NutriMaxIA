@@ -1,0 +1,87 @@
+# Controle de versão
+.git/
+.gitignore
+
+# Ambientes virtuais Python
+venv/
+env/
+ENV/
+
+# Arquivos de cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de documentação
+docs/
+*.md
+!README.md
+
+# Arquivos temporários
+.DS_Store
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
+*.cover
+*.log
+logs/
+log/
+
+# Arquivos de IDE e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Arquivos de dados que não devem ser incluídos na imagem
+data/
+/postgres-data/
+
+# Arquivos de credenciais e configuração
+*.pem
+*.key
+*.crt
+*.p12
+.env
+.env.*
+!.env.example
+
+# Arquivos de teste
+**/tests/
+**/test_*.py
+**/*_test.py
+
+# Arquivos de base de conhecimento sensíveis
+app/kb/knowledge_base_sensitive*.json
+app/kb/custom_*.json
+
+# Arquivos Docker que não devem entrar na própria imagem
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Arquivos de modelo AI (devem ser baixados ou montados, não incluídos na imagem)
+*.bin
+*.pt
+*.h5
+*.onnx
+model_weights/

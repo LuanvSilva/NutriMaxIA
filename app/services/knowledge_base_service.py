@@ -55,27 +55,116 @@ class KnowledgeBaseService:
         return self.knowledge_base.get('protocolos_seguranca_avisos_obrigatorios', {}).get('disclaimers_gerais_saude', [])
 
     def get_all_chunks_for_indexing(self):
-        # Lógica para percorrer o self.knowledge_base e dividi-lo em chunks
-        # Retorna uma lista de dicionários: [{'chunk_text': '...', 'metadata': {...}}, ...]
-        # Esta lógica pode ser complexa dependendo da estrutura do JSON
+        """
+        Gera chunks da base de conhecimento para indexação eficiente.
+        Cada seção da KB é processada de maneira específica para maximizar 
+        a qualidade da recuperação.
+        """
         chunks = []
         kb_data = self.knowledge_base
-
-        # Exemplo simplificado para alimentos:
-        for food in kb_data.get('bibliotecas_dados_detalhadas', {}).get('alimentos', []):
-            text = f"Alimento: {food.get('nome_pt', '')}. Grupo: {food.get('grupo_alimentar', '')}. Descrição: {food.get('observacoes', '')}. Tags: {', '.join(food.get('tags', []))}"
-            metadata = {'type': 'food', 'id': food.get('id'), 'tags': food.get('tags', [])}
+        
+        # 1. Bibliotecas de dados detalhados
+        biblioteca = kb_data.get('bibliotecas_dados_detalhadas', {})
+        
+        # 1.1. Processar alimentos
+        for food in biblioteca.get('alimentos', []):
+            nome = food.get('nome_pt', '')
+            grupo = food.get('grupo_alimentar', '')
+            descricao = food.get('observacoes', '')
+            tags = ', '.join(food.get('tags', []))
+            calorias = food.get('informacao_nutricional', {}).get('calorias_por_100g', '')
+            proteinas = food.get('informacao_nutricional', {}).get('proteinas_g', '')
+            carbos = food.get('informacao_nutricional', {}).get('carboidratos_g', '')
+            gorduras = food.get('informacao_nutricional', {}).get('gorduras_g', '')
+            
+            text = f"""Alimento: {nome}. Grupo: {grupo}.
+Informações nutricionais por 100g: Calorias: {calorias}, Proteínas: {proteinas}g, Carboidratos: {carbos}g, Gorduras: {gorduras}g. 
+Descrição: {descricao}. Tags: {tags}"""
+            
+            metadata = {
+                'type': 'food',
+                'id': food.get('id'),
+                'grupo': grupo,
+                'tags': food.get('tags', [])
+            }
             chunks.append({'chunk_text': text, 'metadata': metadata})
 
-        # Exemplo simplificado para exercícios:
-        for exercise in kb_data.get('bibliotecas_dados_detalhadas', {}).get('exercicios', []):
-             text = f"Exercício: {exercise.get('nome_pt', '')}. Músculo Primário: {exercise.get('musculo_primario', '')}. Tipo: {exercise.get('tipo_exercicio')}. Nível: {exercise.get('nivel_dificuldade')}. Equipamento: {', '.join(exercise.get('equipamento',[]))}"
-             metadata = {'type': 'exercise', 'id': exercise.get('id'), 'muscle_group': exercise.get('musculo_primario'), 'level': exercise.get('nivel_dificuldade'), 'equipment': exercise.get('equipamento', [])}
-             chunks.append({'chunk_text': text, 'metadata': metadata})
+        # 1.2. Processar exercícios
+        for exercise in biblioteca.get('exercicios', []):
+            nome = exercise.get('nome_pt', '')
+            musculo = exercise.get('musculo_primario', '')
+            tipo = exercise.get('tipo_exercicio', '')
+            nivel = exercise.get('nivel_dificuldade', '')
+            equipamento = ', '.join(exercise.get('equipamento', []))
+            instrucoes = exercise.get('instrucoes_execucao', '')
+            
+            text = f"""Exercício: {nome}. Músculo Primário: {musculo}. Tipo: {tipo}.
+Nível: {nivel}. Equipamento: {equipamento}.
+Instruções: {instrucoes}"""
+            
+            metadata = {
+                'type': 'exercise',
+                'id': exercise.get('id'),
+                'muscle_group': musculo,
+                'level': nivel,
+                'equipment': exercise.get('equipamento', [])
+            }
+            chunks.append({'chunk_text': text, 'metadata': metadata})
 
+        # 2. Processar regras de nutrição
+        regras_nutricao = kb_data.get('regras_nutricao', {})
+        
+        # 2.1. Cálculos calóricos e macronutrientes
+        calculos = regras_nutricao.get('calculos_caloricos_e_macronutrientes', {})
+        for calculo_key, calculo_value in calculos.items():
+            if isinstance(calculo_value, dict):
+                text = f"Regra de Cálculo Nutricional - {calculo_key}: {json.dumps(calculo_value, ensure_ascii=False)}"
+                metadata = {'type': 'nutrition_rule', 'subtype': 'calculation', 'id': calculo_key}
+                chunks.append({'chunk_text': text, 'metadata': metadata})
+            elif isinstance(calculo_value, str):
+                text = f"Regra de Cálculo Nutricional - {calculo_key}: {calculo_value}"
+                metadata = {'type': 'nutrition_rule', 'subtype': 'calculation', 'id': calculo_key}
+                chunks.append({'chunk_text': text, 'metadata': metadata})
 
-        # ... Adicionar lógica para chunking de princípios, regras, etc. ...
+        # 2.2. Restrições alimentares
+        restricoes = regras_nutricao.get('restricoes_alimentares', {})
+        for restricao_key, restricao_value in restricoes.items():
+            if isinstance(restricao_value, dict) or isinstance(restricao_value, list):
+                text = f"Restrição Alimentar - {restricao_key}: {json.dumps(restricao_value, ensure_ascii=False)}"
+            else:
+                text = f"Restrição Alimentar - {restricao_key}: {restricao_value}"
+            metadata = {'type': 'nutrition_rule', 'subtype': 'restriction', 'id': restricao_key}
+            chunks.append({'chunk_text': text, 'metadata': metadata})
 
+        # 3. Processar protocolos de treino
+        protocolos_treino = kb_data.get('protocolos_treino', {})
+        
+        for protocolo_key, protocolo_value in protocolos_treino.items():
+            if isinstance(protocolo_value, dict) or isinstance(protocolo_value, list):
+                text = f"Protocolo de Treino - {protocolo_key}: {json.dumps(protocolo_value, ensure_ascii=False)}"
+            else:
+                text = f"Protocolo de Treino - {protocolo_key}: {protocolo_value}"
+            metadata = {'type': 'training_protocol', 'id': protocolo_key}
+            chunks.append({'chunk_text': text, 'metadata': metadata})
+
+        # 4. Processar avisos de segurança
+        avisos = kb_data.get('protocolos_seguranca_avisos_obrigatorios', {})
+        
+        # 4.1. Disclaimers gerais
+        disclaimers = avisos.get('disclaimers_gerais_saude', [])
+        for i, disclaimer in enumerate(disclaimers):
+            text = f"Disclaimer de Saúde #{i+1}: {disclaimer}"
+            metadata = {'type': 'disclaimer', 'id': f'general_{i}'}
+            chunks.append({'chunk_text': text, 'metadata': metadata})
+        
+        # 4.2. Avisos específicos
+        avisos_especificos = avisos.get('avisos_por_condicao', {})
+        for condicao, aviso in avisos_especificos.items():
+            text = f"Aviso de Segurança para {condicao}: {aviso}"
+            metadata = {'type': 'safety_warning', 'condition': condicao}
+            chunks.append({'chunk_text': text, 'metadata': metadata})
+            
+        logger.info(f"Gerados {len(chunks)} chunks para indexação da KB versão {self.kb_version}")
         return chunks
 
     def generate_embeddings(self, texts):

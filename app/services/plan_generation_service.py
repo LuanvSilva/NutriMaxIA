@@ -39,17 +39,49 @@ class PlanGenerationService:
         }
 
     def _create_query_from_user_data(self, user_data):
-        # Lógica para extrair informações chave e criar uma ou mais consultas semânticas
-        # Exemplo muito simples:
+        """
+        Cria consultas contextuais baseadas nos dados do usuário.
+        Gera consultas específicas para diferentes aspectos do plano.
+        """
+        # Extração de dados do usuário
         objetivo = user_data.get('objetivo_principal', 'saude geral')
         nivel = user_data.get('nivel_experiencia_treino', 'iniciante')
         restricoes = user_data.get('restricoes_alimentares', [])
-        query = f"Plano alimentar e de treino para usuário {nivel} com objetivo de {objetivo}."
-        if restricoes:
-            query += f" Restrições: {', '.join(restricoes)}."
-        # Idealmente, criar consultas mais específicas para nutrição e treino
+        preferencias = user_data.get('preferencias_alimentares', [])
+        idade = user_data.get('idade', 30)
+        sexo = user_data.get('sexo', '')
+        peso = user_data.get('peso_kg', 70)
+        altura = user_data.get('altura_cm', 170)
         
-        return query
+        # Verificar condições especiais
+        condicoes_especiais = user_data.get('condicoes_especiais', [])
+        
+        # Construção de consulta de dieta
+        diet_query = f"Plano alimentar para {sexo} de {idade} anos, {peso}kg, {altura}cm, "
+        diet_query += f"{nivel} em treino, com objetivo de {objetivo}. "
+        
+        if restricoes:
+            diet_query += f"Restrições alimentares: {', '.join(restricoes)}. "
+            
+        if preferencias:
+            diet_query += f"Preferências alimentares: {', '.join(preferencias)}. "
+            
+        if condicoes_especiais:
+            diet_query += f"Condições especiais: {', '.join(condicoes_especiais)}. "
+            
+        # Construção de consulta de treino
+        training_query = f"Plano de treino para {nivel} com objetivo de {objetivo}. "
+        training_query += f"Sexo: {sexo}, idade: {idade}, peso: {peso}kg, altura: {altura}cm. "
+        
+        if condicoes_especiais:
+            training_query += f"Considerar condições especiais: {', '.join(condicoes_especiais)}. "
+        
+        # Combinar as consultas para recuperar informações relevantes
+        # Usando uma única consulta combinada para aumentar a variedade de resultados
+        combined_query = f"{diet_query} {training_query}"
+        
+        logger.debug(f"Query gerada: {combined_query}")
+        return combined_query
 
     def _build_prompt(self, user_data, relevant_chunks):
         # Constrói o prompt final para o LLM
@@ -120,29 +152,107 @@ class PlanGenerationService:
         return final_warnings
 
     def generate_plan(self, user_data):
-        # 1. Criar consulta(s) a partir dos dados do usuário
-        query = self._create_query_from_user_data(user_data)
-
-        # 2. Buscar chunks relevantes no DB Vetorial
-        # TODO: Adicionar filtros baseados em user_data (ex: tags de restrição, nível)
-        relevant_chunks = self.vector_db_service.search(query, k=Config.VECTOR_DB_SEARCH_K)
-        if not relevant_chunks:
-            raise ValueError("Não foi possível encontrar informações relevantes na base de conhecimento para esta solicitação.")
-
-        # 3. Construir o prompt
-        prompt = self._build_prompt(user_data, relevant_chunks)
-        logger.debug(f"Prompt enviado para LLM: {prompt[:300]}...") # Logar início do prompt para debug
-
-        # 4. Chamar a API do LLM
+        """
+        Gera um plano completo (nutricional e treino) para o usuário com base nos dados fornecidos.
+        
+        Args:
+            user_data: Dicionário com informações do usuário
+            
+        Returns:
+            Tupla com (plano_nutricional, plano_treino, avisos)
+            
+        Raises:
+            ValueError: Se não houver dados suficientes ou ocorrer erro de validação
+            ConnectionError: Se houver falha na comunicação com serviços externos
+        """
         try:
-            raw_llm_response = self.llm_service.call_llm(prompt)
-            logger.debug(f"Resposta crua do LLM: {raw_llm_response[:300]}...")
+            # 1. Criar consulta a partir dos dados do usuário
+            query = self._create_query_from_user_data(user_data)
+            
+            # 2. Preparar filtros baseados em dados do usuário
+            filters = {}
+            
+            # Filtros para restrições alimentares
+            restricoes = user_data.get('restricoes_alimentares', [])
+            condicoes = user_data.get('condicoes_especiais', [])
+            
+            # 3. Buscar chunks relevantes com diferentes estratégias para máxima cobertura
+            
+            # 3.1 Busca geral para contexto amplo
+            relevant_chunks = self.vector_db_service.search(query, k=Config.VECTOR_DB_SEARCH_K)
+            
+            # 3.2 Busca específica para restrições alimentares (se houver)
+            if restricoes:
+                restricao_query = f"Restrições alimentares: {', '.join(restricoes)}"
+                restriction_chunks = self.vector_db_service.search(
+                    restricao_query, 
+                    k=2,
+                    filters={'type': 'nutrition_rule', 'subtype': 'restriction'}
+                )
+                relevant_chunks.extend(restriction_chunks)
+            
+            # 3.3 Busca específica para condições especiais (se houver)
+            if condicoes:
+                for condicao in condicoes:
+                    condicao_query = f"Aviso de segurança para {condicao}"
+                    safety_chunks = self.vector_db_service.search(
+                        condicao_query,
+                        k=2,
+                        filters={'type': 'safety_warning'}
+                    )
+                    relevant_chunks.extend(safety_chunks)
+            
+            # 3.4 Verificar se temos chunks suficientes
+            if not relevant_chunks:
+                raise ValueError("Não foi possível encontrar informações relevantes na base de conhecimento.")
+                
+            # Remover potenciais duplicatas
+            unique_chunks = []
+            chunk_ids = set()
+            for chunk in relevant_chunks:
+                if chunk['id'] not in chunk_ids:
+                    chunk_ids.add(chunk['id'])
+                    unique_chunks.append(chunk)
+            
+            logger.info(f"Recuperados {len(unique_chunks)} chunks únicos para geração do plano")
+            
+            # 4. Construir o prompt
+            prompt = self._build_prompt(user_data, unique_chunks)
+            logger.debug(f"Prompt enviado para LLM: {prompt[:300]}...")
+            
+            # 5. Chamar a API do LLM com retry
+            max_retries = 2
+            current_retry = 0
+            
+            while current_retry <= max_retries:
+                try:
+                    raw_llm_response = self.llm_service.call_llm(prompt)
+                    break
+                except Exception as e:
+                    current_retry += 1
+                    if current_retry > max_retries:
+                        logger.error(f"Falha após {max_retries} tentativas: {e}")
+                        raise ConnectionError(f"Falha na comunicação com o serviço de IA após {max_retries} tentativas.")
+                    logger.warning(f"Erro na tentativa {current_retry}, tentando novamente: {e}")
+            
+            # 6. Parsear, validar e adicionar disclaimers
+            plan_nutricional, plan_treino, generated_warnings = self._parse_and_validate_llm_response(raw_llm_response)
+            final_warnings = self._add_mandatory_disclaimers(generated_warnings)
+            
+            # 7. Log de sucesso e retorno
+            logger.info(f"Plano gerado com sucesso: {len(plan_nutricional.get('refeicoes', []))} refeições, " 
+                       f"{len(plan_treino.get('dias_semana', []))} dias de treino, {len(final_warnings)} avisos")
+            
+            return plan_nutricional, plan_treino, final_warnings
+            
+        except json.JSONDecodeError as e:
+            logger.error(f"Erro no formato JSON: {e}")
+            raise ValueError(f"Erro ao processar resposta do serviço de IA: {e}")
+            
+        except ValueError as e:
+            logger.error(f"Erro de validação: {e}")
+            raise
+            
         except Exception as e:
-             logger.error(f"Erro na chamada da API do LLM: {e}", exc_info=True)
-             raise ConnectionError(f"Falha ao comunicar com o serviço de IA: {e}")
-
-        # 5. Parsear, validar e adicionar disclaimers
-        plan_nutricional, plan_treino, generated_warnings = self._parse_and_validate_llm_response(raw_llm_response)
-        final_warnings = self._add_mandatory_disclaimers(generated_warnings)
-
-        return plan_nutricional, plan_treino, final_warnings
+            logger.error(f"Erro inesperado: {e}", exc_info=True)
+            raise ValueError(f"Erro ao gerar plano: {str(e)}")

@@ -393,7 +393,7 @@
                             "nivel": "avancado",
                             "range_series": [
                                 14,
-                                20+
+                                20
                             ],
                             "observacao": "Volume maior pode ser necessário, mas requer manejo cuidadoso da recuperação e periodização."
                         }
@@ -423,7 +423,7 @@
                             "objetivo": "hipertrofia_endurance",
                             "range_reps": [
                                 12,
-                                20+
+                                20
                             ],
                             "percentual_1RM_aprox": "50-70%"
                         }
@@ -996,7 +996,6 @@
             }
         ],
         "condicoes_saude_declaradas": [
-            // Condições que EXIGEM AVISO e adaptação, mas podem permitir plano GERAL com ressalvas
             {
                 "condicao": "hipertensao_controlada",
                 "requer_adaptacao": true,
@@ -1027,7 +1026,6 @@
                 "diretriz": "Pode exigir dieta baixa em FODMAPs (complexo, requer orientação profissional). Focar em alimentos bem tolerados individualmente.",
                 "aviso_forte": "Acompanhamento médico e nutricional essencial."
             },
-            // Condições RED FLAG - Ver seção de segurança
             {
                 "condicao": "diabetes_descontrolada",
                 "acao_imediata": "referenciar_profissional"
@@ -1048,7 +1046,6 @@
                 "condicao": "gravidez_amamentacao",
                 "acao_imediata": "referenciar_profissional"
             }
-            // ... outras condições relevantes
         ],
         "equipamento_disponivel": [
             {
@@ -1121,7 +1118,6 @@
     },
     "bibliotecas_dados_detalhadas": {
         "alimentos": [
-            // PROTEÍNAS MAGRAS ANIMAIS
             {
                 "id": "FOOD001",
                 "nome_pt": "Peito de Frango Grelhado ou Cozido (sem pele)",
@@ -1213,7 +1209,7 @@
                 "id": "FOOD007",
                 "nome_pt": "Patinho Bovino Moído (magro, cozido)",
                 "grupo_alimentar": "Proteína Magra",
-                "energia_kcal_100g": 210, // Varia com % gordura
+                "energia_kcal_100g": 210, 
                 "macros_100g": {
                     "proteina_g": 30,
                     "carboidrato_g": 0,
@@ -1327,7 +1323,7 @@
                 "id": "FOOD010",
                 "nome_pt": "Lombo Suíno Assado ou Grelhado",
                 "grupo_alimentar": "Proteína Magra",
-                "energia_kcal_100g": 180, // Magro
+                "energia_kcal_100g": 180, 
                 "macros_100g": {
                     "proteina_g": 26,
                     "carboidrato_g": 0,
@@ -1389,7 +1385,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 lata pequena drenada",
-                        "peso_g": 80-100
+                        "peso_min_g": 80,
+                        "peso_max_g": 100
                     },
                     {
                         "descricao": "3 colheres de sopa",
@@ -1437,7 +1434,6 @@
                 ],
                 "observacoes": "Apesar do colesterol, tem baixo teor de gordura saturada. Cuidado com preparações com muita gordura (frito, molhos)."
             },
-            // PROTEÍNAS COM MAIS GORDURA ANIMAIS
             {
                 "id": "FOOD013",
                 "nome_pt": "Salmão Grelhado ou Assado",
@@ -1481,7 +1477,7 @@
             {
                 "id": "FOOD014",
                 "nome_pt": "Coxa ou Sobrecoxa de Frango Assada (sem pele)",
-                "grupo_alimentar": "Proteína", // Gordura moderada
+                "grupo_alimentar": "Proteína", 
                 "energia_kcal_100g": 209,
                 "macros_100g": {
                     "proteina_g": 26,
@@ -1508,7 +1504,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 unidade média (coxa+sobrecoxa)",
-                        "peso_g": 150-200 (com osso)
+                        "peso_min_g": 150,
+                        "peso_max_g": 200
                     },
                     {
                         "descricao": "1 xícara desfiado",
@@ -1548,7 +1545,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 lata pequena drenada",
-                        "peso_g": 80-90
+                        "peso_min_g": 80,
+                        "peso_max_g": 90
                     },
                     {
                         "descricao": "3-4 sardinhas médias",
@@ -1560,8 +1558,8 @@
             {
                 "id": "FOOD016",
                 "nome_pt": "Acém Bovino Cozido (ex: carne de panela)",
-                "grupo_alimentar": "Proteína", // Gordura moderada a alta
-                "energia_kcal_100g": 250, // Varia muito
+                "grupo_alimentar": "Proteína",
+                "energia_kcal_100g": 250, 
                 "macros_100g": {
                     "proteina_g": 28,
                     "carboidrato_g": 0,
@@ -1597,10 +1595,10 @@
                 "observacoes": "Corte mais gordo, ideal para cozimentos longos. Retirar gordura excessiva visível pode ser opção."
             },
             {
-                "id": "FOOD004", // ID Original mantido para consistência
+                "id": "FOOD004", 
                 "nome_pt": "Ovo de Galinha Inteiro (Cozido, Frito, Mexido)",
                 "grupo_alimentar": "Proteína e Gordura",
-                "energia_kcal_100g": 155, // Cozido. Frito/Mexido pode adicionar kcal da gordura usada.
+                "energia_kcal_100g": 155, 
                 "macros_100g": {
                     "proteina_g": 13,
                     "carboidrato_g": 1.1,
@@ -1642,7 +1640,6 @@
                 ],
                 "observacoes": "Alimento completo. Método de preparo influencia calorias (fritura adiciona gordura)."
             },
-            // PROTEÍNAS VEGETAIS
             {
                 "id": "FOOD017",
                 "nome_pt": "Tofu Firme",
@@ -1819,7 +1816,7 @@
                     "gordura_total_g": 0.5,
                     "gordura_saturada_g": 0.1,
                     "fibras_g": 8.8
-                }, // Fibras ligeiramente maiores
+                },
                 "micronutrientes_destaque": [
                     "Folato (B9)",
                     "Ferro",
@@ -1899,7 +1896,7 @@
                     "gordura_total_g": 10.8,
                     "gordura_saturada_g": 2.2,
                     "fibras_g": 0
-                }, // Fibra varia
+                }, 
                 "micronutrientes_destaque": [
                     "Manganês",
                     "Cobre",
@@ -1919,7 +1916,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 fatia",
-                        "peso_g": 80-100
+                        "peso_min_g": 80,
+                        "peso_max_g": 100
                     }
                 ],
                 "observacoes": "Soja fermentada, textura firme. Mais fácil digestão para alguns. Sabor mais pronunciado que tofu."
@@ -1928,14 +1926,14 @@
                 "id": "FOOD024",
                 "nome_pt": "Proteína de Soja Texturizada (PTS) Grossa Hidratada",
                 "grupo_alimentar": "Proteína Vegetal",
-                "energia_kcal_100g": 120, // Valor após hidratar e cozinhar, varia muito
+                "energia_kcal_100g": 120,
                 "macros_100g": {
                     "proteina_g": 16,
                     "carboidrato_g": 9,
                     "gordura_total_g": 1,
                     "gordura_saturada_g": 0.2,
                     "fibras_g": 6
-                }, // Varia muito
+                },
                 "micronutrientes_destaque": [
                     "Ferro",
                     "Magnésio",
@@ -1960,9 +1958,8 @@
                 ],
                 "observacoes": "Muito versátil para substituir carne moída. Hidratar bem e temperar."
             },
-            // CARBOIDRATOS COMPLEXOS / INTEGRAIS
             {
-                "id": "FOOD003", // ID Original
+                "id": "FOOD003", 
                 "nome_pt": "Arroz Integral Cozido",
                 "grupo_alimentar": "Carboidrato Complexo Integral",
                 "energia_kcal_100g": 111,
@@ -2058,7 +2055,7 @@
                     "gordura_total_g": 6.9,
                     "gordura_saturada_g": 1.2,
                     "fibras_g": 10.6
-                }, // Rica em Beta-glucana
+                }, 
                 "micronutrientes_destaque": [
                     "Manganês",
                     "Fósforo",
@@ -2177,14 +2174,14 @@
                 "id": "FOOD029",
                 "nome_pt": "Pão Integral (100% Trigo Integral)",
                 "grupo_alimentar": "Carboidrato Complexo Integral",
-                "energia_kcal_100g": 265, // Varia por marca
+                "energia_kcal_100g": 265,
                 "macros_100g": {
                     "proteina_g": 13,
                     "carboidrato_g": 41,
                     "gordura_total_g": 4.2,
                     "gordura_saturada_g": 0.8,
                     "fibras_g": 7
-                }, // Varia
+                }, 
                 "micronutrientes_destaque": [
                     "Manganês",
                     "Selênio",
@@ -2203,11 +2200,13 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 fatia",
-                        "peso_g": 30-40
+                        "peso_min_g": 30,
+                        "peso_max_g": 40
                     },
                     {
                         "descricao": "2 fatias",
-                        "peso_g": 60-80
+                        "peso_min_g": 60,
+                        "peso_max_g": 80
                     }
                 ],
                 "observacoes": "Verificar rótulo para garantir que é 100% integral e sem adição excessiva de açúcar/gordura."
@@ -2216,7 +2215,7 @@
                 "id": "FOOD030",
                 "nome_pt": "Macarrão Integral Cozido",
                 "grupo_alimentar": "Carboidrato Complexo Integral",
-                "energia_kcal_100g": 145, // Cozido al dente
+                "energia_kcal_100g": 145, 
                 "macros_100g": {
                     "proteina_g": 5.8,
                     "carboidrato_g": 30,
@@ -2245,7 +2244,8 @@
                     },
                     {
                         "descricao": "1 pegador",
-                        "peso_g": 100-120
+                        "peso_min_g": 100,
+                        "peso_max_g": 120
                     }
                 ],
                 "observacoes": "Alternativa com mais fibras ao macarrão branco."
@@ -2319,7 +2319,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 espiga média",
-                        "peso_g": 150 (grãos)
+                        "peso_g": 150,
+                        "observacao":"peso em grãos"
                     },
                     {
                         "descricao": "1/2 lata drenada",
@@ -2332,9 +2333,8 @@
                 ],
                 "observacoes": "Base de muitas preparações. Versão em lata pode ter adição de sal/açúcar."
             },
-            // CARBOIDRATOS SIMPLES / REFINADOS (Usar com Moderação)
             {
-                "id": "FOOD002", // ID Original
+                "id": "FOOD002", 
                 "nome_pt": "Arroz Branco Cozido",
                 "grupo_alimentar": "Carboidrato Refinado",
                 "energia_kcal_100g": 130,
@@ -2376,14 +2376,14 @@
                 "id": "FOOD033",
                 "nome_pt": "Pão Francês (tipo Cacetinho)",
                 "grupo_alimentar": "Carboidrato Refinado",
-                "energia_kcal_100g": 300, // Varia
+                "energia_kcal_100g": 300,
                 "macros_100g": {
                     "proteina_g": 9,
                     "carboidrato_g": 59,
                     "gordura_total_g": 3,
                     "gordura_saturada_g": 0.7,
                     "fibras_g": 2.7
-                }, // Varia
+                }, 
                 "micronutrientes_destaque": [
                     "Selênio",
                     "(Enriquecido com Ferro, Ácido Fólico)"
@@ -2410,7 +2410,7 @@
                 "id": "FOOD034",
                 "nome_pt": "Macarrão Branco Cozido",
                 "grupo_alimentar": "Carboidrato Refinado",
-                "energia_kcal_100g": 158, // Cozido
+                "energia_kcal_100g": 158, 
                 "macros_100g": {
                     "proteina_g": 5.8,
                     "carboidrato_g": 31,
@@ -2439,7 +2439,8 @@
                     },
                     {
                         "descricao": "1 pegador",
-                        "peso_g": 100-120
+                        "peso_min_g": 100,
+                        "peso_max_g": 120
                     }
                 ],
                 "observacoes": "Fonte de energia rápida, mas menos nutritivo que o integral."
@@ -2448,14 +2449,14 @@
                 "id": "FOOD035",
                 "nome_pt": "Tapioca (Goma Hidratada preparada na frigideira)",
                 "grupo_alimentar": "Carboidrato Refinado",
-                "energia_kcal_100g": 280, // Varia com recheio
+                "energia_kcal_100g": 280, 
                 "macros_100g": {
                     "proteina_g": 0.5,
                     "carboidrato_g": 68,
                     "gordura_total_g": 0.1,
                     "gordura_saturada_g": 0,
                     "fibras_g": 0.5
-                }, // Só a goma
+                }, 
                 "micronutrientes_destaque": [
                     "Nenhum significativo"
                 ],
@@ -2472,7 +2473,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 disco médio (3 col sopa de goma)",
-                        "peso_g": 80-100 (só a massa)
+                        "peso_min_g": 80,
+                        "peso_max_g": 100
                     }
                 ],
                 "observacoes": "Índice glicêmico alto. Nutritividade depende totalmente do recheio. Adicionar fibras (chia, aveia) na massa pode ajudar."
@@ -2522,7 +2524,7 @@
                     "gordura_total_g": 0,
                     "gordura_saturada_g": 0,
                     "fibras_g": 0.2
-                }, // Predominantemente frutose e glicose
+                }, 
                 "micronutrientes_destaque": [
                     "Pequenas quantidades de antioxidantes, minerais"
                 ],
@@ -2544,7 +2546,6 @@
                 ],
                 "observacoes": "Ainda é uma forma de açúcar, usar com moderação. Não recomendado para bebês < 1 ano (risco de botulismo)."
             },
-            // FRUTAS
             {
                 "id": "FOOD038",
                 "nome_pt": "Banana Prata",
@@ -2576,7 +2577,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 unidade média",
-                        "peso_g": 90-110
+                        "peso_min_g": 90,
+                        "peso_max_g": 110
                     }
                 ],
                 "observacoes": "Ótima fonte de energia rápida e potássio."
@@ -2592,7 +2594,7 @@
                     "gordura_total_g": 0.2,
                     "gordura_saturada_g": 0,
                     "fibras_g": 2.4
-                }, // Rica em pectina
+                },
                 "micronutrientes_destaque": [
                     "Vitamina C",
                     "Potássio",
@@ -2632,7 +2634,7 @@
                     "gordura_total_g": 0.3,
                     "gordura_saturada_g": 0.1,
                     "fibras_g": 1.7
-                }, // Contém Papaína
+                }, 
                 "micronutrientes_destaque": [
                     "Vitamina C",
                     "Vitamina A",
@@ -2693,7 +2695,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 unidade média",
-                        "peso_g": 150-180 (com casca)
+                        "peso_min_g": 150,
+                        "peso_max_g": 180
                     }
                 ],
                 "observacoes": "Consumir a fruta inteira é melhor que o suco devido às fibras."
@@ -2792,7 +2795,7 @@
                     "gordura_total_g": 0.2,
                     "gordura_saturada_g": 0,
                     "fibras_g": 0.4
-                }, // Baixa fibra
+                }, 
                 "micronutrientes_destaque": [
                     "Licopeno (antioxidante)",
                     "Vitamina C",
@@ -2832,7 +2835,7 @@
                     "gordura_total_g": 0.1,
                     "gordura_saturada_g": 0,
                     "fibras_g": 1.4
-                }, // Contém Bromelina
+                }, 
                 "micronutrientes_destaque": [
                     "Vitamina C",
                     "Manganês",
@@ -2903,14 +2906,14 @@
                 "id": "FOOD047",
                 "nome_pt": "Açaí Puro Congelado (sem xarope/açúcar)",
                 "grupo_alimentar": "Fruta (rica em gordura)",
-                "energia_kcal_100g": 60-80, // Varia
+                "energia_kcal_100g": 80, 
                 "macros_100g": {
                     "proteina_g": 1,
                     "carboidrato_g": 4,
                     "gordura_total_g": 5,
                     "gordura_saturada_g": 1.5,
                     "fibras_g": 3
-                }, // Gorduras mono e poliinsaturadas
+                }, 
                 "micronutrientes_destaque": [
                     "Antocianinas (antioxidante)",
                     "Manganês",
@@ -2935,7 +2938,6 @@
                 ],
                 "observacoes": "O açaí tradicional vendido em lanchonetes geralmente contém MUITO xarope de guaraná/açúcar, elevando drasticamente calorias e carboidratos. Priorizar a polpa pura."
             },
-            // VEGETAIS / HORTALIÇAS
             {
                 "id": "FOOD048",
                 "nome_pt": "Alface Crespa Crua",
@@ -2969,7 +2971,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 prato fundo cheio",
-                        "peso_g": 80-100
+                        "peso_min_g": 80,
+                        "peso_max_g": 100
                     },
                     {
                         "descricao": "5 folhas grandes",
@@ -3287,7 +3290,7 @@
                 "id": "FOOD056",
                 "nome_pt": "Berinjela Cozida",
                 "grupo_alimentar": "Fruto (usado como vegetal)",
-                "energia_kcal_100g": 35, // Cozida sem gordura
+                "energia_kcal_100g": 35,
                 "macros_100g": {
                     "proteina_g": 0.8,
                     "carboidrato_g": 8.7,
@@ -3414,7 +3417,7 @@
                 "id": "FOOD059",
                 "nome_pt": "Alho Cru",
                 "grupo_alimentar": "Bulbo",
-                "energia_kcal_100g": 149, // Densidade calórica maior, mas usa-se pouco
+                "energia_kcal_100g": 149,
                 "macros_100g": {
                     "proteina_g": 6.4,
                     "carboidrato_g": 33,
@@ -3443,14 +3446,14 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 dente",
-                        "peso_g": 3-5
+                        "peso_min_g": 3,
+                        "peso_max_g": 5
                     }
                 ],
                 "observacoes": "Fundamental na culinária. Propriedades medicinais potenciais associadas à alicina (liberada ao cortar/amassar)."
             },
-            // GORDURAS SAUDÁVEIS (OLEAGINOSAS, SEMENTES, ÓLEOS)
             {
-                "id": "FOOD005", // ID Original
+                "id": "FOOD005",
                 "nome_pt": "Abacate Hass",
                 "grupo_alimentar": "Gordura Saudável (Fruta)",
                 "energia_kcal_100g": 160,
@@ -3499,14 +3502,14 @@
                 "id": "FOOD060",
                 "nome_pt": "Azeite de Oliva Extra Virgem",
                 "grupo_alimentar": "Gordura Saudável (Óleo)",
-                "energia_kcal_100g": 884, // Muito denso
+                "energia_kcal_100g": 884,
                 "macros_100g": {
                     "proteina_g": 0,
                     "carboidrato_g": 0,
                     "gordura_total_g": 100,
                     "gordura_saturada_g": 14,
                     "fibras_g": 0
-                }, // Predominantemente monoinsaturada
+                },
                 "micronutrientes_destaque": [
                     "Vitamina E",
                     "Vitamina K",
@@ -3571,7 +3574,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 unidade média",
-                        "peso_g": 4-5
+                        "peso_min_g": 4,
+                        "peso_max_g": 5
                     },
                     {
                         "descricao": "Porção recomendada (selênio)",
@@ -3617,7 +3621,10 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 punhado pequeno",
-                        "peso_g": 25-30 (aprox. 20-24 unidades)
+                        "peso_min_g": 4,
+                        "peso_max_g": 5,
+                        "unidades_min": 20,
+                        "unidades_max": 24
                     },
                     {
                         "descricao": "10 unidades",
@@ -3637,7 +3644,7 @@
                     "gordura_total_g": 65.2,
                     "gordura_saturada_g": 6.1,
                     "fibras_g": 6.7
-                }, // Rica em Ômega-3 ALA
+                }, 
                 "micronutrientes_destaque": [
                     "Ômega-3 (ALA)",
                     "Cobre",
@@ -3660,7 +3667,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 punhado pequeno",
-                        "peso_g": 25-30 (aprox. 5-7 metades)
+                        "peso_min_g": 25,
+                        "peso_max_g": 30
                     },
                     {
                         "descricao": "4 metades",
@@ -3680,7 +3688,7 @@
                     "gordura_total_g": 30.7,
                     "gordura_saturada_g": 3.3,
                     "fibras_g": 34.4
-                }, // Fibra muito alta!
+                }, 
                 "micronutrientes_destaque": [
                     "Fibras",
                     "Ômega-3 (ALA)",
@@ -3727,7 +3735,7 @@
                     "gordura_total_g": 42.2,
                     "gordura_saturada_g": 3.7,
                     "fibras_g": 27.3
-                }, // Rica em lignanas
+                }, 
                 "micronutrientes_destaque": [
                     "Fibras",
                     "Ômega-3 (ALA)",
@@ -3764,14 +3772,14 @@
                 "id": "FOOD066",
                 "nome_pt": "Pasta de Amendoim Integral (100% amendoim)",
                 "grupo_alimentar": "Gordura Saudável / Proteína Vegetal",
-                "energia_kcal_100g": 588, // Varia
+                "energia_kcal_100g": 588,
                 "macros_100g": {
                     "proteina_g": 25,
                     "carboidrato_g": 20,
                     "gordura_total_g": 50,
                     "gordura_saturada_g": 10,
                     "fibras_g": 6
-                }, // Varia
+                }, 
                 "micronutrientes_destaque": [
                     "Niacina (B3)",
                     "Vitamina E",
@@ -3811,7 +3819,7 @@
                     "gordura_total_g": 100,
                     "gordura_saturada_g": 87,
                     "fibras_g": 0
-                }, // Rico em TCMs
+                }, 
                 "micronutrientes_destaque": [
                     "Triglicerídeos de Cadeia Média (TCM)"
                 ],
@@ -3840,19 +3848,18 @@
                 ],
                 "observacoes": "Alto em gordura saturada, embora TCMs tenham metabolismo diferente. Usar com moderação. Bom para cozinhar em altas temperaturas."
             },
-            // LATICÍNIOS
             {
                 "id": "FOOD068",
                 "nome_pt": "Leite de Vaca Integral (3% gordura)",
                 "grupo_alimentar": "Laticínio Integral",
-                "energia_kcal_100g": 61, // = 61 kcal / 100ml
+                "energia_kcal_100g": 61, 
                 "macros_100g": {
                     "proteina_g": 3.2,
                     "carboidrato_g": 4.8,
                     "gordura_total_g": 3.3,
                     "gordura_saturada_g": 1.9,
                     "fibras_g": 0
-                }, // Carboidrato = lactose
+                }, 
                 "micronutrientes_destaque": [
                     "Cálcio",
                     "Vitamina D (se fortificado)",
@@ -3970,7 +3977,7 @@
                     "gordura_total_g": 0.4,
                     "gordura_saturada_g": 0.1,
                     "fibras_g": 0
-                }, // Proteína pode ser maior
+                }, 
                 "micronutrientes_destaque": [
                     "Cálcio",
                     "Fósforo",
@@ -4008,7 +4015,7 @@
                     "gordura_total_g": 0.4,
                     "gordura_saturada_g": 0.1,
                     "fibras_g": 0
-                }, // Proteína bem mais alta
+                }, 
                 "micronutrientes_destaque": [
                     "Proteína",
                     "Cálcio",
@@ -4029,7 +4036,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 pote",
-                        "peso_g": 100-130
+                        "peso_min_g": 100,
+                        "peso_max_g": 130
                     }
                 ],
                 "observacoes": "Textura mais espessa e maior teor de proteína devido à remoção do soro."
@@ -4078,14 +4086,14 @@
                 "id": "FOOD074",
                 "nome_pt": "Queijo Minas Frescal",
                 "grupo_alimentar": "Queijo Fresco",
-                "energia_kcal_100g": 264, // Varia
+                "energia_kcal_100g": 264,
                 "macros_100g": {
                     "proteina_g": 17,
                     "carboidrato_g": 2.7,
                     "gordura_total_g": 20,
                     "gordura_saturada_g": 13,
                     "fibras_g": 0
-                }, // Teor de gordura moderado/alto
+                }, 
                 "micronutrientes_destaque": [
                     "Cálcio",
                     "Fósforo",
@@ -4146,7 +4154,8 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 fatia",
-                        "peso_g": 25-30
+                        "peso_min_g": 25,
+                        "peso_max_g": 30
                     }
                 ],
                 "observacoes": "Muito usado em sanduíches e pizzas. Rico em gordura e sódio."
@@ -4155,7 +4164,7 @@
                 "id": "FOOD076",
                 "nome_pt": "Ricota Fresca",
                 "grupo_alimentar": "Derivado Lácteo (Soro)",
-                "energia_kcal_100g": 174, // Integral
+                "energia_kcal_100g": 174,
                 "macros_100g": {
                     "proteina_g": 11,
                     "carboidrato_g": 3,
@@ -4191,7 +4200,6 @@
                 ],
                 "observacoes": "Feita a partir do soro do leite. Versões light/magras disponíveis com menos gordura."
             },
-            // BEBIDAS (Excluindo refrigerantes e sucos industrializados com açúcar)
             {
                 "id": "FOOD077",
                 "nome_pt": "Água Mineral",
@@ -4234,7 +4242,7 @@
                 "id": "FOOD078",
                 "nome_pt": "Café Coado (sem açúcar)",
                 "grupo_alimentar": "Bebida Estimulante",
-                "energia_kcal_100g": 2, // Praticamente zero
+                "energia_kcal_100g": 2, 
                 "macros_100g": {
                     "proteina_g": 0.1,
                     "carboidrato_g": 0,
@@ -4275,7 +4283,7 @@
                 "id": "FOOD079",
                 "nome_pt": "Chá Verde (infusão, sem açúcar)",
                 "grupo_alimentar": "Bebida",
-                "energia_kcal_100g": 1, // Praticamente zero
+                "energia_kcal_100g": 1,
                 "macros_100g": {
                     "proteina_g": 0,
                     "carboidrato_g": 0.2,
@@ -4311,14 +4319,14 @@
                 "id": "FOOD080",
                 "nome_pt": "Leite de Amêndoas (sem açúcar adicionado)",
                 "grupo_alimentar": "Bebida Vegetal",
-                "energia_kcal_100g": 15-30, // Varia muito por marca
+                "energia_kcal_100g": 30,
                 "macros_100g": {
                     "proteina_g": 0.5,
                     "carboidrato_g": 1,
                     "gordura_total_g": 1.5,
                     "gordura_saturada_g": 0.1,
                     "fibras_g": 0.5
-                }, // Baixo em proteína
+                }, 
                 "micronutrientes_destaque": [
                     "Vitamina E",
                     "Cálcio (se fortificado)",
@@ -4381,17 +4389,17 @@
                     },
                     {
                         "descricao": "1 caixinha",
-                        "peso_g": 200-300
+                        "peso_min_g": 200,
+                        "peso_max_g": 300
                     }
                 ],
                 "observacoes": "Boa para repor eletrólitos após exercício leve/moderado. Contém açúcares naturais, moderar consumo."
             },
-            // ALIMENTOS PROCESSADOS / ULTRAPROCESSADOS (Exemplos com Alertas)
             {
                 "id": "FOOD082",
                 "nome_pt": "Presunto Cozido Magro Fatiado",
                 "grupo_alimentar": "Carne Processada",
-                "energia_kcal_100g": 110, // Varia
+                "energia_kcal_100g": 110,
                 "macros_100g": {
                     "proteina_g": 18,
                     "carboidrato_g": 1.5,
@@ -4416,11 +4424,13 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 fatia",
-                        "peso_g": 15-20
+                        "peso_min_g": 15,
+                        "peso_max_g": 20
                     },
                     {
                         "descricao": "2 fatias",
-                        "peso_g": 30-40
+                        "peso_min_g": 30,
+                        "peso_max_g": 40
                     }
                 ],
                 "observacoes": "Alto teor de sódio e conservantes (nitritos/nitratos). Consumo associado a riscos à saúde. Limitar ao máximo."
@@ -4429,7 +4439,7 @@
                 "id": "FOOD083",
                 "nome_pt": "Peito de Peru Fatiado",
                 "grupo_alimentar": "Carne Processada",
-                "energia_kcal_100g": 105, // Varia
+                "energia_kcal_100g": 105, 
                 "macros_100g": {
                     "proteina_g": 22,
                     "carboidrato_g": 1,
@@ -4454,11 +4464,13 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 fatia",
-                        "peso_g": 15-20
+                        "peso_min_g": 15,
+                        "peso_max_g": 20
                     },
                     {
                         "descricao": "2 fatias",
-                        "peso_g": 30-40
+                        "peso_min_g": 30,
+                        "peso_max_g": 40
                     }
                 ],
                 "observacoes": "Frequentemente visto como 'saudável', mas ainda é um processado com alto sódio. Alternar com fontes de proteína fresca."
@@ -4467,14 +4479,14 @@
                 "id": "FOOD084",
                 "nome_pt": "Biscoito de Água e Sal",
                 "grupo_alimentar": "Processado",
-                "energia_kcal_100g": 420, // Varia
+                "energia_kcal_100g": 420,
                 "macros_100g": {
                     "proteina_g": 9,
                     "carboidrato_g": 73,
                     "gordura_total_g": 10,
                     "gordura_saturada_g": 2,
                     "fibras_g": 3
-                }, // Varia muito
+                }, 
                 "micronutrientes_destaque": [
                     "Sódio (alto)"
                 ],
@@ -4491,11 +4503,13 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 unidade",
-                        "peso_g": 5-7
+                        "peso_min_g": 5,
+                        "peso_max_g": 7
                     },
                     {
                         "descricao": "4 unidades",
-                        "peso_g": 20-28
+                        "peso_min_g": 20,
+                        "peso_max_g": 28
                     }
                 ],
                 "observacoes": "Pobre em nutrientes, rico em carboidrato refinado e sódio."
@@ -4504,14 +4518,14 @@
                 "id": "FOOD085",
                 "nome_pt": "Refrigerante tipo Cola (Normal)",
                 "grupo_alimentar": "Bebida Açucarada Ultraprocessada",
-                "energia_kcal_100g": 42, // Aprox.
+                "energia_kcal_100g": 42, 
                 "macros_100g": {
                     "proteina_g": 0,
                     "carboidrato_g": 10.6,
                     "gordura_total_g": 0,
                     "gordura_saturada_g": 0,
                     "fibras_g": 0
-                }, // Carboidrato = Açúcar
+                }, 
                 "micronutrientes_destaque": [
                     "Nenhum"
                 ],
@@ -4539,7 +4553,7 @@
                 "id": "FOOD086",
                 "nome_pt": "Refrigerante tipo Cola (Zero Açúcar)",
                 "grupo_alimentar": "Bebida Ultraprocessada com Adoçantes",
-                "energia_kcal_100g": 0-1, // Praticamente zero
+                "energia_kcal_100g": 0, 
                 "macros_100g": {
                     "proteina_g": 0,
                     "carboidrato_g": 0,
@@ -4570,19 +4584,18 @@
                 ],
                 "observacoes": "Sem açúcar, mas contém adoçantes artificiais, corantes e ácidos cujo impacto a longo prazo é debatido. Consumir esporadicamente, preferir água."
             },
-            // SUPLEMENTOS (Dados básicos para referência - idealmente ter seção separada)
             {
-                "id": "FOOD087", // Ou SUP001
+                "id": "FOOD087",
                 "nome_pt": "Whey Protein Concentrado (Pó, sabor neutro/baunilha)",
                 "grupo_alimentar": "Suplemento Proteico",
-                "energia_kcal_100g": 400, // Varia por marca
+                "energia_kcal_100g": 400, 
                 "macros_100g": {
-                    "proteina_g": 75-80,
-                    "carboidrato_g": 5-8,
-                    "gordura_total_g": 5-7,
-                    "gordura_saturada_g": 2-4,
+                    "proteina_g": -80,
+                    "carboidrato_g": 8,
+                    "gordura_total_g": 7,
+                    "gordura_saturada_g": 4,
                     "fibras_g": 1
-                }, // Varia
+                }, 
                 "micronutrientes_destaque": [
                     "Proteína de Alto Valor Biológico",
                     "BCAAs",
@@ -4601,16 +4614,17 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 scoop (medidor)",
-                        "peso_g": 30-40
+                        "peso_min_g": 30,
+                        "peso_max_g": 40
                     }
                 ],
                 "observacoes": "Fonte prática de proteína. Concentrado tem um pouco de lactose/gordura. Isolado/Hidrolisado tem menos."
             },
             {
-                "id": "FOOD088", // Ou SUP002
+                "id": "FOOD088", 
                 "nome_pt": "Creatina Monohidratada (Pó)",
                 "grupo_alimentar": "Suplemento Ergogênico",
-                "energia_kcal_100g": 0, // Desprezível na dose usual
+                "energia_kcal_100g": 0, 
                 "macros_100g": {
                     "proteina_g": 0,
                     "carboidrato_g": 0,
@@ -4632,22 +4646,16 @@
                 "medidas_caseiras_aproximadas": [
                     {
                         "descricao": "1 dosador pequeno",
-                        "peso_g": 3-5
+                        "peso_min_g": 3,
+                        "peso_max_g": 5
                     }
                 ],
                 "observacoes": "Um dos suplementos mais estudados e eficazes para aumento de força e massa muscular. Requer uso contínuo."
             }
-            // ... CONTINUAR ADICIONANDO MUITOS OUTROS ITENS...
-            // Exemplos: outros peixes (pescada, cação), outras carnes (músculo, fígado), outros queijos (parmesão, brie),
-            // outras frutas (kiwi, pêssego, ameixa), outros vegetais (rúcula, agrião, couve de bruxelas, nabo),
-            // outros grãos (centeio, cevadinha), outras bebidas vegetais (soja, aveia, coco),
-            // mais detalhes sobre preparações (frito vs assado vs cozido),
-            // itens específicos de certas dietas (óleo MCT, farinha de amêndoa, etc.)
+         
         ]
-    ],
+    },
     "exercicios": [
-        // --- MEMBROS INFERIORES ---
-        // ** Agachamentos e Variações **
         {
             "id": "EX001",
             "nome_pt": "Agachamento Livre com Barra (Costas - Barra Alta)",
@@ -4939,7 +4947,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Leg Press e Variações **
         {
             "id": "EX010",
             "nome_pt": "Leg Press 45 graus",
@@ -5023,7 +5030,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Extensões e Flexões de Joelho **
         {
             "id": "EX012",
             "nome_pt": "Cadeira Extensora (Extensão de Joelho)",
@@ -5174,9 +5180,8 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Exercícios com Ênfase em Glúteos e Posteriores **
         {
-            "id": "EX004", // Original
+            "id": "EX004", 
             "nome_pt": "Levantamento Terra (Convencional)",
             "musculo_primario": "Cadeia Posterior (Glúteos, Isquiotibiais, Eretores da Espinha)",
             "musculos_secundarios": [
@@ -5603,7 +5608,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Panturrilhas **
         {
             "id": "EX025",
             "nome_pt": "Panturrilha em Pé na Máquina (Gêmeos)",
@@ -5717,10 +5721,8 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // --- MEMBROS SUPERIORES: PEITORAL ---
-        // ** Supinos e Variações **
         {
-            "id": "EX002", // Original
+            "id": "EX002", 
             "nome_pt": "Supino Reto com Barra",
             "musculo_primario": "Peitoral Maior (porção esternal)",
             "musculos_secundarios": [
@@ -6016,7 +6018,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Crucifixos / Aduções **
         {
             "id": "EX034",
             "nome_pt": "Crucifixo Reto com Halteres",
@@ -6171,7 +6172,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Flexões e Mergulhos **
         {
             "id": "EX038",
             "nome_pt": "Flexão de Braço (Push-up)",
@@ -6264,8 +6264,6 @@
             "video_link_exemplo": "placeholder",
             "aviso_seguranca": "Pode ser estressante para os ombros, especialmente com má forma ou descendo demais."
         },
-        // --- MEMBROS SUPERIORES: COSTAS ---
-        // ** Puxadas Verticais **
         {
             "id": "EX040",
             "nome_pt": "Barra Fixa (Pull-up) - Pegada Pronada",
@@ -6487,9 +6485,8 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Remadas Horizontais **
         {
-            "id": "EX003", // Original
+            "id": "EX003", 
             "nome_pt": "Remada Curvada com Barra (Pegada Pronada)",
             "musculo_primario": "Dorsais",
             "musculos_secundarios": [
@@ -6767,7 +6764,6 @@
             "video_link_exemplo": "placeholder",
             "aviso_seguranca": "Exercício controverso, alto risco de impacto no ombro para algumas pessoas, especialmente com pegada muito fechada ou puxando muito alto. Executar com cautela ou evitar se causar dor."
         },
-        // ** Isolamento para Costas / Puxadas **
         {
             "id": "EX050",
             "nome_pt": "Pullover com Halter (Deitado no Banco)",
@@ -6897,8 +6893,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // --- MEMBROS SUPERIORES: OMBROS ---
-        // ** Desenvolvimentos / Presses Verticais **
         {
             "id": "EX053",
             "nome_pt": "Desenvolvimento Militar com Barra (Overhead Press - OHP)",
@@ -7075,7 +7069,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // ** Elevações Laterais, Frontais e Posteriores **
         {
             "id": "EX057",
             "nome_pt": "Elevação Lateral com Halteres",
@@ -7203,7 +7196,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // --- MEMBROS SUPERIORES: BÍCEPS ---
         {
             "id": "EX060",
             "nome_pt": "Rosca Direta com Barra Reta",
@@ -7530,7 +7522,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // --- MEMBROS SUPERIORES: TRÍCEPS ---
         {
             "id": "EX068",
             "nome_pt": "Tríceps Pulley com Barra Reta (Pushdown)",
@@ -7820,7 +7811,6 @@
             "video_link_exemplo": "placeholder",
             "aviso_seguranca": "Pode ser estressante para os ombros, especialmente se descer muito ou com má forma."
         },
-        // --- CORE (Abdômen e Lombar) ---
         {
             "id": "EX075",
             "nome_pt": "Prancha Frontal (Plank)",
@@ -8242,7 +8232,6 @@
             ],
             "video_link_exemplo": "placeholder"
         },
-        // --- EXERCÍCIOS FUNCIONAIS / CORPO INTEIRO ---
         {
             "id": "EX085",
             "nome_pt": "Kettlebell Swing (Estilo Russo)",
@@ -8461,558 +8450,5 @@
             ],
             "video_link_exemplo": "placeholder"
         }
-        // ... CONTINUAR ADICIONANDO MAIS EXERCÍCIOS ...
-        // Exemplos a adicionar:
-        // - Variações de máquinas (diferentes ângulos, unilaterais)
-        // - Mais exercícios com cabos (remadas unilaterais, elevações diferentes)
-        // - Mais exercícios com Kettlebells (Snatch, Clean, Windmill)
-        // - Exercícios com elásticos (remadas, puxadas, agachamentos assistidos/resistidos)
-        // - Exercícios de mobilidade e alongamento (se aplicável à base de dados)
-        // - Exercícios pliométricos (Box Jump, Medicine Ball Throws)
-        // - Exercícios de aquecimento específicos
     ]
-},
-"templates_geracao_plano_detalhados": {
-    "estrutura_plano_nutricional_output": {
-        "tipo_documento": "Plano Alimentar Sugerido",
-        "objetivo_primario": "{{objetivo_interno_mapeado}}", // Ex: perda_gordura
-        "metas_diarias_estimadas": {
-            "calorias_kcal": "{{calorias_calculadas}}",
-            "proteina_g": "{{proteina_calculada_g}} ({{percentual_proteina}}%)",
-            "carboidrato_g": "{{carboidrato_calculado_g}} ({{percentual_carboidrato}}%)",
-            "gordura_g": "{{gordura_calculada_g}} ({{percentual_gordura}}%)",
-            "fibras_g": "{{fibras_recomendadas_g}} (mínimo)"
-        },
-        "horarios_sugeridos_flexiveis": true, // Indicar que horários são sugestões
-        "refeicoes_dia_exemplo": [
-            {
-                "nome_refeicao": "Café da Manhã",
-                "horario_sugestao": "07:00 - 08:00",
-                "observacao_geral": "Refeição importante para quebrar o jejum noturno e fornecer energia inicial.",
-                "opcoes_combinacoes": [
-                    {
-                        "id_opcao": "CF01",
-                        "descricao": "Ovos Mexidos com Aveia e Fruta",
-                        "alimentos": [
-                            {
-                                "id_alimento": "FOOD004",
-                                "nome": "Ovo de Galinha Inteiro",
-                                "quantidade_g": 110,
-                                "medida_caseira": "2 unidades grandes"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Aveia em Flocos",
-                                "quantidade_g": 30,
-                                "medida_caseira": "3 colheres de sopa"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Mamão Papaia",
-                                "quantidade_g": 100,
-                                "medida_caseira": "1/2 unidade pequena"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Semente de Chia",
-                                "quantidade_g": 5,
-                                "medida_caseira": "1 colher de chá"
-                            }
-                        ],
-                        "macros_estimados_opcao": {
-                            "prot": "...",
-                            "carb": "...",
-                            "gord": "...",
-                            "kcal": "..."
-                        } // Calcular com base nos alimentos
-                    },
-                    {
-                        "id_opcao": "CF02",
-                        "descricao": "Iogurte Natural com Whey, Granola e Morangos",
-                        "alimentos": [
-                            {
-                                "id_alimento": "...",
-                                "nome": "Iogurte Natural Desnatado",
-                                "quantidade_g": 170,
-                                "medida_caseira": "1 pote"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Whey Protein Concentrado",
-                                "quantidade_g": 30,
-                                "medida_caseira": "1 scoop"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Granola sem Açúcar",
-                                "quantidade_g": 30,
-                                "medida_caseira": "3 colheres de sopa"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Morangos Frescos",
-                                "quantidade_g": 100,
-                                "medida_caseira": "1 xícara picado"
-                            }
-                        ],
-                        "macros_estimados_opcao": {
-                            "prot": "...",
-                            "carb": "...",
-                            "gord": "...",
-                            "kcal": "..."
-                        }
-                    }
-                    // ... mais opções para café da manhã
-                ]
-            },
-            {
-                "nome_refeicao": "Lanche da Manhã",
-                "horario_sugestao": "10:00 - 11:00",
-                "observacao_geral": "Opcional. Ajuda a controlar a fome até o almoço.",
-                "opcoes_combinacoes": [
-                    {
-                        "id_opcao": "LM01",
-                        "descricao": "Castanhas e Maçã",
-                        "alimentos": [
-                            {
-                                "id_alimento": "...",
-                                "nome": "Castanha do Pará",
-                                "quantidade_g": 15,
-                                "medida_caseira": "2 unidades médias"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Maçã Fuji com casca",
-                                "quantidade_g": 150,
-                                "medida_caseira": "1 unidade média"
-                            }
-                        ],
-                        "macros_estimados_opcao": {
-                            "prot": "...",
-                            "carb": "...",
-                            "gord": "...",
-                            "kcal": "..."
-                        }
-                    },
-                    {
-                        "id_opcao": "LM02",
-                        "descricao": "Palitos de Cenoura com Pasta de Amendoim",
-                        "alimentos": [
-                            {
-                                "id_alimento": "...",
-                                "nome": "Cenoura Crua",
-                                "quantidade_g": 100,
-                                "medida_caseira": "1 unidade média em palitos"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Pasta de Amendoim Integral",
-                                "quantidade_g": 15,
-                                "medida_caseira": "1 colher de sopa rasa"
-                            }
-                        ],
-                        "macros_estimados_opcao": {
-                            "prot": "...",
-                            "carb": "...",
-                            "gord": "...",
-                            "kcal": "..."
-                        }
-                    }
-                    // ... mais opções
-                ]
-            },
-            {
-                "nome_refeicao": "Almoço",
-                "horario_sugestao": "12:30 - 14:00",
-                "observacao_geral": "Refeição principal, deve ser completa e equilibrada.",
-                "opcoes_combinacoes": [
-                    {
-                        "id_opcao": "AL01",
-                        "descricao": "Frango Grelhado com Arroz Integral, Feijão e Salada Colorida",
-                        "alimentos": [
-                            {
-                                "id_alimento": "FOOD001",
-                                "nome": "Peito de Frango Grelhado",
-                                "quantidade_g": 150,
-                                "medida_caseira": "1 filé grande"
-                            },
-                            {
-                                "id_alimento": "FOOD003",
-                                "nome": "Arroz Integral Cozido",
-                                "quantidade_g": 110,
-                                "medida_caseira": "2 colheres de servir"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Feijão Carioca Cozido",
-                                "quantidade_g": 100,
-                                "medida_caseira": "1 concha média"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Alface Crespa",
-                                "quantidade_g": 50,
-                                "medida_caseira": "À vontade"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Tomate Cereja",
-                                "quantidade_g": 80,
-                                "medida_caseira": "8 unidades"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Pepino Japonês",
-                                "quantidade_g": 50,
-                                "medida_caseira": "1/2 unidade pequena"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Azeite Extra Virgem (tempero)",
-                                "quantidade_g": 5,
-                                "medida_caseira": "1 colher de chá"
-                            }
-                        ],
-                        "macros_estimados_opcao": {
-                            "prot": "...",
-                            "carb": "...",
-                            "gord": "...",
-                            "kcal": "..."
-                        }
-                    },
-                    {
-                        "id_opcao": "AL02",
-                        "descricao": "Salmão Assado com Batata Doce e Brócolis",
-                        "alimentos": [
-                            {
-                                "id_alimento": "...",
-                                "nome": "Salmão Assado",
-                                "quantidade_g": 130,
-                                "medida_caseira": "1 posta média"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Batata Doce Cozida",
-                                "quantidade_g": 150,
-                                "medida_caseira": "1 unidade média"
-                            },
-                            {
-                                "id_alimento": "...",
-                                "nome": "Brócolis Cozido no Vapor",
-                                "quantidade_g": 150,
-                                "medida_caseira": "1 xícara"
-                            }
-                        ],
-                        "macros_estimados_opcao": {
-                            "prot": "...",
-                            "carb": "...",
-                            "gord": "...",
-                            "kcal": "..."
-                        }
-                    }
-                    // ... mais opções
-                ]
-            },
-            // ... Lanche da Tarde
-            // ... Jantar
-            // ... Ceia (Opcional)
-        ],
-        "lista_substituicao_inteligente": [
-            // Sugestões de trocas DENTRO do mesmo grupo alimentar
-            {
-                "grupo": "Proteína Magra",
-                "alimento_base": "Peito de Frango (100g)",
-                "substituicoes_equivalentes_aprox": [
-                    "Tilápia Grelhada (120g)",
-                    "Patinho Moído Magro (100g)",
-                    "Clara de Ovo (6 unidades)",
-                    "Tofu Firme (150g)"
-                ]
-            },
-            {
-                "grupo": "Carboidrato Complexo",
-                "alimento_base": "Arroz Integral (100g cozido)",
-                "substituicoes_equivalentes_aprox": [
-                    "Batata Doce Cozida (110g)",
-                    "Quinoa Cozida (100g)",
-                    "Pão Integral (2 fatias)",
-                    "Mandioca Cozida (90g)"
-                ]
-            },
-            {
-                "grupo": "Gordura Saudável",
-                "alimento_base": "Abacate (50g)",
-                "substituicoes_equivalentes_aprox": [
-                    "Azeite Extra Virgem (1 colher sopa)",
-                    "Castanha do Pará (3 unidades)",
-                    "Amêndoas (15 unidades)"
-                ]
-            }
-            // ... mais grupos
-        ],
-        "recomendacoes_nutricionais_gerais": [
-            "Beba {{litros_agua_recomendado}} litros de água distribuídos ao longo do dia.",
-            "Priorize alimentos frescos e minimamente processados.",
-            "Varie os alimentos dentro de cada grupo para garantir diversidade de nutrientes.",
-            "Ajuste as porções conforme sua fome, saciedade e resultados observados. Este plano é um guia inicial.",
-            "Cozinhe mais em casa para ter controle sobre os ingredientes e preparo.",
-            "Mastigue bem os alimentos e coma com atenção plena.",
-            "Modere o consumo de açúcar adicionado, gorduras trans e sódio.",
-            "Considere o uso de um aplicativo de rastreamento alimentar (ex: MyFitnessPal, FatSecret) para maior precisão, se desejar."
-        ],
-        "avisos_importantes": "{{lista_avisos_obrigatorios_seguranca}}" // Referencia seção de segurança
-    },
-    "estrutura_plano_treino_output": {
-        "tipo_documento": "Programa de Treinamento Sugerido",
-        "objetivo_primario": "{{objetivo_interno_mapeado}}", // Ex: hipertrofia
-        "nivel_experiencia": "{{nivel_interno_mapeado}}", // Ex: intermediario
-        "frequencia_semanal_sugerida": "{{frequencia_calculada}} sessões",
-        "duracao_estimada_sessao_min": "{{duracao_estimada}}",
-        "tipo_divisao_split": "{{split_recomendado}}", // Ex: Upper/Lower
-        "equipamento_necessario_primario": "{{equipamento_mapeado}}", // Ex: academia_completa
-        "enfase_principal": "{{enfase_treino}}", // Ex: Hipertrofia com suporte de força
-        "protocolo_aquecimento_geral": [
-            "5-10 minutos de cardio leve (esteira, bicicleta, elíptico) para elevar a temperatura corporal.",
-            "5 minutos de mobilidade articular dinâmica (rotações de ombros, quadris, punhos, tornozelos; movimentos controlados)."
-        ],
-        "cronograma_semanal_exemplo": [
-            {
-                "dia_semana": "Segunda-feira",
-                "nome_treino": "Superior A (Ênfase Empurrar)",
-                "aquecimento_especifico": [
-                    {
-                        "exercicio": "Rotação Externa Ombro (Elástico/Cabo)",
-                        "series_reps": "2x15 (leve)"
-                    },
-                    {
-                        "exercicio": "Flexão de Braço (ou na parede)",
-                        "series_reps": "1x10-15"
-                    }
-                ],
-                "exercicios": [
-                    {
-                        "id_exercicio": "EX002",
-                        "nome": "Supino Reto com Barra",
-                        "series_repeticoes": "3 x 6-10",
-                        "descanso_segundos": 90-120,
-                        "observacoes": "Foco na progressão de carga. RPE 8-9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Desenvolvimento Militar com Halteres (Sentado)",
-                        "series_repeticoes": "3 x 8-12",
-                        "descanso_segundos": 75-90,
-                        "observacoes": "Controlar a descida. RPE 8-9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Supino Inclinado com Halteres",
-                        "series_repeticoes": "3 x 10-15",
-                        "descanso_segundos": 60-90,
-                        "observacoes": "Focar na contração do peitoral superior. RPE 8-9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Elevação Lateral com Halteres",
-                        "series_repeticoes": "3 x 12-15",
-                        "descanso_segundos": 60,
-                        "observacoes": "Movimento controlado, sem impulso. RPE 9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Tríceps Testa com Barra EZ",
-                        "series_repeticoes": "3 x 10-12",
-                        "descanso_segundos": 60-75,
-                        "observacoes": "Cotovelos estáveis. RPE 9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Tríceps Pulley Corda",
-                        "series_repeticoes": "2 x 12-15",
-                        "descanso_segundos": 60,
-                        "observacoes": "Máxima contração no final. RPE 9-10."
-                    }
-                ],
-                "cardio_sugerido_pos_treino": {
-                    "tipo": "LISS",
-                    "duracao_min": 20,
-                    "intensidade": "Caminhada inclinada"
-                }
-            },
-            {
-                "dia_semana": "Terça-feira",
-                "nome_treino": "Inferior A (Ênfase Quadríceps/Glúteos)",
-                "aquecimento_especifico": [
-                    {
-                        "exercicio": "Agachamento Livre (só barra ou leve)",
-                        "series_reps": "2x10"
-                    },
-                    {
-                        "exercicio": "Bom dia (leve)",
-                        "series_reps": "1x15"
-                    }
-                ],
-                "exercicios": [
-                    {
-                        "id_exercicio": "EX001",
-                        "nome": "Agachamento Livre com Barra",
-                        "series_repeticoes": "4 x 6-10",
-                        "descanso_segundos": 120-180,
-                        "observacoes": "Priorizar profundidade com boa forma. RPE 8-9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Leg Press 45",
-                        "series_repeticoes": "3 x 10-15",
-                        "descanso_segundos": 90-120,
-                        "observacoes": "Amplitude controlada. RPE 9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Cadeira Extensora",
-                        "series_repeticoes": "3 x 12-15",
-                        "descanso_segundos": 60-75,
-                        "observacoes": "Pico de contração. RPE 9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Levantamento Terra Romeno com Halteres",
-                        "series_repeticoes": "3 x 10-12",
-                        "descanso_segundos": 75-90,
-                        "observacoes": "Foco no alongamento dos posteriores. Costas retas. RPE 8."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Elevação Pélvica com Barra",
-                        "series_repeticoes": "4 x 10-15",
-                        "descanso_segundos": 90,
-                        "observacoes": "Contração máxima dos glúteos no topo. RPE 9."
-                    },
-                    {
-                        "id_exercicio": "...",
-                        "nome": "Panturrilha em Pé (Máquina ou Livre)",
-                        "series_repeticoes": "4 x 15-20",
-                        "descanso_segundos": 60,
-                        "observacoes": "Amplitude completa. RPE 9-10."
-                    }
-                ],
-                "cardio_sugerido_pos_treino": null // Ou opcional
-            },
-            {
-                "dia_semana": "Quarta-feira",
-                "nome_treino": "Descanso ou Cardio Leve/Mobilidade",
-                "exercicios": null,
-                "cardio_sugerido_pos_treino": {
-                    "tipo": "LISS",
-                    "duracao_min": 30-40,
-                    "intensidade": "Caminhada ou Bicicleta Leve"
-                }
-            },
-            // ... Quinta (Superior B - Ênfase Puxar)
-            // ... Sexta (Inferior B - Ênfase Posteriores/Glúteos)
-            // ... Sábado/Domingo (Descanso ou Atividade Leve)
-        ],
-        "estrategia_progressao_recomendada": {
-            "metodo_primario": "Progressão Dupla",
-            "descricao": "Para cada exercício, escolha um peso que permita realizar o número mínimo de repetições da faixa indicada (ex: 6 reps na faixa 6-10) com boa forma (RPE 8-9). Mantenha o peso nos treinos seguintes e tente aumentar as repetições. Quando conseguir completar todas as séries no topo da faixa (ex: 10 reps), aumente ligeiramente o peso no próximo treino e reinicie o processo (voltando para 6-8 reps).",
-            "metodo_secundario": "Aumentar Séries ou Diminuir Descanso",
-            "descricao": "Se a progressão de carga/reps estagnar, considere adicionar 1 série a um ou mais exercícios, ou reduzir o tempo de descanso entre as séries (mantendo a forma)."
-        },
-        "protocolo_desaquecimento_sugerido": [
-            "5 minutos de cardio muito leve (opcional).",
-            "5-10 minutos de alongamentos estáticos leves para os principais grupos musculares trabalhados (segurar 15-30s por posição, sem forçar)."
-        ],
-        "observacoes_importantes_treino": [
-            "Priorize SEMPRE a execução correta dos movimentos sobre a quantidade de peso.",
-            "Aprenda a sentir a contração do músculo alvo.",
-            "Escute seu corpo. Se sentir dor aguda ou articular, pare o exercício e avalie. Não treine lesionado.",
-            "A progressão não é linear. Haverá dias bons e ruins. Foque na consistência a longo prazo.",
-            "Durma bem (7-9 horas) e controle o estresse, pois são cruciais para a recuperação e resultados.",
-            "Ajuste o volume e intensidade conforme sua capacidade de recuperação individual."
-        ],
-        "avisos_importantes": "{{lista_avisos_obrigatorios_seguranca}}" // Referencia seção de segurança
-    }
-},
-"protocolos_seguranca_avisos_obrigatorios": {
-    "disclaimers_gerais_saude": [
-        "**AVISO LEGAL IMPORTANTE:** Este plano foi gerado por Inteligência Artificial com base nas informações fornecidas e na documentação de referência. Ele representa uma SUGESTÃO e NÃO SUBSTITUI, em hipótese alguma, a avaliação, diagnóstico e acompanhamento individualizado por profissionais de saúde devidamente registrados e qualificados (Nutricionista, Médico, Educador Físico).",
-        "**CONSULTE SEU MÉDICO:** Antes de iniciar ou modificar qualquer programa alimentar ou de exercícios, especialmente se você possui qualquer condição médica pré-existente (mesmo que controlada), histórico de lesões, ou faz uso de medicações, é fundamental consultar seu médico.",
-        "**INDIVIDUALIDADE BIOLÓGICA:** Os resultados variam enormemente de pessoa para pessoa devido a fatores genéticos, metabólicos, estilo de vida, aderência ao plano e outros. Não compare seu progresso com o de outros.",
-        "**RISCOS INERENTES:** Qualquer atividade física envolve riscos. Execute os exercícios com técnica correta e atenção. Se sentir dor aguda, tontura, falta de ar excessiva ou qualquer sintoma incomum, INTERROMPA imediatamente a atividade e procure orientação profissional.",
-        "**PRECISÃO DOS DADOS:** As informações sobre calorias e macronutrientes dos alimentos são valores aproximados e podem variar. Use como guia.",
-        "**NÃO É TRATAMENTO MÉDICO:** Esta plataforma e seus planos gerados não se destinam a diagnosticar, tratar, curar ou prevenir qualquer doença.",
-        "**SUPLEMENTAÇÃO:** A suplementação só deve ser considerada após otimização da dieta e, preferencialmente, com orientação de Nutricionista ou Médico. Não inicie o uso de suplementos sem conhecimento.",
-        "**RESPONSABILIDADE DO USUÁRIO:** Ao utilizar este plano, você assume total responsabilidade por sua saúde e segurança."
-    ],
-    "condicoes_alerta_vermelho_parada_imediata": [
-        // Lista de condições que IMPEDEM a geração de plano pela IA e direcionam para profissional
-        {
-            "codigo": "RF01",
-            "condicao": "Dor no peito ou desconforto durante ou após atividade física"
-        },
-        {
-            "codigo": "RF02",
-            "condicao": "Tontura frequente, perda de consciência"
-        },
-        {
-            "codigo": "RF03",
-            "condicao": "Falta de ar desproporcional ao esforço"
-        },
-        {
-            "codigo": "RF04",
-            "condicao": "Doença cardíaca conhecida ou suspeita não liberada por médico para exercício"
-        },
-        {
-            "codigo": "RF05",
-            "condicao": "Histórico de AVC (Acidente Vascular Cerebral)"
-        },
-        {
-            "codigo": "RF06",
-            "condicao": "Diabetes Tipo 1 ou Tipo 2 DESCONTROLADA"
-        },
-        {
-            "codigo": "RF07",
-            "condicao": "Doença Renal Crônica (qualquer estágio sem liberação médica)"
-        },
-        {
-            "codigo": "RF08",
-            "condicao": "Doença Hepática Ativa ou Crônica Grave"
-        },
-        {
-            "codigo": "RF09",
-            "condicao": "Transtorno Alimentar Ativo ou Histórico Recente (Anorexia, Bulimia, Compulsão Alimentar)"
-        },
-        {
-            "codigo": "RF10",
-            "condicao": "Gravidez ou Amamentação (requerem acompanhamento específico)"
-        },
-        {
-            "codigo": "RF11",
-            "condicao": "Lesão Aguda (muscular, articular, óssea) não diagnosticada/tratada"
-        },
-        {
-            "codigo": "RF12",
-            "condicao": "Câncer em tratamento ativo (sem liberação médica)"
-        },
-        {
-            "codigo": "RF13",
-            "condicao": "Uso de múltiplas medicações complexas com potenciais interações (sem avaliação médica)"
-        },
-        {
-            "codigo": "RF14",
-            "condicao": "Qualquer outra condição médica grave que limite atividade física sem liberação explícita do médico."
-        }
-    ],
-    "logica_acao_alerta_vermelho": {
-        "mensagem_padrao_usuario": "Com base nas informações fornecidas, identificamos uma condição que requer atenção e acompanhamento profissional especializado antes de iniciar ou modificar seu plano alimentar e de treino. Para sua segurança, recomendamos fortemente que você procure um Médico e/ou Nutricionista/Educador Físico para uma avaliação individualizada. A plataforma não pode gerar um plano neste caso.",
-        "acao_sistema": "Interromper geração do plano. Exibir mensagem de alerta/recomendação."
-    },
-    "precaucoes_adicionais": [
-        "Alergias alimentares devem ser tratadas com extrema seriedade. Evite contaminação cruzada e leia rótulos CUIDADOSAMENTE.",
-        "Intolerâncias (lactose, glúten) exigem atenção aos alimentos consumidos para evitar desconforto.",
-        "A progressão no treino deve ser GRADUAL. Não tente aumentar cargas ou volume muito rapidamente.",
-        "Hidrate-se adequadamente ANTES, DURANTE e APÓS o exercício.",
-        "Se utilizar suplementos, compre de marcas confiáveis e siga as dosagens recomendadas (idealmente por profissional)."
-    ]
-}
 }

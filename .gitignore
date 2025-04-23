@@ -1,0 +1,76 @@
+# Arquivos de ambiente e configuração
+.env
+.env.*
+!.env.example
+
+# Arquivos de cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Arquivos de logs
+*.log
+logs/
+log/
+
+# Diretórios virtuais Python
+venv/
+env/
+ENV/
+
+# Arquivos de IDE e editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Arquivos de banco de dados
+*.sqlite
+*.db
+
+# Arquivos temporários
+.DS_Store
+.coverage
+htmlcov/
+.pytest_cache/
+coverage.xml
+*.cover
+
+# Arquivos específicos da aplicação que podem conter dados sensíveis
+app/kb/knowledge_base_sensitive*.json
+app/kb/custom_*.json
+
+# Arquivos de credenciais
+*.pem
+*.key
+*.crt
+*.p12
+
+# Diretório de dados persistentes
+data/
+/postgres-data/
+
+# Arquivos de modelo AI
+*.bin
+*.pt
+*.h5
+*.onnx
+model_weights/
