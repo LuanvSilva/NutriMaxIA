@@ -6,8 +6,14 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5001:5001"
+      - "5678:5678"  # Porta para o debugger
     env_file:
       - .env # Alterado de ./app/.env para .env já que o .env está na raiz do projeto
+    # Sobrescreve o comando padrão com o comando de debug quando necessário
+    command: python -m debugpy --listen 0.0.0.0:5678 --wait-for-client -m flask run --host=0.0.0.0 --port=5001
+    # Importante: para desenvolvimento, monte o código como volume para refletir mudanças em tempo real
+    volumes:
+      - .:/app
     depends_on:
       db:
         condition: service_healthy
@@ -78,9 +84,13 @@ services:
     build:
       context: . # Alterado de ./backend para . já que o Dockerfile está na raiz do projeto
       dockerfile: Dockerfile
-    command: celery -A celery_worker.celery worker --loglevel=info
+    command: python -m debugpy --listen 0.0.0.0:5679 --wait-for-client -m celery -A celery_worker.celery worker --loglevel=info
     env_file:
       - .env
+    volumes:
+      - .:/app  # Monta o código como volume para refletir mudanças em tempo real
+    ports:
+      - "5679:5679"  # Porta para o debugger do Celery
     depends_on:
       redis:
         condition: service_healthy

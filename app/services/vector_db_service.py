@@ -78,18 +78,18 @@ class VectorDBService:
             # Gerar embedding da consulta
             query_embedding = self.kb_service.generate_embeddings([query_text])[0]
             
-            # Construir a base da consulta SQL
+            # Construir a base da consulta SQL com conversão explícita para o tipo VECTOR
             base_query = """
-                SELECT id, chunk_text, metadata_json, 1 - (embedding <=> :query_embedding) AS similarity
+                SELECT id, chunk_text, metadata_json, 1 - (embedding <=> CAST(:query_embedding AS vector)) AS similarity
                 FROM kb_chunks
                 WHERE kb_version = :kb_version
                 {filter_conditions}
-                ORDER BY embedding <=> :query_embedding
+                ORDER BY embedding <=> CAST(:query_embedding AS vector)
                 LIMIT :k
             """
             
             params = {
-                "query_embedding": query_embedding,  # pgvector manipula listas automaticamente
+                "query_embedding": query_embedding,
                 "kb_version": self.kb_version,
                 "k": k
             }

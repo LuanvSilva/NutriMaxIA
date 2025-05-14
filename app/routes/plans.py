@@ -15,27 +15,24 @@ plans_bp = Blueprint('plans', __name__, url_prefix='/api/v1/plans')
 
 @plans_bp.route('/latest', methods=['GET'])
 def get_latest_plan():
-    # Usar ID de teste fixo para desenvolvimento
-    user_id = "00000000-0000-0000-0000-000000000001"
-    logger.info(f"Buscando último plano para usuário de teste {user_id}")
-
-    latest_plan = GeneratedPlan.query.filter_by(user_id=user_id)\
-                                      .order_by(GeneratedPlan.generated_at.desc())\
-                                      .first()
+    # Em ambiente de desenvolvimento, buscar o plano mais recente independente do usuário
+    logger.info("Buscando plano mais recente (independente do usuário)")
+    
+    latest_plan = GeneratedPlan.query.order_by(GeneratedPlan.generated_at.desc()).first()
 
     if not latest_plan:
-        logger.info(f"Nenhum plano encontrado para usuário de teste")
+        logger.info("Nenhum plano encontrado")
         return jsonify({"message": "Nenhum plano encontrado."}), 404
 
     if latest_plan.generation_status == 'PENDING' or latest_plan.generation_status == 'PROCESSING':
-        logger.info(f"Plano {latest_plan.id} ainda está sendo gerado para usuário {user_id}")
+        logger.info(f"Plano {latest_plan.id} ainda está sendo gerado")
         return jsonify({
             "plan_id": str(latest_plan.id),
             "status": latest_plan.generation_status,
             "message": "Seu plano ainda está sendo processado. Por favor, tente novamente em alguns instantes."
         }), 202 # Accepted ou 200 OK com status
     elif latest_plan.generation_status == 'FAILED':
-         logger.warning(f"Último plano {latest_plan.id} falhou para usuário {user_id}")
+         logger.warning(f"Último plano {latest_plan.id} falhou para geração")
          return jsonify({
             "plan_id": str(latest_plan.id),
             "status": latest_plan.generation_status,
