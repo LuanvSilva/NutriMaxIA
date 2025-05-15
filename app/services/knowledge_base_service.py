@@ -72,10 +72,13 @@ class KnowledgeBaseService:
             grupo = food.get('grupo_alimentar', '')
             descricao = food.get('observacoes', '')
             tags = ', '.join(food.get('tags', []))
-            calorias = food.get('informacao_nutricional', {}).get('calorias_por_100g', '')
-            proteinas = food.get('informacao_nutricional', {}).get('proteinas_g', '')
-            carbos = food.get('informacao_nutricional', {}).get('carboidratos_g', '')
-            gorduras = food.get('informacao_nutricional', {}).get('gorduras_g', '')
+            
+            # Correção na extração dos dados nutricionais
+            calorias = food.get('energia_kcal_100g', '') # Acessa diretamente energia_kcal_100g
+            macros = food.get('macros_100g', {})
+            proteinas = macros.get('proteina_g', '')
+            carbos = macros.get('carboidrato_g', '')
+            gorduras = macros.get('gordura_total_g', '') # Assumindo que 'gordura_total_g' é o campo correto para gorduras
             
             text = f"""Alimento: {nome}. Grupo: {grupo}.
 Informações nutricionais por 100g: Calorias: {calorias}, Proteínas: {proteinas}g, Carboidratos: {carbos}g, Gorduras: {gorduras}g. 
@@ -93,12 +96,12 @@ Descrição: {descricao}. Tags: {tags}"""
         for exercise in biblioteca.get('exercicios', []):
             nome = exercise.get('nome_pt', '')
             musculo = exercise.get('musculo_primario', '')
-            tipo = exercise.get('tipo_exercicio', '')
+            tipo_exercicio = exercise.get('tipo_exercicio', '') # Nome da variável corrigido para consistência
             nivel = exercise.get('nivel_dificuldade', '')
             equipamento = ', '.join(exercise.get('equipamento', []))
             instrucoes = exercise.get('instrucoes_execucao', '')
             
-            text = f"""Exercício: {nome}. Músculo Primário: {musculo}. Tipo: {tipo}.
+            text = f"""Exercício: {nome}. Músculo Primário: {musculo}. Tipo: {tipo_exercicio}.
 Nível: {nivel}. Equipamento: {equipamento}.
 Instruções: {instrucoes}"""
             
@@ -111,58 +114,90 @@ Instruções: {instrucoes}"""
             }
             chunks.append({'chunk_text': text, 'metadata': metadata})
 
-        # 2. Processar regras de nutrição
-        regras_nutricao = kb_data.get('regras_nutricao', {})
-        
-        # 2.1. Cálculos calóricos e macronutrientes
-        calculos = regras_nutricao.get('calculos_caloricos_e_macronutrientes', {})
-        for calculo_key, calculo_value in calculos.items():
-            if isinstance(calculo_value, dict):
-                text = f"Regra de Cálculo Nutricional - {calculo_key}: {json.dumps(calculo_value, ensure_ascii=False)}"
-                metadata = {'type': 'nutrition_rule', 'subtype': 'calculation', 'id': calculo_key}
-                chunks.append({'chunk_text': text, 'metadata': metadata})
-            elif isinstance(calculo_value, str):
-                text = f"Regra de Cálculo Nutricional - {calculo_key}: {calculo_value}"
-                metadata = {'type': 'nutrition_rule', 'subtype': 'calculation', 'id': calculo_key}
-                chunks.append({'chunk_text': text, 'metadata': metadata})
+        # --- NOVA LÓGICA PARA PROCESSAR REGRAS DE NUTRIÇÃO E TREINO ---
+        principios_fundamentais = kb_data.get('principios_fundamentais', {})
 
-        # 2.2. Restrições alimentares
-        restricoes = regras_nutricao.get('restricoes_alimentares', {})
-        for restricao_key, restricao_value in restricoes.items():
-            if isinstance(restricao_value, dict) or isinstance(restricao_value, list):
-                text = f"Restrição Alimentar - {restricao_key}: {json.dumps(restricao_value, ensure_ascii=False)}"
+        # 2. Processar Regras de Nutrição de 'principios_fundamentais.nutricao'
+        regras_nutricao_data = principios_fundamentais.get('nutricao', {})
+        for nome_regra_nutricao, conteudo_regra_nutricao in regras_nutricao_data.items():
+            # Se o conteúdo for um dicionário ou lista, serializa para JSON. Senão, usa como string.
+            if isinstance(conteudo_regra_nutricao, (dict, list)):
+                texto_conteudo = json.dumps(conteudo_regra_nutricao, ensure_ascii=False, indent=2)
             else:
-                text = f"Restrição Alimentar - {restricao_key}: {restricao_value}"
-            metadata = {'type': 'nutrition_rule', 'subtype': 'restriction', 'id': restricao_key}
-            chunks.append({'chunk_text': text, 'metadata': metadata})
+                texto_conteudo = str(conteudo_regra_nutricao)
+            
+            chunk_text = f"Regra de Nutrição - {nome_regra_nutricao.replace('_', ' ').title()}:\\n{texto_conteudo}"
+            metadata = {
+                'type': 'nutrition_rule',
+                'subtype': nome_regra_nutricao, # ex: 'calculo_necessidades_energeticas'
+                'id': f"nutri_rule_{nome_regra_nutricao}" 
+            }
+            chunks.append({'chunk_text': chunk_text, 'metadata': metadata})
 
-        # 3. Processar protocolos de treino
-        protocolos_treino = kb_data.get('protocolos_treino', {})
-        
-        for protocolo_key, protocolo_value in protocolos_treino.items():
-            if isinstance(protocolo_value, dict) or isinstance(protocolo_value, list):
-                text = f"Protocolo de Treino - {protocolo_key}: {json.dumps(protocolo_value, ensure_ascii=False)}"
+        # 3. Processar Protocolos de Treino de 'principios_fundamentais.treino'
+        protocolos_treino_data = principios_fundamentais.get('treino', {})
+        for nome_protocolo_treino, conteudo_protocolo_treino in protocolos_treino_data.items():
+            # Lida com a chave "estruturas_divisao_treino (Splits)" e outras
+            nome_protocolo_formatado = nome_protocolo_treino.replace('_', ' ').title()
+            if "(Splits)" in nome_protocolo_formatado:
+                 nome_protocolo_formatado = nome_protocolo_formatado.replace("(Splits)", "Splits")
+                 
+            if isinstance(conteudo_protocolo_treino, (dict, list)):
+                texto_conteudo = json.dumps(conteudo_protocolo_treino, ensure_ascii=False, indent=2)
             else:
-                text = f"Protocolo de Treino - {protocolo_key}: {protocolo_value}"
-            metadata = {'type': 'training_protocol', 'id': protocolo_key}
-            chunks.append({'chunk_text': text, 'metadata': metadata})
+                texto_conteudo = str(conteudo_protocolo_treino)
 
-        # 4. Processar avisos de segurança
-        avisos = kb_data.get('protocolos_seguranca_avisos_obrigatorios', {})
+            chunk_text = f"Protocolo de Treino - {nome_protocolo_formatado}:\\n{texto_conteudo}"
+            metadata = {
+                'type': 'training_protocol',
+                'subtype': nome_protocolo_treino, # ex: 'variaveis_treino' ou 'estruturas_divisao_treino (Splits)'
+                'id': f"train_proto_{nome_protocolo_treino.split(' ')[0]}" # Id simplificado
+            }
+            chunks.append({'chunk_text': chunk_text, 'metadata': metadata})
+        
+        # 4. Processar avisos de segurança (Mantém como está, mas verifica a fonte na KB)
+        # A KB parece ter 'protocolos_seguranca_avisos_obrigatorios' no nível raiz.
+        avisos_data = kb_data.get('protocolos_seguranca_avisos_obrigatorios', {})
         
         # 4.1. Disclaimers gerais
-        disclaimers = avisos.get('disclaimers_gerais_saude', [])
+        disclaimers = avisos_data.get('disclaimers_gerais_saude', [])
         for i, disclaimer in enumerate(disclaimers):
             text = f"Disclaimer de Saúde #{i+1}: {disclaimer}"
-            metadata = {'type': 'disclaimer', 'id': f'general_{i}'}
+            metadata = {'type': 'disclaimer', 'id': f'general_disclaimer_{i+1}'}
             chunks.append({'chunk_text': text, 'metadata': metadata})
         
-        # 4.2. Avisos específicos
-        avisos_especificos = avisos.get('avisos_por_condicao', {})
-        for condicao, aviso in avisos_especificos.items():
-            text = f"Aviso de Segurança para {condicao}: {aviso}"
-            metadata = {'type': 'safety_warning', 'condition': condicao}
-            chunks.append({'chunk_text': text, 'metadata': metadata})
+        # 4.2. Avisos específicos por condição
+        avisos_especificos = avisos_data.get('avisos_por_condicao', {}) # Esta chave pode não existir na KB fornecida
+                                                                        # A KB tem 'regras_perfil_usuario_mapeamento.condicoes_saude_declaradas'
+                                                                        # que contém 'aviso_forte' ou 'acao_imediata'.
+                                                                        # Vou adaptar para usar 'condicoes_saude_declaradas' se 'avisos_por_condicao' não existir.
+
+        # Tentativa de obter avisos de segurança da estrutura 'regras_perfil_usuario_mapeamento.condicoes_saude_declaradas'
+        # se 'protocolos_seguranca_avisos_obrigatorios.avisos_por_condicao' não estiver populado.
+        if not avisos_especificos:
+            logger.info("A seção 'protocolos_seguranca_avisos_obrigatorios.avisos_por_condicao' não foi encontrada ou está vazia. Tentando extrair avisos de 'regras_perfil_usuario_mapeamento.condicoes_saude_declaradas'.")
+            condicoes_mapeadas = kb_data.get('regras_perfil_usuario_mapeamento', {}).get('condicoes_saude_declaradas', [])
+            for cond_map in condicoes_mapeadas:
+                condicao_nome = cond_map.get('condicao') 
+                aviso = cond_map.get('aviso_forte') or cond_map.get('diretriz') # Prioriza aviso_forte, senão usa diretriz
+                acao_imediata = cond_map.get('acao_imediata')
+
+                if condicao_nome and (aviso or acao_imediata == 'referenciar_profissional'):
+                    full_warning_text = f"Aviso de Segurança para {condicao_nome}: "
+                    if aviso:
+                        full_warning_text += aviso
+                    if acao_imediata == 'referenciar_profissional':
+                        full_warning_text += " Requer atenção profissional imediata. Sugestões da IA podem não ser apropriadas."
+                    
+                    chunks.append({
+                        'chunk_text': full_warning_text.strip(),
+                        'metadata': {'type': 'safety_warning', 'condition': condicao_nome, 'id': f'safety_{condicao_nome}'}
+                    })
+        else: # Processa 'avisos_por_condicao' se existir
+            for condicao, aviso_texto in avisos_especificos.items():
+                text = f"Aviso de Segurança para {condicao}: {aviso_texto}"
+                metadata = {'type': 'safety_warning', 'condition': condicao, 'id': f'safety_direct_{condicao}'}
+                chunks.append({'chunk_text': text, 'metadata': metadata})
             
         logger.info(f"Gerados {len(chunks)} chunks para indexação da KB versão {self.kb_version}")
         return chunks

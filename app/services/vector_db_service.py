@@ -109,12 +109,14 @@ class VectorDBService:
                             for i, item in enumerate(value):
                                 param_name = f"{filter_param}_{i}"
                                 params[param_name] = item
-                                or_conditions.append(f"metadata_json->'tags' ? :{param_name}")
+                                # Usar a chave dinâmica 'key' para o campo (ex: 'tags' ou 'equipment')
+                                or_conditions.append(f"metadata_json->'{key}' ? :{param_name}")
                             
                             if or_conditions:
+                                # Corrigir para usar ' OR ' na junção
                                 filter_clauses.append(f"({' OR '.join(or_conditions)})")
                         else:
-                            # Para campos regulares, usamos IN
+                            # Para campos regulares que são listas, mas não de tags/equipment (ex: IN (val1, val2))
                             params[filter_param] = value
                             filter_clauses.append(f"metadata_json->>'{key}' IN (:{filter_param})")
                     else:

@@ -47,11 +47,20 @@ class PlanGenerationService:
         objetivo = user_data.get('objetivo_principal', 'saude geral')
         nivel = user_data.get('nivel_experiencia_treino', 'iniciante')
         restricoes = user_data.get('restricoes_alimentares', [])
-        preferencias = user_data.get('preferencias_alimentares', [])
-        idade = user_data.get('idade', 30)
-        sexo = user_data.get('sexo', '')
-        peso = user_data.get('peso_kg', 70)
-        altura = user_data.get('altura_cm', 170)
+        preferencias_alimentares = user_data.get('preferencias_alimentares', [])
+        
+        # NOVO: Extrair preferencias de treino corretamente
+        preferencias = user_data.get('preferencias', {})
+        dias_treino_semana = preferencias.get('dias_treino_semana')
+        tempo_disponivel_treino_minutos = preferencias.get('tempo_disponivel_treino_minutos')
+        periodo_preferido = preferencias.get('periodo_preferido')
+        
+        # Correção: Acessar dados pessoais do sub-dicionário 'dados_pessoais'
+        dados_pessoais = user_data.get('dados_pessoais', {})
+        idade = dados_pessoais.get('idade', 30)
+        sexo = dados_pessoais.get('sexo', '')
+        peso = dados_pessoais.get('peso_kg', 70)
+        altura = dados_pessoais.get('altura_cm', 170)
         
         # Verificar condições especiais
         condicoes_especiais = user_data.get('condicoes_especiais', [])
@@ -63,16 +72,21 @@ class PlanGenerationService:
         if restricoes:
             diet_query += f"Restrições alimentares: {', '.join(restricoes)}. "
             
-        if preferencias:
-            diet_query += f"Preferências alimentares: {', '.join(preferencias)}. "
-            
+        if preferencias_alimentares:
+            diet_query += f"Preferências alimentares: {', '.join(preferencias_alimentares)}. "
+        
         if condicoes_especiais:
             diet_query += f"Condições especiais: {', '.join(condicoes_especiais)}. "
-            
+        
         # Construção de consulta de treino
         training_query = f"Plano de treino para {nivel} com objetivo de {objetivo}. "
         training_query += f"Sexo: {sexo}, idade: {idade}, peso: {peso}kg, altura: {altura}cm. "
-        
+        if dias_treino_semana:
+            training_query += f"Dias de treino por semana: {dias_treino_semana}. "
+        if tempo_disponivel_treino_minutos:
+            training_query += f"Tempo disponível por treino: {tempo_disponivel_treino_minutos} minutos. "
+        if periodo_preferido:
+            training_query += f"Período preferido: {periodo_preferido}. "
         if condicoes_especiais:
             training_query += f"Considerar condições especiais: {', '.join(condicoes_especiais)}. "
         
@@ -86,22 +100,40 @@ class PlanGenerationService:
     def _build_prompt(self, user_data, relevant_chunks):
         # Constrói o prompt final para o LLM
         context = "\n\n".join([chunk['chunk_text'] for chunk in relevant_chunks])
+        # Log detalhado do contexto enviado ao LLM
+        logger.debug(f"Contexto completo enviado ao LLM ({len(relevant_chunks)} chunks):\n{context}")
 
-        # Instruções DETALHADAS e REFORÇADAS para o Gemini
+        # INSTRUÇÕES DETALHADAS E OBRIGATÓRIAS PARA O LLM
         instructions = f"""
-        **Instrução Crítica:** Sua única e exclusiva saída DEVE SER um objeto JSON válido, começando com '{{' e terminando com '}}'. Não inclua NENHUM texto antes ou depois do JSON, nem use blocos de código como ```json.
+        **INSTRUÇÃO CRÍTICA:** Sua única e exclusiva saída DEVE SER um objeto JSON válido, começando com '{{' e terminando com '}}'. Não inclua NENHUM texto antes ou depois do JSON, nem use blocos de código como ```json.
 
-        **Sua Tarefa:** Você é um assistente especialista em nutrição e treino para academias no Brasil. Gere SUGESTÕES de plano alimentar e de treino INICIAIS com base ESTRITAMENTE nas informações do usuário e no CONTEXTO FORNECIDO abaixo.
+        **TAREFA:** Você é um assistente especialista em nutrição e treino para academias no Brasil. Gere SUGESTÕES de plano alimentar e de treino INICIAIS com base ESTRITAMENTE nas informações do usuário e no CONTEXTO FORNECIDO abaixo.
 
-        **Regras Essenciais:**
+        **REGRAS ESSENCIAIS:**
         1.  **Use APENAS o CONTEXTO FORNECIDO.** Não invente informações, alimentos, exercícios ou regras. Se algo não estiver no contexto, omita essa parte ou indique explicitamente a falta de informação *dentro do JSON de resposta*, se permitido pelo schema.
         2.  **Siga RIGOROSAMENTE** as regras de cálculo, faixas de macronutrientes, listas de alimentos permitidos/proibidos e estruturas de treino descritas no contexto.
         3.  **Respeite TODAS as restrições e preferências** do usuário (alergias, intolerâncias, vegetarianismo, etc.) encontradas nos dados do usuário e mapeadas pelas regras no contexto.
         4.  **Priorize a SEGURANÇA.** Inclua avisos relevantes DO CONTEXTO na seção 'avisos_especificos' do JSON, se aplicável à situação do usuário.
-        5.  **Formato OBRIGATÓRIO:** Sua resposta DEVE ser APENAS um objeto JSON válido, sem comentários ou texto adicional, seguindo EXATAMENTE o schema abaixo:
+        5.  **Preenchimento Completo e Detalhado:**
+            - Preencha TODOS os campos do schema JSON de resposta abaixo, utilizando as informações do contexto.
+            - Se alguma informação específica para um campo não estiver disponível no contexto, indique isso explicitamente no valor do campo (ex: "Informação não disponível no contexto fornecido" ou "Necessário detalhamento adicional na base de conhecimento") ou, como último recurso, use os valores padrão do template (0, listas vazias, strings vazias), mas priorize encontrar ou sinalizar a ausência de dados.
+        6.  **Formato OBRIGATÓRIO:** Sua resposta DEVE ser APENAS um objeto JSON válido, sem comentários ou texto adicional, seguindo EXATAMENTE o schema abaixo:
             ```json
             {self.output_template}
             ```
+
+        **DETALHAMENTO OBRIGATÓRIO:**
+        - O plano alimentar deve conter:
+            - Calorias diárias calculadas conforme o contexto.
+            - Macronutrientes (proteínas, carboidratos, gorduras) calculados e justificados.
+            - Refeições detalhadas: para cada refeição, liste exemplos de alimentos e quantidades aproximadas, usando alimentos e medidas reais do contexto.
+            - Respeite as preferências e restrições alimentares do usuário.
+        - O plano de treino deve conter:
+            - Divisão semanal detalhada (ex: PPL, Upper/Lower, etc.)
+            - Para cada dia de treino, liste os exercícios recomendados, agrupados por grupo muscular, com exemplos reais do contexto.
+            - Para cada exercício, detalhe: séries, repetições, equipamentos a serem utilizados (usando os disponíveis no JSON do usuário), instruções práticas e dicas de execução.
+            - Adapte o treino para condições especiais do usuário (ex: dor lombar, etc.), sugerindo variações ou cuidados.
+        - Sempre que possível, utilize exemplos reais de alimentos e exercícios presentes no contexto fornecido.
 
         **Contexto da Base de Conhecimento (Fonte Exclusiva de Informação):**
         ---
@@ -168,6 +200,8 @@ class PlanGenerationService:
         try:
             # 1. Criar consulta a partir dos dados do usuário
             query = self._create_query_from_user_data(user_data)
+            logger.debug(f"Dados do usuário para geração do plano: {json.dumps(user_data, indent=2, ensure_ascii=False)}")
+            logger.debug(f"Query combinada gerada para busca vetorial: {query}")
             
             # 2. Preparar filtros baseados em dados do usuário
             filters = {}
@@ -179,30 +213,94 @@ class PlanGenerationService:
             # 3. Buscar chunks relevantes com diferentes estratégias para máxima cobertura
             
             # 3.1 Busca geral para contexto amplo
+            logger.debug(f"Iniciando busca vetorial geral. Query: '{query}', k: {Config.VECTOR_DB_SEARCH_K}, Filtros: Nenhum")
             relevant_chunks = self.vector_db_service.search(query, k=Config.VECTOR_DB_SEARCH_K)
+            logger.debug(f"Chunks recuperados da busca geral: {len(relevant_chunks)}")
             
             # 3.2 Busca específica para restrições alimentares (se houver)
             if restricoes:
                 restricao_query = f"Restrições alimentares: {', '.join(restricoes)}"
+                current_filters = {'type': 'nutrition_rule', 'subtype': 'restriction'}
+                logger.debug(f"Iniciando busca vetorial para restrições. Query: '{restricao_query}', k: 2, Filtros: {current_filters}")
                 restriction_chunks = self.vector_db_service.search(
                     restricao_query, 
-                    k=2,
-                    filters={'type': 'nutrition_rule', 'subtype': 'restriction'}
+                    k=2, # Considerar aumentar k se necessário mais contexto específico
+                    filters=current_filters
                 )
+                logger.debug(f"Chunks recuperados da busca por restrições: {len(restriction_chunks)}")
                 relevant_chunks.extend(restriction_chunks)
             
             # 3.3 Busca específica para condições especiais (se houver)
             if condicoes:
                 for condicao in condicoes:
                     condicao_query = f"Aviso de segurança para {condicao}"
+                    current_filters = {'type': 'safety_warning'}
+                    logger.debug(f"Iniciando busca vetorial para condição especial: '{condicao}'. Query: '{condicao_query}', k: 2, Filtros: {current_filters}")
                     safety_chunks = self.vector_db_service.search(
                         condicao_query,
-                        k=2,
-                        filters={'type': 'safety_warning'}
+                        k=2, # Considerar aumentar k se necessário mais contexto específico
+                        filters=current_filters
                     )
+                    logger.debug(f"Chunks recuperados da busca por condição '{condicao}': {len(safety_chunks)}")
                     relevant_chunks.extend(safety_chunks)
             
-            # 3.4 Verificar se temos chunks suficientes
+            # 3.4 Busca específica para exercícios baseada em equipamento e nível
+            user_equipment_type = user_data.get('equipamentos_disponiveis')
+            # CORREÇÃO: aceitar lista ou string
+            if isinstance(user_equipment_type, list):
+                if len(user_equipment_type) > 0:
+                    user_equipment_type = user_equipment_type[0]  # Pega o primeiro equipamento disponível
+                else:
+                    user_equipment_type = None
+            nivel_experiencia = user_data.get('nivel_experiencia_treino')
+            specific_exercise_equipment_filter_list = []
+
+            if user_equipment_type:
+                # Mapear o tipo de equipamento do usuário para a lista de equipamentos específicos da KB
+                # Acessa self.kb_service.knowledge_base que já está carregado.
+                equipment_mapping_rules = self.kb_service.knowledge_base.get('regras_perfil_usuario_mapeamento', {}).get('equipamento_disponivel', [])
+                for rule in equipment_mapping_rules:
+                    if rule.get('tipo') == user_equipment_type:
+                        # A KB armazena os equipamentos específicos sob a chave 'equipamentos' (lista)
+                        specific_exercise_equipment_filter_list = rule.get('equipamentos', [])
+                        break 
+                if specific_exercise_equipment_filter_list:
+                     logger.debug(f"Mapeado tipo de equipamento do usuário '{user_equipment_type}' para equipamentos específicos: {specific_exercise_equipment_filter_list}")
+                else:
+                    logger.warning(f"Não foi possível mapear o tipo de equipamento do usuário '{user_equipment_type}' para equipamentos específicos da KB. A busca de exercícios pode ser menos precisa.")
+
+            # Construir query e filtros para exercícios
+            if specific_exercise_equipment_filter_list or nivel_experiencia:
+                exercise_filters = {'type': 'exercise'}
+                exercise_query_parts = ["exercícios de treino adequados"]
+
+                if nivel_experiencia:
+                    exercise_filters['level'] = nivel_experiencia # Filtra pelo nível de experiência nos metadados do exercício
+                    exercise_query_parts.append(f"para nível {nivel_experiencia}")
+
+                if specific_exercise_equipment_filter_list:
+                    exercise_filters['equipment'] = specific_exercise_equipment_filter_list # Lista de equipamentos específicos para o filtro
+                    exercise_query_parts.append(f"utilizando equipamentos como: {', '.join(specific_exercise_equipment_filter_list)}")
+                elif user_equipment_type and not specific_exercise_equipment_filter_list:
+                    # Fallback se o mapeamento falhou, mas o usuário forneceu um tipo. A busca será mais semântica.
+                    exercise_query_parts.append(f"para ambiente com {user_equipment_type}")
+                
+                exercise_specific_query = " ".join(exercise_query_parts)
+                
+                # Usar um k maior para exercícios para dar mais variedade ao LLM.
+                # Idealmente, este valor viria de Config.
+                num_exercise_chunks_to_fetch = getattr(Config, 'VECTOR_DB_SEARCH_K_EXERCISES', 7)
+
+                logger.debug(f"Iniciando busca vetorial específica para exercícios. Query: '{exercise_specific_query}', k: {num_exercise_chunks_to_fetch}, Filtros: {exercise_filters}")
+                exercise_chunks = self.vector_db_service.search(
+                    exercise_specific_query, 
+                    k=num_exercise_chunks_to_fetch,
+                    filters=exercise_filters
+                )
+                logger.debug(f"Chunks recuperados da busca específica por exercícios: {len(exercise_chunks)}")
+                relevant_chunks.extend(exercise_chunks)
+
+            # 3.5 Verificar se temos chunks suficientes
             if not relevant_chunks:
                 raise ValueError("Não foi possível encontrar informações relevantes na base de conhecimento.")
                 
