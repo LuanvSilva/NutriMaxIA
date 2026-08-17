@@ -48,7 +48,7 @@ git clone https://github.com/sua-organizacao/nutrimax-ia.git
 cd nutrimax-ia
 ```
 
-2. Configure o arquivo `.env` com suas credenciais (veja `.env.example`)
+2. Configure o arquivo `.env` com suas credenciais
 
 3. Inicie os contêineres
 ```bash
