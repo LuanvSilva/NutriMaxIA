@@ -63,7 +63,6 @@ data/
 *.p12
 .env
 .env.*
-!.env.example
 
 # Arquivos de teste
 **/tests/
